@@ -1,0 +1,1055 @@
+
+body {
+    background-color: #1A2B45;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+header {
+    background-color: #0A1F44;
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+    z-index: 1000;
+    position: relative;
+}
+
+/* ------ Naviigation Bar ------  */
+nav {
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #F0F0F0;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: 600;
+    margin-left:10px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-family:'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    text-shadow: #0C090A;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: #ffeb38;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ------ header icons ------ */
+.anakin {
+    height: 100px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.obi-wan {
+    height: 100px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Cinzel', Times, serif;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    text-shadow: #0C090A;
+}
+
+h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    text-shadow: #0C090A;
+    margin-left: 15px;
+}
+.name {
+    padding-top: 10px;
+    margin-top: 0px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+}
+
+.location {
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color:#ffffff58;
+    margin: 0px;
+}
+
+/* ------- Hero Section ------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.tagline {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 242, 0);
+    font-size: 70px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5) ;
+    font-weight: 300;
+    margin-top: 175px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* ------ Welcome Section ------ */
+.welcome {
+    padding-top: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.text-container {
+    grid-column: 1 / 2;
+    text-align: left;
+}
+
+.text-container h2 {
+    font-size: 50px;
+    color: #ffeb38;
+    /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); */
+    margin-bottom: 0px;
+}
+
+.image-container {
+    grid-column: 2 / 3;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    scale: 0.95; opacity: 0.5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+
+
+p {
+    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 15px;
+    text-align: left;
+    padding-top: 0px;
+}
+
+.featured-classes {
+    background-color: #233a5d;
+    padding-bottom: 50px;
+}
+.featured-classes h2 {
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffeb38;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 30px;
+}
+.featured-classes h3 {
+    margin-top: 10px;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.featured-classes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.featured-class {
+    background-color: #1A2B45;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 1px 1px 20px #0000005f;
+    padding: 0px;
+    padding-right: 2px;
+    color: white;  
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.featured-class h4 {
+    background-color: #0A1F44;
+    margin: 0px;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+}
+
+.see-more-classes {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 70px;
+}
+.see-more-classes:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.lightsaber {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+  
+.hilt {
+    width: 300px;
+    cursor: pointer;
+    animation: breathe 1s ease-in-out infinite;
+}
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+.hilt:hover {
+    animation-play-state: paused;
+}
+.blade {
+    width: 0;
+    height: 28px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 14px 14px 0px;
+    box-shadow: 0px 0px 10px rgb(228, 247, 255), 0px 0px 20px rgb(0, 115, 255), 0px 0px 40px rgba(0, 123, 255, 0.682);
+    transition: width 0.2s ease-out;
+}
+  
+.hilt:hover + .blade {
+    width: 1000px;
+}
+
+.obi-wan-quote {
+    padding-bottom: 70px;
+    font-family: 'Cinzel', Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color:#ffeb38;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Testamonials --- */
+.testimonials {
+    padding: 30px;
+    background-color: #233a5d;
+}
+.testimonials h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.testimonials p {
+    text-align: center;
+}
+
+.testimonial-card {
+    border: 2px solid #b3cfff;
+    width: 800px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: #b3cfff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.311);
+    scale: 0.95; opacity: 0.5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.left-card {
+    position: relative;
+    right: 100px;
+}
+.right-card {
+    position: relative;
+    left: 100px;
+}
+.left-student {
+    flex: 1;
+    order: 1;
+}
+.right-student {
+    flex: 1;
+    order: 2;  
+}
+.left-testimonial {
+    flex: 2;
+    order: 1;
+}
+.right-testimonial {
+    flex: 2;
+    order: 2;
+}
+.testimonial-card-text {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.testimonial-card-text p {
+    color: #172a4b;
+    text-align: left;
+}
+.student-quote {
+    font-size: 20px;
+    font-style: italic;
+    
+}
+.student-name {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.avatar img {
+    width: 300px;
+    padding: 0;
+    display: block;
+}
+.left-student img {
+    float: left;
+    border-radius: 10px 0 0 10px;
+}
+.right-student img {
+    float: right;
+    border-radius: 0 10px 10px 0;
+}
+
+/* --- footer --- */
+
+footer p {
+    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* ------ About Page ------ */
+
+.about-header {
+    background-image: url(obi-wan-kenobi-vs-darth-vader.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+.about-header h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    color: #ffeb38;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+/* fade in animation */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-section h3 {
+    color: #ffeb38;
+    font-size: 30px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 65px;
+}
+
+/* --- Our Mission --- */
+.our-mission {
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+  
+.our-mission-text-column {
+    flex: 1;
+    margin-left: 60px;
+}
+.our-mission-text-column h3 {
+    padding-left: 42px;
+}
+.our-mission-text-column p {
+    font-size: 20px;
+    margin-right: 0px;
+    padding-left: 30px;
+    padding-right: 0px;
+    line-height: 1.5;
+}
+.our-mission-image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.ssa-logo {
+    width: 350px;
+    height: 350px;
+    border-radius: 95px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+.about-cta {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
+    padding: 8px 20px;
+    margin-top: 0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+}
+.about-cta:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+.mission-cta-container {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* --- history --- */
+.history {
+    background-image: url(black-sky.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 50px;
+    perspective: 1000px;
+    padding-bottom: 100px;
+}
+
+@keyframes fade-in {
+    to {scale:1; opacity: 1;}
+}
+.history-text {
+    transform: rotateX(30deg);
+    scale: 0.95; opacity: 0.5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+
+}
+.history h3 {
+    text-align: center;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    color: rgb(79, 208, 255);
+}
+.history p {
+    color: rgb(79, 208, 255);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* --- why choose us --- */
+.why {
+    background-image: url(hallway.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-attachment: fixed;
+}
+.why h3 {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-style: normal;
+    text-align: center;
+    color: #b6e4ffcc;
+    font-size: 50px;
+    filter: brightness(1.2);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.411), 0 0 10px #61c5ff, 0 0 20px #61c5ff, 0 0 30px #00c3ff58, 0 0 40px #00c3ff58, 0 0 50px #00c3ff58, 0 0 60px #00c3ff58, 0 0 70px #00c3ff58;
+    scale: 0.95; opacity: 0.5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.why-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+.why-grid-item {
+    background-color: #3db8ffcc;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.432), 0 0 30px #00c3ffc5;
+    border-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.why-grid-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: hsla(199, 100%, 64%, 0.873);
+}
+.why-grid-item img {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    filter: invert(100%);
+    box-shadow: 0px 0px 0px white;
+}
+.why-grid-item p {
+    color: #ffffff;
+    text-align: center;
+    opacity: 0%;
+    transition: opacity 0.3s ease;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.334);
+}
+.why-grid-item:hover p {
+    opacity: 100%;
+    transition: opacity 0.3s ease;
+}
+.why-cta-container {
+    display: block;
+    text-align: center;
+}
+
+/* --- cta section --- */
+
+.about-cta-section {
+    background-image: url(jedi-path.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100vh;
+}
+.cta-message {
+    font-family: "Cinzel", Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: darkkhaki;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    /* font-size: 2em; */
+    animation: breathe 3s ease-in-out infinite;
+    transition: color 0.1s ease;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.cta-message:hover {
+    color: rgb(239, 236, 198);
+    transition: color 0.2s ease;
+}
+
+/* ------ Classes Page------ */
+
+.classes-header {
+    background-image: url(obi-wan-background.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 300px;
+    overflow: hidden;
+}
+.classes-header h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    color: #ffeb38;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px;
+    /* fade in animation */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* --- Classes-Intro --- */
+.classes-intro {
+    display: flex;
+}
+.classes-intro-text {
+    flex: 1;
+    order: 1;
+    margin: 50px;
+    margin-left: 100px;
+}
+.classes-intro-image {
+    flex: 1;
+    order: 2;
+    margin: 50px;
+    align-content: center;
+}
+.classes-intro-image img {
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: #0A1F44;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.323);
+    width: 400px;
+    height: auto;
+}
+.classes-intro h2 {
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #ffeb38;
+    font-size: 30px;
+}
+.classes-intro p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* --- Class Cards --- */
+
+.classes-container {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #7aa7d6;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    scale: 0.97; opacity: 0.7;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.classes h3 {
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    color: #ffeb38;
+    padding: 10px;
+    padding-left: 100px;
+    background-color: #0A1F44;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.classes-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.class-card {
+    background-color: #126ba7;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 15px;
+    color: white;  
+    border-width: 3px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+        
+.class-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+.class-card h4 {
+    border-radius: 10px 10px 0 0;
+    background-color: #0A1F44;
+    background-position: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+.class-card p {
+    font-size: 20px;
+}
+.easy {
+    font-style: normal;
+    background-color: rgb(0, 189, 0);
+    border-radius: 5px;
+    padding: 4px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 5px;
+}
+.moderate {
+    font-style: normal;
+    background-color: rgb(166, 141, 0);
+    border-radius: 5px;
+    padding: 4px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 5px;
+}
+.advanced {
+    font-style: normal;
+    background-color: rgb(218, 0, 0);
+    border-radius: 5px;
+    padding: 4px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 5px;
+}
+
+
+.card-header {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+.dropdown-content p {
+    color: #0A1F44;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .card-header + .dropdown-content {
+    display: block;
+    opacity: 1; 
+    max-height: 200px;
+}
+
+/* ------ Instructors ------ */
+
+.instructors-header {
+    background-image: url(jedi-group.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.instructors-intro {
+    display: block;
+    width: 1000px;
+    margin: 50px;
+}
+.instructors-intro h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #ffeb38;
+    font-size: 30px;
+}
+.instructors-intro p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.instructor-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.grid-item {
+    background-color: #1A2B45;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 2px 2px 10px #0000005f;
+    padding: 15px;
+    color: white;  
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item img {
+    width: 300px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+}
+
+.grid-item h3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.grid-item p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ------ Learn Page ------ */
+
+
+/* ------ Contact Page ------ */
+
+.contact-header {
+    background-image: none;
+    height: auto;
+    margin-bottom: 50px;
+}
+.contact-header h3 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.contact-page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form-container {
+    background-color: #395784;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.21);
+    padding: 50px;
+    margin: 20px;
+    margin-right: 50px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form label {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #93939374;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0058dd;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.307);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.contact-form button:hover {
+    background-color: #4c93ff;
+    transform: scale(1.03);
+}
+
+.contact-info-container {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    row-gap: 50px;
+}
+
+.contact-info-container p {
+    font-size: 20px;
+}
+.contact-info-container span {
+    font-size: 45px;
+    color: rgb(255, 242, 0);
+}
