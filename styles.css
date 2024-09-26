@@ -1186,19 +1186,16 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     h2 {
         padding-top: 0px;
         text-align: center;
-        margin-top: -75px;
         text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
         padding: 50px;
-        border-radius: 20px;
-        
     }
 }
 
 .sign-up-page {
-    
+    margin-top: 200px;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem;  
 }
 
 .form-container {
@@ -1275,3 +1272,8 @@ input[type="checkbox"], input[type="radio"] {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
+
+
+/* ------ Blog Page ------ */
+
