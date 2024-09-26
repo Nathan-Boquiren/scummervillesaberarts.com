@@ -35,7 +35,7 @@
                 <li><a href="about.html">About</a>
                 <li><a href="classes.html">Classes</a></li>
                 <li><a href="instructors.html">Instructors</a></li>
-                <li><a href="learn.html">Learn</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="sign-up.html">Sign Up</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -44,10 +44,12 @@
 
     <main>
         <section class="hero">
-            <video autoplay muted loop id="background-video">
-                <source src="hero-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="hero-video">
+                <video autoplay muted loop id="background-video">
+                    <source src="hero-video-final.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="hero-content">
                 <h2 class="tagline">Master the Art of Lightsaber Combat</h2>
                     <div class="container">
@@ -75,27 +77,71 @@
             
             <div class="featured-classes-grid">
 
-                <div class="featured-class">
-                    <h4>Form 3: Soresu</h4>
-                    <p><strong>Difficulty:</strong> <em class="easy">Easy</em></p>
-                    <p>Become a master of defense</p>
+                <div class="class-card">
+                    <div class="card-inner">
+                        <div class= "card-front">
+                            <h4>Form 3: Soresu</h4>
+                            <p><strong>Difficulty:</strong> <em class="easy">Easy</em></p>
+                            <p>Become an impenetrable force of defense</p>
+                            <img src="" height: 350px; width="auto">
+                        </div>
+                        <div class="card-back">
+                            <p>Overview:<br>Master the art of defense with Soresu, the ultimate form for countering aggressive attacks.</p>
+                            <p>What You'll Learn:</p>
+                            <ul>
+                                <li>Defensive postures</li>
+                                <li>Energy conservation</li>
+                                <li>Turning defense into counterattack</li>
+                            </ul>
+                            <a href="sign-up.html" class="sign-up-class">Sign up</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="featured-class">
-                    <h4>Spins and Flourishes</h4>
-                    <p><strong>Difficulty:</strong> <em class="moderate">Moderate</em></p>
-                    <p>Leaern flashy spins to impress your friends</p>
+                <div class="class-card">
+                    <div class="card-inner">
+                        <div class= "card-front">
+                            <h4>Spins and Flourishes</h4>
+                            <p><strong>Difficulty:</strong> <em class="moderate">Moderate</em></p>
+                            <p>Add flair to your fighting style—look good while winning!</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Overview:<br>Add style to your combat with advanced spins and flourishes, increasing fluidity and intimidation.</p>
+                            <p>What You'll Learn:</p>
+                            <ul>
+                                <li>Basic flows and figure 8</li>
+                                <li>Obi-Ani spin and variations</li>
+                                <li>Reverse-grip flourishes</li>
+                                <li>Grip switches</li>
+                            </ul>
+                            <a href="sign-up.html" class="sign-up-class">Sign up</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="featured-class">
-                    <h4>Reverse Grip Technique</h4>
-                    <p><strong>Difficulty:</strong> <em class="advanced">Advanced</em></p>
-                    <p>Learn to be different</p>
+                <div class="class-card">
+                    <div class="card-inner">
+                        <div class= "card-front">
+                            <h4>Reverse Grip Technique</h4>
+                            <p><strong>Difficulty:</strong> <em class="advanced">Advanced</em></p>
+                            <p >Fight from the shadows with swift, unexpected strikes</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Overview:<br>A specialized style focused on wielding the lightsaber in reverse grip for unexpected attacks.</p>
+                            <p>What You'll Learn:</p>
+                            <ul>
+                                <li>Stealthy, quick-strike techniques</li>
+                                <li>Handling close-quarters combat effectively</li>
+                                <li>How to switch grips easily</li>
+                            </ul>
+                            <a href="sign-up.html" class="sign-up-class">Sign up</a>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
             <div class="container">
-                <a href="classes.html" class="see-more-classes">See more classes </a>
+                <a href="classes.html" class="see-more-classes">See more classes →</a>
             </div>
 
         </section>
@@ -174,6 +220,7 @@
 
     <footer>
         <p>© 2024 Scummerville Saber Arts</p>
+        <a href="youtube.html" target="_blank" rel="noopener noreferrer">Don't Click</a>
     </footer>
 </body>
 </html>
