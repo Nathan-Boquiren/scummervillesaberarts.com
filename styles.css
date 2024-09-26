@@ -1277,3 +1277,6 @@ input[type="checkbox"], input[type="radio"] {
 
 /* ------ Blog Page ------ */
 
+.blog-header {
+    background-image: url(lightsaber-poses.jpg);
+}
