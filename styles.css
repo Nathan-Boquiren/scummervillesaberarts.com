@@ -1388,14 +1388,16 @@ input[type="checkbox"], input[type="radio"] {
     }
     img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 50px auto;
         width: 80%;
         border-radius: 20px;
-        padding: 50px;
+        scale: 0.95; opacity: 0.6;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
     }
 }
-.blog-signature {
+.blog-signature p {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-align: right;
 }
