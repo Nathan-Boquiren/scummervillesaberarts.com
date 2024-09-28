@@ -320,7 +320,6 @@ p {
     padding: 50px;
     display: flex;
     align-items: center;
-    
 }
   
 .hilt {
@@ -451,16 +450,100 @@ p {
 }
 
 /* --- footer --- */
-
-footer p {
-    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+footer {
+    background-color: #0A1F44;
     color: white;
-    font-size: 15px;
-    font-weight: 400;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0 20px;
+
+    p {
+        font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px;
+    }
 }
 
+.affiliate-link {
+    margin: 0px 0px 20px 50px;
+    h3 {
+        font-size: 25px;
+        font-family: 'Helvetica', Arial, sans-serif;
+    }
+    position: absolute;
+    left: 20px;
+    a {
+        text-decoration: none;
+        p {
+            font-family: 'Helvetica', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            background-image: linear-gradient(red, rgb(197, 0, 0));
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+        p:hover {
+            transform: scale(1.05);
+
+        }
+    }
+}
+.subscribe-section {
+    margin: 0px 50px 20px 0;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+.subscribe-section-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe-section-input [type="email"] {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+
+}
+.subscribe-section-input button {
+    margin-top: 8px;
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #ff4040;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.subscribe-section button:hover {
+    background-color: #c51e1e;
+}
+.social-buttons {
+    margin-top: 10px;
+    a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        img {
+            filter: invert(100%);
+        }
+    }
+}
+
+.footer-link {
+    transition: transform 0.2s ease;
+}
+.footer-link:hover {
+    transform: scale(1.1);
+}
+.button-warning {
+    margin-top: 0;
+}
 
 /* ------ About Page ------ */
 
@@ -1051,10 +1134,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(163, 163, 163));
     background-clip: text;
     color: transparent;
-    /* color: rgb(255, 242, 0); */
 }
-
-/* ------ Learn Page ------ */
 
 
 /* ------ Contact Page ------ */
@@ -1080,6 +1160,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     justify-content: center;
     position: relative;
     margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .contact-form-section {
@@ -1095,7 +1176,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: 20px;
     margin-right: 50px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .contact-form label {
@@ -1158,17 +1239,22 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 45px;
     color: rgb(255, 242, 0);
 }
-.fake-yt {
+
+/* ------ Fake Social Media Pages ------ */
+
+.fake-social-page {
     background-color: #0C090A;
 }
 .rickroll {
-    cursor: pointer;
-}
-.rickroll img {
-    height: auto;
-    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.rickroll img {
+    width: 100%;
+    cursor: pointer;
+}
 
 /* ------ Sign-Up ------ */
 .sign-up h3 {
@@ -1343,19 +1429,14 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-
 /* ------Blog Post Pages ------ */
-.blog-page-header {
-    margin-bottom: -140px;
-    
-}
+
 .blog-post-page {
     background-image: url(balck-sky.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 140px;
     h2 {
         text-align: center;
         font-weight: 600;
@@ -1378,13 +1459,25 @@ input[type="checkbox"], input[type="radio"] {
     padding-bottom: 100px;
     p {
     color: cyan;
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-stretch: expanded;
     line-height: 2;
     scale: 0.95; opacity: 0.8;
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: entry;
+    }
+    h3 {
+        text-indent: 15px;
+        color: cyan;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 2;
+        scale: 0.95; opacity: 0.8;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
     }
     img {
         display: block;
@@ -1400,4 +1493,12 @@ input[type="checkbox"], input[type="radio"] {
 .blog-signature p {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-align: right;
+}
+
+.lightsaber-form-img {
+    float: left;
+    img {
+        width: 400px;
+        margin: 0 20px 10px 0;
+    }
 }
