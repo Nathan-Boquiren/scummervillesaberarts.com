@@ -485,10 +485,10 @@ footer {
             color: white;
             background-image: linear-gradient(red, rgb(197, 0, 0));
             border-radius: 10px;
-            transition: transform 0.2s ease;
+            transition: box-shadow 0.2s ease;
         }
         p:hover {
-            transform: scale(1.05);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
 
         }
     }
@@ -504,21 +504,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    input, textarea {
+        border: none;
+    }
 }
 .subscribe-section-input [type="email"] {
     font-size: 20px;
     padding: 10px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 15px 0 0 15px;
 
 }
 .subscribe-section-input button {
-    margin-top: 8px;
+    /* margin-top: 8px; */
     font-size: 20px;
     padding: 10px 15px;
     background-color: #ff4040;
     color: white;
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
     transition: background-color 0.15s ease;
 }
@@ -1264,27 +1267,30 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     background-image: none;
     h2 {
         text-align: center;
-        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-        padding-bottom: 0px 0 10px;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0 0;
+        border: 1px solid rgba(0, 0, 0, 0);
     }
-}
+}   
 
 .sign-up-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
+    margin-top: -20px;
 }
 
 .form-section {
-    border: 2px solid #5ea7ff00;
+    display: none;
+    border: 1px solid #5ea7ff00;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
     margin: 100px 50px 100px;
     background-color: #243858;
     border-radius: 20px;
     position: relative;
     width: 700px;
-    height: 500px;
+    height: 550px;
     opacity: 0;
     animation: fadeIn 0.3s ease-in forwards;
     text-align: center;
@@ -1300,18 +1306,10 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         text-align: center;
     }
 
-    label {
-        padding: 50px;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 200;
-        font-size: 30px;
-        color: #ffffff;
-        line-height: 1.7;
-    }
-
     input[type="text"],
     input[type="email"],
-    input[type="tel"] {
+    input[type="tel"],
+    input[type="number"] {
         width: 500px;
         padding: 15px;
         border-radius: 40px;
@@ -1322,6 +1320,12 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         color: #cacaca;
         background-color: #324b72;
     }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
     input::placeholder {
         font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
@@ -1333,6 +1337,14 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     }
     input:focus, textarea:focus {
         outline: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    label {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        font-size: 30px;
+        color: #ffffff;
+        line-height: 1.7;
     }
 }
 
@@ -1346,14 +1358,14 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     padding: 0;
 }
 .yoda-slide-text {
-    height: 500px;
+    height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 
-button {
+.form-section button {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding: 10px 20px;
@@ -1369,14 +1381,8 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.form-section button:hover {
     background-color: #e94560;
-}
-
-
-/* Step Navigation - Hidden by default */
-.form-section {
-    display: none;
 }
 
 /* Display first section */

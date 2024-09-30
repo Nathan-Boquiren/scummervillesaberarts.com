@@ -61,9 +61,10 @@
                     </div>
                  </section>
 
-                 <section class="form-section" style="display: none;">
+                 <section class="form-section step-one" style="display: none;">
                     <h3>Step 1: Confirm Your Details</h3>
                     <input type="text" id="name" name="name" placeholder="Full Name"><br>
+                    <input type="number" id="age" name="age" placeholder="Age (at least 10)" min="10" max="60" step="1"><br>
                     <input type="email" id="email" name="email" placeholder="Email Address"><br>
                     <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
                     <button type="button" onclick="nextStep()">Next</button>
@@ -72,10 +73,10 @@
                 <!-- Step 1: Choose Your Path -->
                 <section class="form-section" style="display: none;">
                     <h3>Step 2: Choose Your Path</h3>
-                    <p>Will you protect, balance, or dominate?</p>
-                    <label><input type="radio" name="path" value="Guardian"> Guardian (Defense)</label><br>
-                    <label><input type="radio" name="path" value="Sentinel"> Sentinel (Balanced)</label><br>
-                    <label><input type="radio" name="path" value="Consular"> Consular (Offense)</label><br>
+                    <!-- <p>Will you protect, balance, or dominate?</p> -->
+                    <label for="guardian"><input type="radio" id="guardian" name="path" value="Guardian"> Guardian (Defense)</label><br>
+                    <label for="sentinel"><input type="radio" id="sentinel" name="path" value="Sentinel"> Sentinel (Balanced)</label><br>
+                    <label for="consular"><input type="radio" id="consular" name="path" value="Consular"> Consular (Offense)</label><br>
                     <button type="button" onclick="nextStep()">Next</button>
                 </section>
 
@@ -115,7 +116,13 @@
                     <p>Do you like Star Wars?</p>
                     <label><input type="radio" name="sw-question" value="yes"> Yes</label>
                     <label><input type="radio" name="sw-question" value="no"> No</label>
-                    <button type="submit">Complete</button>
+                    <button type="submit"onclick="nextStep()">Complete</button>
+                </section>
+
+                <section class="form-section">
+                    <h3>Congrats!</h3>
+                    <p>View your class schedule</p>
+                    
                 </section>
                 
             </form>
