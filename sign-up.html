@@ -45,75 +45,82 @@
     <main class="sign-up">
 
         <section class="signup-header about-header">
-            <h2>Sign Up</h2>
+            <h2>Register for Classes</h2>
         </section>
         
-        <section class="sign-up-page">
-            <section class="form-container">
-                <form id="signup-form">
-                    <div class="form-step">
-                        <h3>Step 1: Personal Information</h3>
-                            <div class="form-step-content">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Luke Skywalker" required>
+        <section class="sign-up-section">
 
-                            <label for="age">Age</label>
-                            <input type="number" id="age" name="age" min="13" max="29" required value="16" required placeholder="66">
+            <form id="signup-form">
 
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="vader@empire.com">
-
-                            <label for="phone">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(123) - 456 - 7890">
+                 <section class="form-section">
+                    <div class="first-slide">
+                        <div class="yoda-slide-text">
+                            <h3>Want to become<br>powerful jedi, hmm?</h3>
                         </div>
+                        <button type="button" onclick="nextStep()">Begin</button>
                     </div>
+                 </section>
 
-                    <div class="form-step">
-                        <h3>Step 2: Select a Class</h3>
-                            <div class="form-step-content">
-                            <select id="class" name="class" required>
-                                <option value="" disabled selected>Select your class</option>
-                                <option value="form1">Form I - Shii-Cho (Beginner)</option>
-                                <option value="form2">Form II - Makashi (Intermediate)</option>
-                                <option value="form3">Form III - Soresu (Defense)</option>
-                            </select>
-                        </div>
-                    </div>
+                 <section class="form-section" style="display: none;">
+                    <h3>Step 1: Confirm Your Details</h3>
+                    <input type="text" id="name" name="name" placeholder="Full Name"><br>
+                    <input type="email" id="email" name="email" placeholder="Email Address"><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
 
-                    <div class="form-step">
-                        <h3>Step 3: Preferred Time Slot</h3>
-                            <div class="form-step-content">
-                            <select id="time-slot" name="time-slot" required>
-                                <option value="" disabled selected>Select your time</option>
-                                <option value="morning">Morning</option>
-                                <option value="afternoon">Afternoon</option>
-                                <option value="evening">Evening</option>
-                            </select>
-                            <label>
-                                <input type="checkbox" id="flexible" name="flexible"> Flexible Schedule
-                            </label>
-                        </div>
-                    </div>
+                <!-- Step 1: Choose Your Path -->
+                <section class="form-section" style="display: none;">
+                    <h3>Step 2: Choose Your Path</h3>
+                    <p>Will you protect, balance, or dominate?</p>
+                    <label><input type="radio" name="path" value="Guardian"> Guardian (Defense)</label><br>
+                    <label><input type="radio" name="path" value="Sentinel"> Sentinel (Balanced)</label><br>
+                    <label><input type="radio" name="path" value="Consular"> Consular (Offense)</label><br>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
 
-                    <div class="form-step">
-                        <h3>Step 4: Payment Options</h3>
-                            <div class="form-step-content">
-                            <label>
-                                <input type="radio" name="payment" value="credit" required> Credit Card
-                            </label>
-                            <label>
-                                <input type="radio" name="payment" value="paypal" required> PayPal
-                            </label>
-                            <label>
-                                <input type="radio" name="payment" value="later" required> Pay Later
-                            </label>
-                        </div>
-                    </div>
+                <!-- Step 2: Select Your Lightsaber -->
+                <section class="form-section" style="display: none;">
+                    <h3>Step 3: Select Your Lightsaber</h3>
+                    <p>Which style of lightsaber do you choose?</p>
+                    <label><input type="radio" name="saber" value="Single"> Single Blade</label><br>
+                    <label><input type="radio" name="saber" value="Double"> Double-Bladed</label><br>
+                    <label><input type="radio" name="saber" value="Dual"> Dual Wield</label><br>
+                    <label><input type="radio" name="saber" value="Reverse"> Reverse Grip</label><br>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
 
-                    <button type="submit" class="submit-btn">Begin Your Training</button>
-                </form>
-            </section>
+                <!-- Step 3: Choose Class Schedule -->
+                <section class="form-section" style="display: none;">
+                    <h3>Step 4: Choose Class Schedule</h3>
+                    <p>Pick the time that fits your training schedule:</p>
+                    <label><input type="checkbox" name="schedule" value="morning"> Weekday Morning (8 AM - 10 AM)</label><br>
+                    <label><input type="checkbox" name="schedule" value="afternoon"> Weekday Afternoon (1 PM - 3 PM)</label><br>
+                    <label><input type="checkbox" name="schedule" value="evening"> Weekday Evening (6 PM - 8 PM)</label><br>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
+
+                <!-- Step 4: Payment Options -->
+                <section class="form-section" style="display: none;">
+                    <h3>Step 5: Payment Options</h3>
+                    <p>Secure your place at the academy:</p>
+                    <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label><br>
+                    <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
+                    <label><input type="radio" name="payment" value="installments"> Pay in Installments</label><br>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
+
+                <section class="form-section" style="display: none;">
+                    <h3>Step 6</h3>
+                    <p>Do you like Star Wars?</p>
+                    <label><input type="radio" name="sw-question" value="yes"> Yes</label>
+                    <label><input type="radio" name="sw-question" value="no"> No</label>
+                    <button type="submit">Complete</button>
+                </section>
+                
+            </form>
         </section>
+
     </main>
 
     <footer>
@@ -152,5 +159,8 @@
         <p>&copy; 2024 Scummerville Saber Arts. All rights reserved.</p>
     
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

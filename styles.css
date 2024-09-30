@@ -2,7 +2,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+html {
+    scroll-behavior: smooth;
+}
  
 body {
     background-color: #1A2B45;
@@ -1257,109 +1259,130 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 /* ------ Sign-Up ------ */
-.sign-up h3 {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        font-size: 20px;
-        color: white;
-        margin-bottom: 0.5rem;
-}
+
 .signup-header {
-    background-image: url(signup-header.jpeg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
+    background-image: none;
     h2 {
-        padding-top: 0px;
         text-align: center;
         text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-        padding: 50px;
+        padding-bottom: 0px 0 10px;
     }
 }
 
-.sign-up-page {
-    margin-top: 200px;
+.sign-up-section {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 2rem;  
+    padding: 20px;
 }
 
-.form-container {
-    width: 60%;
-}
-.form-step h3 {
-    font-size: 50px;
-    font-weight: 600;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.37);
-
-}
-.form-step-content {
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.205);
+.form-section {
+    border: 2px solid #5ea7ff00;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+    margin: 100px 50px 100px;
+    background-color: #243858;
     border-radius: 20px;
-    padding: 30px;
-    margin: 50px;
+    position: relative;
+    width: 700px;
+    height: 500px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards;
+    text-align: center;
 
-    scale: 0.95; opacity: 0.5;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
+    h3 {
+        text-align: center;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+        color: #ffffff;
+    }
+    p {
+        text-align: center;
+    }
+
+    label {
+        padding: 50px;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        font-size: 30px;
+        color: #ffffff;
+        line-height: 1.7;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 500px;
+        padding: 15px;
+        border-radius: 40px;
+        margin: 15px 50px 10px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        color: #cacaca;
+        background-color: #324b72;
+    }
+    input::placeholder {
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    input, textarea {
+        border: none;
+    }
+    input:focus, textarea:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.3);
+    }
 }
 
-label {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1rem;
+.first-slide {
+    background-image: url(yoda-ep-5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+.yoda-slide-text {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4a7ebd;
     border: none;
-}
-
-input[type="checkbox"], input[type="radio"] {
-    margin-right: 0.5rem;
-}
-
-.submit-btn {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    background-color: #2761a8;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 1.5rem;
+    margin-top: 10px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-    background-color: #3985d9;
-}
-
-.sidebar {
-    width: 30%;
-    background-color: #18203a;
-    padding: 2rem;
-    margin-left: 2rem;
-    border-radius: 8px;
-}
-
-.sidebar h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+button:hover {
+    background-color: #e94560;
 }
 
 
+/* Step Navigation - Hidden by default */
+.form-section {
+    display: none;
+}
+
+/* Display first section */
+.form-section:first-child {
+    display: block;
+}
 
 /* ------ Blog Page ------ */
 
