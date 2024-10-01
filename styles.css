@@ -22,11 +22,14 @@ header {
     z-index: 9;
     position: relative;
     height: 150px;
+    a {
+        text-decoration: none;
+    }
 }
 
 /* ------ Naviigation Bar ------  */
 nav {
-    margin-top: -50px;
+    margin-top: -60px;
     display: grid;
     justify-content: center;
     position: sticky;
@@ -34,6 +37,7 @@ nav {
     z-index: 10;
     background-color: #0a1f44;
     width: 100%;
+    padding-bottom: 5px;
 }
 
 nav ul {
