@@ -61,54 +61,192 @@
                  </section>
 
                  <section class="form-section step-one" style="display: none;">
-                    <h3>Step 1: Confirm Your Details</h3>
-                    <input type="text" id="name" name="name" placeholder="Full Name"><br>
-                    <input type="number" id="age" name="age" placeholder="Age (at least 10)" min="10" max="60" step="1"><br>
-                    <input type="email" id="email" name="email" placeholder="Email Address"><br>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+                    <h3>Step 1: Personal Info</h3>
+                    <input type="text" id="name" name="name" placeholder="Full Name (Remember to Capitalize)"><br>
+                    <input type="number" id="age" name="age" placeholder="Age (at least 13, this ain't for young'uns)" min="10" max="60" step="1"><br>
+                    <div class="m-f">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <p>or</p>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                    </div>
+
+                    <div class="m-f">
+                        <input type="radio" id="cool" name="cool" value="cool">
+                        <label for="cool">Cool</label><br>
+                        <p>or</p>
+                        <input type="radio" id="uncool" name="cool" value="uncool">
+                        <label for="uncool">Uncool</label><br>
+                    </div>
+
+                    <button type="button" onclick="nextStep()">Next</button>
+                </section>
+
+                <section class="form-section step-one" style="display: none;">
+                    <h3>Step 2: Contact Info</h3>
+                    <input type="email" id="email" name="email" placeholder="Email Address (to send you annoying junk)"><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number (to call you at the worst time)"><br>
+                    <input type="text" id="address" name="address" placeholder="Address (to randomly drive by...for no reason)"><br>
                     <button type="button" onclick="nextStep()">Next</button>
                 </section>
 
                 <!-- Step 1: Choose Your Path -->
                 <section class="form-section" style="display: none;">
-                    <h3>Step 2: Choose Your Path</h3>
+
+                    <h3>Step 3: Choose Your Path</h3>
+
                     <input type="radio" id="initiate" name="path" value="initiate">
-                    <label for="initiate" data-hover-text="Defend and protect.">Initiate</label><br>
+                    <label for="initiate">
+                        <em>Initiate</em>
+                        <br>
+                        <strong>Learn basic combat and fourishes</strong>
+                    </label><br>
                     
                     <input type="radio" id="apprentice" name="path" value="apprentice">
-                    <label for="apprentice" data-hover-text="Defend and protect.">Apprentice</label><br>
+                    <label for="apprentice">
+                        <em>Apprentice</em>
+                        <br>
+                        <strong>Learn each of the lightsaber forms</strong>
+                    </label><br>
                     
                     <input type="radio" id="knight" name="path" value="knight">
-                    <label for="knight">Knight</label><br>
+                    <label for="knight">
+                        <em>Knight</em
+                            ><br>
+                        <strong>Learn advanced combat techniques</strong>
+                    </label><br>
 
                     <input type="radio" id="master" name="path" value="master">
-                    <label for="master">Master</label><br>
+                    <label for="master">
+                        <em>Master</em
+                            ><br>
+                        <strong>Learn everything about lightsaber combat</strong
+                            ></label><br>
                 
                     <button type="button" onclick="nextStep()">Next</button>
+
                 </section>
 
                 <!-- Step 2: Select Your Lightsaber -->
                 <section class="form-section" style="display: none;">
-                    <h3>Step 3: Select Your Lightsaber</h3>
-                    <label><input type="radio" name="saber" value="Single"> Single Blade</label><br>
-                    <label><input type="radio" name="saber" value="Double"> Double-Bladed</label><br>
-                    <label><input type="radio" name="saber" value="Dual"> Dual Wield</label><br>
-                    <label><input type="radio" name="saber" value="Reverse"> Reverse Grip</label><br>
+                    <h3>Step 4: Select Your Lightsaber</h3>
+
+                    <input type="radio" id="single" name="saber" value="single">
+                    <label for="single">
+                        <em>Single Blade</em>
+                        <br>
+                        <strong>Learn to fight like Anakin, Obi-wan, Dooku...</strong>
+                    </label><br>
+                    
+                    <input type="radio" id="double-bladed" name="saber" value="double-bladed">
+                    <label for="double-bladed">
+                        <em>Double Bladed Saber</em>
+                        <br>
+                        <strong>Learn to fight like Maul, Opress, Bastila Shan...</strong>
+                    </label><br>
+                    
+                    <input type="radio" id="dual wielding" name="saber" value="dual wielding">
+                    <label for="dual wielding">
+                        <em>Dual Wield</em>
+                        <br>
+                        <strong>Learn to fight like Ahsoka Tano, Galen Marek...</strong>
+                    </label><br>
+
+                    <input type="radio" id="reverse grip" name="saber" value="reverse grip">
+                    <label for="reverse grip">
+                        <em>Reverse Grip</em>
+                        <br>
+                        <strong>Learn to fight Starkiller. . .and Starkiller</strong>
+                    </label><br>
+
                     <button type="button" onclick="nextStep()">Next</button>
                 </section>
 
                 <!-- Step 3: Choose Class Schedule -->
                 <section class="form-section" style="display: none;">
-                    <h3>Step 4: Choose Class Schedule</h3>
-                    <label><input type="checkbox" name="schedule" value="morning"> Weekday Morning (8 AM - 10 AM)</label><br>
-                    <label><input type="checkbox" name="schedule" value="afternoon"> Weekday Afternoon (1 PM - 3 PM)</label><br>
-                    <label><input type="checkbox" name="schedule" value="evening"> Weekday Evening (6 PM - 8 PM)</label><br>
+
+                    <h3>Step 5: Choose Class Schedule</h3>
+                    <div class="schedule-instruction">
+                        <p>Select your preferred class days, choose how often you'd like to attend, and decide if you'd like to participate in the monthly tournament.</p>
+                    </div>
+
+                    <div class="schedule-grid-container">
+
+                        <input type="checkbox" id="Tue" name="schedule" value="Tue">
+                        <label for="Tue">
+                            <em>Tuesday</em>
+                        </label>
+
+                        <div class="schedule-time">
+                            <select id="schedule" name="schedule">
+                                <option value="">Select a time:</option>
+                                <option value="time-1">10 AM - 12 AM</option>
+                                <option value="time-2">3 PM - 5 PM</option>
+                                <option value="time-3">7 PM - 9 PM</option>
+                            </select>
+                        </div>
+
+                        <input type="checkbox" id="Thur" name="schedule" value="Thur">
+                        <label for="Thur">
+                            <em>Thursday</em>
+                        </label>
+                        
+                        <div class="schedule-time">
+                            <select id="schedule" name="schedule">
+                                <option value="">Select a time:</option>
+                                <option value="time-1">10 AM - 12 AM</option>
+                                <option value="time-2">3 PM - 5 PM</option>
+                                <option value="time-3">7 PM - 9 PM</option>
+                            </select>
+                        </div>
+
+                        <input type="checkbox" id="Sat" name="schedule" value="Sat">
+                        <label for="Sat">
+                            <em>Saturday</em>
+                        </label>
+
+                        <div class="schedule-time">
+                            <select id="schedule" name="schedule">
+                                <option value="">Select a time:</option>
+                                <option value="time-1">10 AM - 12 AM</option>
+                                <option value="time-2">3 PM - 5 PM</option>
+                                <option value="time-3">7 PM - 9 PM</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="m-f biweekly">
+                        <input type="radio" id="weekly" name="biweekly" value="weekly">
+                        <label for="weekly">
+                            <em>Weekly</em>
+                        </label>
+                        <p>or</p>
+                        <input type="radio" id="biweekly" name="biweekly" value="biweekly">
+                        <label for="biweekly">
+                            <em>Biweekly</em>
+                        </label>
+                    </div>
+
+                    <div class="m-f biweekly">
+                        <input type="radio" id="monthly-tournament-yes" name="monthly-tournament" value="monthly-tournament-yes">
+                        <label for="monthly-tournament-yes">
+                            <em>Yes to Monthly Tournament</em>
+                        </label>
+                        <p>or</p>
+                        <input type="radio" id="monthly-tournament-no" name="monthly-tournament" value="monthly-tournament-no">
+                        <label for="monthly-tournament-no">
+                            <em>No to Monthly Tournament</em>
+                        </label>
+                    </div>
+
                     <button type="button" onclick="nextStep()">Next</button>
                 </section>
 
                 <!-- Step 4: Payment Options -->
                 <section class="form-section" style="display: none;">
-                    <h3>Step 5: Payment Options</h3>
+                    <h3>Step 6: Payment Options</h3>
                     <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label><br>
                     <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
                     <label><input type="radio" name="payment" value="installments"> Pay in Installments</label><br>
@@ -116,7 +254,7 @@
                 </section>
 
                 <section class="form-section" style="display: none;">
-                    <h3>Step 6</h3>
+                    <h3>Step 7</h3>
                     <p>Do you like Star Wars?</p>
                     <label><input type="radio" name="sw-question" value="yes"> Yes</label>
                     <label><input type="radio" name="sw-question" value="no"> No</label>

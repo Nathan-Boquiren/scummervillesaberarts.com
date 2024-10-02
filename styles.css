@@ -1295,12 +1295,12 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     border: 2px solid #324b729f;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.192),
     -2px -2px 2px #59739c9f;
-    margin: 100px 50px 100px;
+    margin: 100px 50px 200px;
     background-color: #243858;
     border-radius: 20px;
     position: relative;
-    width: 700px;
-    height: 550px;
+    width: 800px;
+    height: 700px;
     opacity: 0;
     animation: fadeIn 0.3s ease-in forwards;
     text-align: center;
@@ -1311,8 +1311,13 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 600;
         font-size: 40px;
         color: #ffffff;
+        margin-bottom: 20px;
     }
     p {
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: #cacaca;
         text-align: center;
     }
 
@@ -1321,13 +1326,13 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     input[type="tel"],
     input[type="number"] {
         width: 500px;
-        padding: 15px;
+        padding: 20px;
         border-radius: 40px;
         margin: 15px 50px 10px;
         font-family: Helvetica, Arial, sans-serif;
         font-weight: 200;
-        font-size: 20px;
-        color: #cacaca;
+        font-size: 18px;
+        color: #ffffff;
         background-color: #324b72;
     }
     input[type="number"]::-webkit-inner-spin-button,
@@ -1337,7 +1342,8 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     }
 
     input[type="radio"] {
-        display: none; /* Hide the actual radio button */
+        display: none;
+        
     }
 
     input[type="radio"]:checked + label {
@@ -1345,11 +1351,20 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         color: #ffffff;
     }
     
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + label {
+        background-color: #476daa;
+        color: #ffffff;
+    }
+
     input::placeholder {
         font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
-        color: rgba(255, 255, 255, 0.3);
+        color: #cacaca;
     }
     input, textarea {
         border: none;
@@ -1361,11 +1376,10 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     label {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 400;
-        color: #ffffff;
         line-height: 1.5;
         display: inline-block;
         width: 500px;
-        padding: 15px;
+        padding: 10px;
         margin: 15px 50px 10px;
         border-radius: 40px;
         font-size: 20px;
@@ -1374,10 +1388,92 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         cursor: pointer;
         border: none;
         transition: box-shadow 0.2s ease, color 0.2s ease;
-        text-align: left;
+        text-align: center;
+        background-color: #324b72;
+
+        em {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        strong {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    select {
+        width: 200px;
+        padding: 10px;
+        font-size: 20px;
+        line-height: 1.5;
+        border-radius: 20px;
+        background-color: #324b72;
+        color: #ffffff;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        border: none;
+        margin: 0px 60px;
+    }
+      
+    select:focus {
+        outline: none;
+        background-color: #476daa;
+    }
+
+    option {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        color: #e6e6e6;
+        font-size: 20px;
     }
 }
 
+.schedule-grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0px 40px;
+    align-items: center;
+
+    label {
+        width: 100%;
+    }
+    option {
+    width: 100%;
+    }
+}
+.schedule-time  {
+    margin: auto;
+}
+.m-f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+
+    label {
+        text-align: center;
+        background-color: #324b72;
+    }
+
+    input[type="radio"]:checked + label {
+        background-color: #476daa;
+        color: #ffffff;
+    }
+
+}
+
+.schedule-instruction p {
+    color: white;
+}
+
+.biweekly {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    label {
+        /* width: 200px; */
+        margin: 15px 58px 10px;
+    }
+}
 
 .first-slide {
     background-image: url(yoda-ep-5.png);
@@ -1389,7 +1485,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     padding: 0;
 }
 .yoda-slide-text {
-    height: 550px;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1409,11 +1505,13 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     position: absolute;
     right: 40px;
     bottom: 40px;
-    transition: background-color 0.3s ease;
+    box-shadow: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-section button:hover {
-    background-color: #e94560;
+    background-color: #4a7ebd;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3), -1px -1px 1px rgb(128, 160, 199);
 }
 
 .form-section label:hover {
@@ -1424,6 +1522,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 .form-section:first-child {
     display: block;
 }
+
 
 /* ------ Blog Page ------ */
 
