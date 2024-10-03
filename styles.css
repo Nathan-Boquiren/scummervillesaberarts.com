@@ -189,7 +189,6 @@ h2 {
     text-align: center;
     display: inline-block;
     z-index: 1;
-    z-index: 1;
 }
 
 .cta:hover {
@@ -243,7 +242,6 @@ h2 {
     animation-timeline: view();
     animation-range: entry;
 }
-
 
 p {
     font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
@@ -459,6 +457,51 @@ p {
     float: right;
     border-radius: 0 10px 10px 0;
 }
+
+.quiz-link-section {
+    background-image: url(2-saber-background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        color: rgb(255, 242, 0);
+        text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.349);
+        margin-bottom: 10px;
+        animation: breathe 1.5s ease-in-out infinite;
+
+    }
+    p {
+        font-weight: 600;
+    }
+}
+
+.quiz-button {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+
+}
+
+.quiz-button:hover {
+    transform: scale(1.05);
+}
+
 
 /* --- footer --- */
 footer {
@@ -985,7 +1028,40 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         right: 20px;
     }
 }
+.juyo-card img {
+    height: 230px;
+}
+.trakata-card img {
+height: 230px;
+}
 
+.spin-card img {
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
+}
+.holocron-card img {
+    height: 240px;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
+    margin-bottom: 5px;
+}
+.lightsaber-card img {
+    margin-bottom: 20px;
+    margin-right: 40px;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
+    rotate: -20deg;
+}
+.ahsoka-card img {
+    height: 300px;
+    transform: scaleX(-1);
+}
+.luke-card img {
+    height: 375px;
+}
+.duel-card img {
+    height: 240px;
+}
 .card-back {
     background-color: #0A1F44;
     color: white;
@@ -1300,7 +1376,8 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     border-radius: 20px;
     position: relative;
     width: 800px;
-    height: 700px;
+    min-height: 600px;
+    height: auto;
     opacity: 0;
     animation: fadeIn 0.3s ease-in forwards;
     text-align: center;
@@ -1324,7 +1401,8 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    input[type="number"] {
+    input[type="number"],
+    input[type="month"] {
         width: 500px;
         padding: 20px;
         border-radius: 40px;
@@ -1360,12 +1438,30 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         color: #ffffff;
     }
 
+    input[type="month"] {
+        color: #cacaca;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    input[type="month"]::-webkit-calendar-picker-indicator {
+        padding: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
     input::placeholder {
         font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
         color: #cacaca;
     }
+
+    .billing-address input::placeholder {
+        font-size: 0.85em;
+    }
+
     input, textarea {
         border: none;
     }
@@ -1426,6 +1522,9 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-size: 20px;
     }
 }
+.choose-schedule {
+    height: 700px;
+}
 
 .schedule-grid-container {
     display: grid;
@@ -1452,6 +1551,9 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     label {
         text-align: center;
         background-color: #324b72;
+        width: auto;
+        min-width: 100px;
+        font-style: normal;
     }
 
     input[type="radio"]:checked + label {
@@ -1459,6 +1561,60 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         color: #ffffff;
     }
 
+}
+.payment-options {
+    h3 {
+        padding-bottom: 20px;
+    }
+    label {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    img {
+        height: 2rem;
+        float: left;
+        background-color: #476daa;
+        padding: 20px;
+        border-radius: 40px 20px 20px 40px;
+    }
+    em {
+        padding-left: 20px;
+    }
+    
+}
+.sw-q {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        width: 150px;
+        font-size: 2em;
+        border-radius: 20px;
+    }
+}   
+.sw-q label {
+    transition: transform 0.15s linear, opacity 0.15s linear;
+}
+
+label[for="no-sw"]:hover {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+}
+#yes-sw:checked + label {
+    background-color: rgba(0, 255, 0, 0.616);
+}
+#no-sw:checked + label {
+    background-color: #324b72;
+    color: none;
 }
 
 .schedule-instruction p {
@@ -1470,7 +1626,6 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
     label {
-        /* width: 200px; */
         margin: 15px 58px 10px;
     }
 }
@@ -1491,6 +1646,60 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     justify-content: center;
 }
 
+.last-slide {
+    background-image: url(darth-vader.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 100px;
+    padding: 0;
+}
+
+.last-slide-text {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    h3 {
+        margin-top: 100px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.678);
+        color: yellow;
+
+        em {
+            font-style: normal;
+            font-size: 50px;
+            position: absolute;
+            right: 50px;
+            top: 100px;
+        }
+    }
+}
+.last-slide-text h3,
+.rickroll-link {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+.rickroll-link {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-image: linear-gradient(red, rgb(192, 0, 0));
+    text-decoration: none;
+    border-radius: 20px;
+    
+    p {
+        font-weight: 400;
+        font-size: 30px;
+        margin: 0;
+        padding: 10px;
+        color: white;
+    }
+}
+.rickroll-link:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+}
 
 .form-section button {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -1664,4 +1873,24 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         width: 400px;
         margin: 0 20px 10px 0;
     }
+}
+
+/* ------ Rickroll Page ------ */
+.rickroll-page {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rickroll-page video {
+    width: 50px;
+    height: auto;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    margin: 0;
 }

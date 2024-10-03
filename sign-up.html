@@ -56,7 +56,7 @@
                         <div class="yoda-slide-text">
                             <h3>Want to become<br>powerful jedi, hmm?</h3>
                         </div>
-                        <button type="button" onclick="nextStep()">Begin</button>
+                        <button type="button" onclick="nextStep()">Begin →</button>
                     </div>
                  </section>
 
@@ -80,7 +80,7 @@
                         <label for="uncool">Uncool</label><br>
                     </div>
 
-                    <button type="button" onclick="nextStep()">Next</button>
+                    <button type="button" onclick="nextStep()">Next →</button>
                 </section>
 
                 <section class="form-section step-one" style="display: none;">
@@ -88,7 +88,7 @@
                     <input type="email" id="email" name="email" placeholder="Email Address (to send you annoying junk)"><br>
                     <input type="tel" id="phone" name="phone" placeholder="Phone Number (to call you at the worst time)"><br>
                     <input type="text" id="address" name="address" placeholder="Address (to randomly drive by...for no reason)"><br>
-                    <button type="button" onclick="nextStep()">Next</button>
+                    <button type="button" onclick="nextStep()">Next →</button>
                 </section>
 
                 <!-- Step 1: Choose Your Path -->
@@ -124,7 +124,7 @@
                         <strong>Learn everything about lightsaber combat</strong
                             ></label><br>
                 
-                    <button type="button" onclick="nextStep()">Next</button>
+                    <button type="button" onclick="nextStep()">Next →</button>
 
                 </section>
 
@@ -160,11 +160,11 @@
                         <strong>Learn to fight Starkiller. . .and Starkiller</strong>
                     </label><br>
 
-                    <button type="button" onclick="nextStep()">Next</button>
+                    <button type="button" onclick="nextStep()">Next →</button>
                 </section>
 
                 <!-- Step 3: Choose Class Schedule -->
-                <section class="form-section" style="display: none;">
+                <section class="form-section choose-schedule" style="display: none;">
 
                     <h3>Step 5: Choose Class Schedule</h3>
                     <div class="schedule-instruction">
@@ -174,9 +174,7 @@
                     <div class="schedule-grid-container">
 
                         <input type="checkbox" id="Tue" name="schedule" value="Tue">
-                        <label for="Tue">
-                            <em>Tuesday</em>
-                        </label>
+                        <label for="Tue">Tuesday</label>
 
                         <div class="schedule-time">
                             <select id="schedule" name="schedule">
@@ -188,9 +186,7 @@
                         </div>
 
                         <input type="checkbox" id="Thur" name="schedule" value="Thur">
-                        <label for="Thur">
-                            <em>Thursday</em>
-                        </label>
+                        <label for="Thur">Thursday</label>
                         
                         <div class="schedule-time">
                             <select id="schedule" name="schedule">
@@ -202,9 +198,7 @@
                         </div>
 
                         <input type="checkbox" id="Sat" name="schedule" value="Sat">
-                        <label for="Sat">
-                            <em>Saturday</em>
-                        </label>
+                        <label for="Sat">Saturday</label>
 
                         <div class="schedule-time">
                             <select id="schedule" name="schedule">
@@ -219,56 +213,119 @@
 
                     <div class="m-f biweekly">
                         <input type="radio" id="weekly" name="biweekly" value="weekly">
-                        <label for="weekly">
-                            <em>Weekly</em>
-                        </label>
+                        <label for="weekly">Weekly</label>
+
                         <p>or</p>
+
                         <input type="radio" id="biweekly" name="biweekly" value="biweekly">
-                        <label for="biweekly">
-                            <em>Biweekly</em>
-                        </label>
+                        <label for="biweekly">Biweekly</label>
                     </div>
 
                     <div class="m-f biweekly">
                         <input type="radio" id="monthly-tournament-yes" name="monthly-tournament" value="monthly-tournament-yes">
-                        <label for="monthly-tournament-yes">
-                            <em>Yes to Monthly Tournament</em>
-                        </label>
+                        <label for="monthly-tournament-yes">Yes to Monthly Tournament</label>
+
                         <p>or</p>
+
                         <input type="radio" id="monthly-tournament-no" name="monthly-tournament" value="monthly-tournament-no">
-                        <label for="monthly-tournament-no">
-                            <em>No to Monthly Tournament</em>
-                        </label>
+                        <label for="monthly-tournament-no">No to Monthly Tournament</label>
                     </div>
 
-                    <button type="button" onclick="nextStep()">Next</button>
+                    <button type="button" onclick="nextStep()">Next →</button>
                 </section>
 
                 <!-- Step 4: Payment Options -->
-                <section class="form-section" style="display: none;">
+                <section class="form-section payment-options" style="display: none;">
                     <h3>Step 6: Payment Options</h3>
-                    <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label><br>
-                    <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
-                    <label><input type="radio" name="payment" value="installments"> Pay in Installments</label><br>
-                    <button type="button" onclick="nextStep()">Next</button>
+
+                    <input type="radio" id="visa" name="payment" value="visa">
+                    <label for="visa">
+                        <img src="visa-logo.png" alt="visa">
+                        <em>Visa</em>
+                    </label><br>
+                    
+                    <input type="radio" id="mastercard" name="payment" value="mastercard">
+                    <label for="mastercard">
+                        <img src="mastercard-logo.png" alt="mastercard">
+                        <em>Mastercard</em>
+                    </label><br>
+
+                    <input type="radio" id="amex" name="payment" value="amex">
+                    <label for="amex">
+                        <img src="amex.png" alt="amex">
+                        <em>Amex</em>
+                    </label><br>
+
+                    <input type="radio" id="paypal" name="payment" value="paypal">
+                    <label for="paypal">
+                        <img src="paypal-logo.png" alt="paypal">
+                        <em>Paypal</em>
+                    </label><br>
+
+                    <button type="button" onclick="nextStep()">Next →</button>
+
                 </section>
 
-                <section class="form-section" style="display: none;">
-                    <h3>Step 7</h3>
+                <section class="form-section payment-section">
+
+                    <h3>Step 7: Waste Your Money</h3>
+
+                    <div class="form-group">
+                        <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="Card Number (Dew It.)" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="month" id="expiration-date" name="expiration-date" placeholder="Expiration Date" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="CVV, CID, or CSC" required>
+                    </div>
+        
+                    <div class="form-group billing-address">
+                        <input type="text" id="billing-address" name="billing-address" placeholder="Billing Address (Yes, I know you've already entered your address)" required>
+                    </div>
+        
+                    <button type="button" onclick="nextStep()">Submit Payment →</button>
+
+                </section>
+
+                <section class="form-section star-wars-q" style="display: none;">
+
+                    <h3>Step 8</h3>
                     <p>Do you like Star Wars?</p>
-                    <label><input type="radio" name="sw-question" value="yes"> Yes</label>
-                    <label><input type="radio" name="sw-question" value="no"> No</label>
+
+                    <div class="sw-q">
+                        
+                        <input type="radio" id="yes-sw" name="sw-q" value="yes-sw">
+                        <label for="yes-sw">Yes</label><br>
+
+                        <p>or</p>
+
+                        <input type="radio" id="no-sw" name="sw-q" value="no-sw" disabled>
+                        <label for="no-sw">No</label><br>
+                    </div>
+
                     <button type="button"onclick="nextStep()">Complete</button>
                 </section>
 
                 
-                <section class="form-section first-slide">
-                    <div class="first-slide">
-                        <div class="yoda-slide-text">
-                            <h3>Congrats!</h3>
-                        </div>
+                <section class="form-section last-slide">
+
+                    <div class="last-slide-text">
+
+                        <h3>
+                            <em>Congrats!</em>
+                        </h3>
+
+                        <h3>The force is with you, young Skywalker, but you are not a Jedi yet.</h3>
+
+                        <a class="rickroll-link" href="rickroll.html">
+                            <p>View your<br>class schedule</p>
+                        </a>
                     </div>
-                    <p>View your class schedule </p>
+                    
+
                 </section>
                 
             </form>
