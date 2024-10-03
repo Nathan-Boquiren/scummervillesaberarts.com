@@ -28,6 +28,7 @@ header {
 }
 
 /* ------ Naviigation Bar ------  */
+
 nav {
     margin-top: -60px;
     display: grid;
@@ -44,8 +45,6 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
-    
 }
 
 nav ul li {
@@ -123,6 +122,56 @@ h2 {
     color:#ffffff58;
     margin: 0px;
 }
+
+
+/* ------ Media Query for smaller screens ------ */
+
+
+@media (max-width: 768px) {
+
+    /* Adjust header */
+    header {
+        height: auto; /* Allow the header height to adjust */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anakin, .obi-wan {
+        display: none;
+    }
+
+    .name {
+        font-size: 35px; /* Make the header text smaller */
+    }
+
+    .location {
+        font-size: 12px; /* Reduce location text size */
+    }
+
+    /* Adjust navigation */
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; 
+    }
+
+    nav ul li {
+        float: none; /* Clear float to stack items */
+        margin-bottom: 10px; /* Add spacing between menu items */
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 13px; /* Make text smaller */
+    }
+}
+
+
+
+
+
 
 /* ------- Hero Section ------- */
 
@@ -457,6 +506,8 @@ p {
     float: right;
     border-radius: 0 10px 10px 0;
 }
+
+/* --- quiz link section --- */
 
 .quiz-link-section {
     background-image: url(2-saber-background.webp);
@@ -1907,29 +1958,102 @@ label[for="no-sw"]:hover {
 .quiz-container {
     background-color: #395784;
     border-radius: 15px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.21);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.21);
     padding: 50px;
-    width: 60%;
+    width: 50%;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     display: none;
     margin: auto;
+    position: relative;
 }
 .quiz-container input[type="radio"] {
     margin: 10px;
 }
 .quiz-container button {
     margin-top: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, scale 0.2s ease;
+}
+.quiz-container button:hover {
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.158), -1px -1px 2px rgba(255, 134, 134, 0.63);
+    scale: 1.05;
 }
 .quiz-container h3 {
     font-size: 30px;
     font-weight: 600;
     color: rgb(255, 242, 0);
     margin-top: 0;
+    line-height: 1.5;
+}
+.quiz-container hr {
+    margin-bottom: 30px;
+}
+.quiz-container label {
+    font-size: 30px;
+    font-weight: 450;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 35px;
+    transition: transform 0.2s ease;
+    transform-origin: 0 50%;
+}
+.quiz-container label:hover {
+    transform: scale(1.05);
 }
 .quiz-container input {
-    font-size: 50px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
 }
+.indicator {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+.quiz-container input:checked + .indicator {
+    background-color: #2196F3;
+}
+
+.indicator:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.quiz-container input:checked + .indicator:after {
+    display: block;
+}
+
+.quiz-container .indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+
 #your-result {
     text-align: center;
 }
@@ -1944,7 +2068,7 @@ label[for="no-sw"]:hover {
     font-weight: 500;
     font-size: 30px;
     text-align: center;
-    background-color: rgb(255, 242, 0);
+    background-color: rgb(91, 189, 255);
     display: inline-block;
     padding: 7px 15px;
     border-radius: 20px;
@@ -1961,26 +2085,45 @@ label[for="no-sw"]:hover {
     position: absolute;
     top: 20%;
     right: 2%;
-    transform: translate(-50%, -50%);
+    transform: translate(-20%, -55%);
     text-align: right;
     font-size: 40px;
-    font-weight: 600;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.726);
-    
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
     color: rgb(255, 0, 0);
-    backdrop-filter: blur(3px);
     padding: 5px;
     border-radius: 20px;
-    strong {
-        font-weight: 800;
-    }
 }
 
 #final-vader-image {
-    width: 75%;
+    width: 90%;
     display: block;
     border-radius: 10px;
     margin: 20px auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     border: 3px solid #0A1F44;
+}
+.link-to-classes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.link-to-classes a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: scale 0.3s ease;
+    z-index: 1;
+
+}
+.link-to-classes a:hover {
+    scale: 1.05;
 }
