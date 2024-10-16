@@ -1652,13 +1652,19 @@ height: 230px;
         border-radius: 20px;
     }
 }   
-.sw-q label {
+/* .sw-q label {
     transition: transform 0.15s linear, opacity 0.15s linear;
-}
+} */
 
 label[for="no-sw"]:hover {
-    transform: scale(0) rotate(360deg);
-    opacity: 0;
+    animation: zoomOut 0.15s linear forwards;
+}
+
+@keyframes zoomOut {
+    to {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
 }
 #yes-sw:checked + label {
     background-color: rgba(0, 255, 0, 0.616);
