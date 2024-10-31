@@ -1,6 +1,7 @@
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
@@ -8,10 +9,8 @@ html {
  
 body {
     background-color: #1A2B45;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0px;
-    overflow: visible;
+    overflow-x:visible;
     position: relative;
 }
 
@@ -20,18 +19,20 @@ header {
     padding-bottom: 0px;
     margin-bottom: 0px;
     z-index: 9;
-    position: relative;
-    height: 150px;
+    width: 100%;
+    height: clamp(140px, 17vh, 150px);
     a {
         text-decoration: none;
     }
 }
-
+.ScummervilleSaberArtsLogo {
+    display: none;
+}
 /* ------ Naviigation Bar ------  */
 
 nav {
     margin-top: -60px;
-    display: grid;
+    display: flex;
     justify-content: center;
     position: sticky;
     top: 0;
@@ -39,6 +40,7 @@ nav {
     background-color: #0a1f44;
     width: 100%;
     padding-bottom: 5px;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -72,16 +74,23 @@ nav ul li a:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+
+.hamburger {
+    margin: 2vh 4vw;
+    display: none;
+    cursor: pointer;
+}
+
 /* ------ header icons ------ */
 .anakin {
-    height: 100px;
+    max-height: 100px;
     float: left;
     margin-left: 100px;
     margin-top: 20px;
 }
 
 .obi-wan {
-    height: 100px;
+    max-height: 100px;
     float: right;
     margin-right: 100px;
     margin-top: 20px;
@@ -114,6 +123,9 @@ h2 {
     margin-bottom: 2px;
 }
 
+.name-abb {
+    display: none;
+}
 .location {
     text-align: center;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -131,46 +143,93 @@ h2 {
 
     /* Adjust header */
     header {
-        height: auto; /* Allow the header height to adjust */
-        padding: 20px;
+        position: fixed;
+        top: 0;
+        max-height: 100px;
+        width: 100vw;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        z-index: 20;
+        
     }
-
     .anakin, .obi-wan {
         display: none;
     }
 
-    .name {
-        font-size: 35px; /* Make the header text smaller */
-    }
-
     .location {
-        font-size: 12px; /* Reduce location text size */
+        display: none;
     }
-
+    .name {
+        display: none;
+    }
+    .name-abb {
+        display: inline;
+        margin: 0;
+        padding-right: 20px;
+        font-size: 35px;
+        position: absolute;
+        right: 0;
+    }
     /* Adjust navigation */
+    
+
+    nav.navbar {
+        position: fixed;
+        left: -60vw;
+        top: 0;
+        transition: left 0.3s ease;
+        background-color: #0A1F44;
+        height: 100vh;
+        width: 60vw;
+        z-index: 10;
+        margin: 0;
+    }
     nav ul {
         display: flex;
         flex-direction: column; /* Stack the menu items vertically */
         align-items: center; 
+        justify-content: center;
+        gap: 10px;
+        
     }
 
     nav ul li {
         float: none; /* Clear float to stack items */
-        margin-bottom: 10px; /* Add spacing between menu items */
     }
 
     nav ul li a {
-        padding: 10px 12px;
-        font-size: 13px; /* Make text smaller */
+        padding: 10px 3vh;
+        font-size: 20px; /* Make text smaller */
+    }
+
+    .hamburger {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+    }
+    .hamburger-line {
+        margin: 3px auto;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        border-radius: 3px;
+        transition: transform 0.2s ease, width 0.2s ease;
+    }
+    
+
+    .ScummervilleSaberArtsLogo {
+        display: inline;
+        height: 6.5vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
-
-
-
 
 
 /* ------- Hero Section ------- */
@@ -245,6 +304,35 @@ h2 {
     transition: transform 0.3s ease;
 }
 
+
+
+@media (max-width: 768px) {
+     
+    .hero {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .tagline {
+        font-size: clamp(30px, 12vw, 75px);
+        padding: 20px;
+    }
+
+    
+    .cta {
+        font-size: clamp(20px, 3.5vw, 40px);
+    }
+    
+}
+
+
+
+
+
+
 /* ------ Welcome Section ------ */
 .welcome {
     position: relative;
@@ -302,6 +390,56 @@ p {
     padding-top: 0px;
     line-height: 1.5;
 }
+
+
+@media (max-width: 768px) {
+
+    .welcome {
+        display: block;
+        margin: 30px;
+        padding: 0;
+        align-items: center;
+        height: 95vh;
+    }
+    
+    .text-container h2 {
+        text-align: center;
+        font-size: 40px;
+        color: #ffeb38;
+        padding: 20px 0;
+    }
+    
+    section h2 {
+        font-size: 40px;
+    }
+    
+    .image-container img {
+        display: none;
+    }
+    
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 15px;
+        text-align: left;
+        padding-top: 0px;
+        line-height: 1.5;
+    }
+
+    p.ezra-quote {
+        visibility: hidden;
+        margin-top: 50px;
+        font-weight: 600;
+    }
+    p.ezra-quote::before {
+        content: "The force will be with you. Always.";
+        visibility: visible;
+    }
+}
+
+
+
+/* ------ Featured Classes Section ------ */
 
 .featured-classes {
     background-color: #233a5d;
@@ -373,6 +511,20 @@ p {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
+
+@media (max-width: 768px) {
+    .featured-classes h2 {
+        font-size: 35px;
+    }
+    .featured-classes h3 {
+        display: none;
+    }
+}
+
+
+/* ----- Lightsaber/Quote ----- */
+
 
 .lightsaber {
     padding: 50px;
@@ -929,7 +1081,7 @@ footer {
     background-size: cover;
     overflow: hidden;
     position: absolute;
-    top: 100px;
+    top: 17vh;
     left: 0;
     width: 100%;
     height: 400px;
@@ -948,6 +1100,20 @@ footer {
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
+
+@media (max-width: 768px) {
+    .classes-header {
+        position: relative;
+        top: 100px;
+        height: 200px;
+        
+    }
+    .classes-header h2 {
+        font-size: clamp(20px, 4vh, 35px);
+        padding-top: 0px;
+    }
+}
+
 
 /* --- Classes-Intro --- */
 .classes-intro {
@@ -979,7 +1145,7 @@ footer {
     height: auto;
 }
 .classes-intro h2 {
-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: #ffeb38;
     font-size: 30px;
 }
@@ -987,6 +1153,32 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 1.5;
 }
+
+
+@media (max-width: 768px) {
+    .classes-intro {
+        margin-top: 20vh;
+        display: block;
+        position: static;
+    }
+    .classes-intro-text {
+        margin: 20px;
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    .classes-intro-image img {
+        display: none;
+    }
+    
+}
+
+
 
 /* --- Class Cards --- */
 
@@ -1034,14 +1226,11 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.35s ease-in-out;
-    transition-delay: 0.2s;
-}
-
-.class-card:hover .card-inner {
-    transform: rotateX(180deg);
+    transition: transform 0.3s ease-in-out;
     transition-delay: 0s;
 }
+
+
 
 .card-front, .card-back {
     position: absolute;

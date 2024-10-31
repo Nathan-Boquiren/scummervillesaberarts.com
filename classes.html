@@ -22,15 +22,25 @@
 </head>
 
 <body>
-    <header>
+    <header class="page-header">
         <img src="anakin-pose.png" class="anakin">
         <img src="obi-wan-pose.png" class="obi-wan">
         <a href="index.html"><h1 class="name">Scummerville Saber arts</h1></a>
         <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
+
+        <div class="hamburger" onclick="navBarShow()">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+        </div>
+
+        <img src="ssa-logo.png" class="ScummervilleSaberArtsLogo">
+
+        <h1 class="name-abb">S.S.A.</h1>
     </header>
 
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <ul class="navbar-links">
             <li><a href="index.html">Home</a>
             <li><a href="about.html">About</a>
             <li><a href="classes.html">Classes</a></li>
@@ -49,7 +59,7 @@
         <section class="classes-intro">
             <div class="classes-intro-text">
                 <h2>Embark on Your Training Journey</h2>
-                    <p> Welcome to the heart of your training journey at Saber Combat Academy. Our classes are designed to immerse you in the thrilling world of lightsaber combat, where ancient techniques meet modern discipline.
+                    <p> Welcome to the heart of your training journey at Saber Combat Academy.  Our classes are designed to immerse you in the thrilling world of lightsaber combat, where ancient techniques meet modern discipline.
                         Whether you're a beginner taking your first steps into this galaxy of skills or an advanced practitioner looking to master intricate forms, we have a class tailored for you.
                         Each session is crafted to challenge, inspire, and elevate your abilities, ensuring you gain not just the skills, but the confidence to wield a saber with precision and flair.
                     </p>
@@ -508,5 +518,26 @@
     
     </footer>
     
+    <script>
+        const cardInners = document.querySelectorAll('.card-inner');
+
+cardInners.forEach(cardInner => {
+    const cardFront = cardInner.querySelector('.card-front');
+    const cardBack = cardInner.querySelector('.card-back');
+
+    function flipCard() {
+        if (cardInner.style.transform === 'rotateX(180deg)') {
+            cardInner.style.transform = 'rotateX(0deg)';
+        } else {
+            cardInner.style.transform = 'rotateX(180deg)';
+        }
+    }
+
+    cardFront.addEventListener('click', flipCard);
+    cardBack.addEventListener('click', flipCard);
+});
+
+
+    </script>
 </body>
 </html>
