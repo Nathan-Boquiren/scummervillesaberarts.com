@@ -1,17 +1,51 @@
-console.log(
+let cl = console.log;
 
-    "H" + "e" + "l" + "l" + "o" + " " + "W" + "o" + "r" + "l" + "d" + "!"
 
+// Xmas Tree
+
+let height = 7;
+
+cl(
+    "Here is my Christmas Tree!"
 );
 
-console.log(
+for (let i = 1; i <= height; i++) {
 
-    "843-872-2917"
+  let spaces = " ".repeat(height - i);
 
+  let branches = "#".repeat(i * 2 - 1);
+
+  cl(spaces + branches);
+}
+
+let stump = " ".repeat(height - 1);
+
+cl(stump + "#");
+
+
+
+// Fizzbuzz Program
+
+cl(
+    "Here is my FizzBuzz Program!"
 );
 
-console.log(
+for (let i = 1; i <= 100; i++) {
 
-    843 - 872 - 2917
+    if (i % 3 === 0 && i % 5 === 0) {
+      cl("FizzBuzz");
+    }
     
-);
+    else if (i % 3 === 0) {
+      cl("Fizz");
+    }
+    
+    else if (i % 5 === 0) {
+      cl("Buzz");
+    }
+    
+    else {
+      cl(i);
+    }
+  }
+  

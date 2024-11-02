@@ -1119,12 +1119,11 @@ footer {
 .classes-intro {
     display: flex;
     position: relative;
-    margin-top: 350px;
+    margin-top: 400px;
     
 }
 .classes-intro-text {
     flex: 1;
-    order: 1;
     margin: 50px;
     margin-left: 100px;
 }
@@ -1133,7 +1132,6 @@ footer {
     align-items: center;
     justify-content: center;
     flex: 1;
-    order: 2;
     margin: 50px;
 }
 .classes-intro-image img {
@@ -1141,7 +1139,8 @@ footer {
     border: 3px solid;
     border-color: #0A1F44;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.323);
-    width: 500px;
+    width: 60%;
+    width: clamp(300px, 60%, 500px);
     height: auto;
 }
 .classes-intro h2 {
@@ -1154,12 +1153,20 @@ footer {
     line-height: 1.5;
 }
 
-
+@media (max-width: 1024px) {
+    .classes-intro {
+        margin-top: 50vh;
+        display: block;
+    }
+    .classes-intro-image img {
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     .classes-intro {
         margin-top: 20vh;
         display: block;
-        position: static;
+        position: relative;
     }
     .classes-intro-text {
         margin: 20px;
@@ -1171,11 +1178,6 @@ footer {
             line-height: 1.5;
         }
     }
-
-    .classes-intro-image img {
-        display: none;
-    }
-    
 }
 
 
@@ -1183,17 +1185,17 @@ footer {
 /* --- Class Cards --- */
 
 .classes-container {
-    margin-left: 100px;
-    margin-right: 100px;
-    border-radius: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 5vw;
 
     opacity: 0.7;
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: entry;
 }
+
 .classes h3 {
     font-family: 'Montserrat', 'Times New Roman', Times, serif;
     font-size: 30px;
@@ -1201,24 +1203,24 @@ footer {
     text-align: left;
     color: #ffeb38;
     padding: 10px;
-    padding-left: 100px;
+    padding-left: 6vw;
     border-bottom: 2px solid white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     
 }
 .classes-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 2vw;
 }
 
 .class-card {
-    width: 100%;
-    height: 500px;
+    aspect-ratio: 1;
+    height: clamp(300px, 30vw, 500px)
 }
 
 .card-inner {
@@ -1242,65 +1244,78 @@ footer {
 }
 .class-card p {
     text-align: left;
-    font-size: 20px;
+    font-size: clamp(16px, 1vw, 25px);
+    position: relative;
 }
 
 .card-front {
-    background-color: #126ba7;
     background-image: linear-gradient(-45deg, #1975b3, #308cc9);
     color: white;
     padding: 20px;
+    transition: transform 0.2s ease;
     h4 {
-        border-radius: 20px 20px 0 0;
+
         text-align: left;
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        margin-left: 20px;
-        margin-top: 50px;
+        font-size: clamp(20px, 2vw, 40px);
+        margin-left: 4%;
+        margin-top: 10%;
     }
     p {
-        padding-right: 200px;
+        padding-right: 40%;
+        z-index: 100;
     }
     img {
-        height: 350px;
+        height: 70%;
         position: absolute;
         bottom: 0px;
         right: 20px;
     }
 }
-.juyo-card img {
-    height: 230px;
-}
-.trakata-card img {
-height: 230px;
+
+
+
+
+.card-front:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
+
+.juyo-card img,
+.trakata-card img,
+.holocron-card img {
+    height: 46%;
+}
+
+.spin-card img,
+.holocron-card img,
+.lightsaber-card img {
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.11));
+}
 .spin-card img {
-    height: 200px;
+    height: 40%;
     border-radius: 10px;
     margin-bottom: 10px;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
+    
 }
 .holocron-card img {
-    height: 240px;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
     margin-bottom: 5px;
 }
 .lightsaber-card img {
     margin-bottom: 20px;
     margin-right: 40px;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.288));
     rotate: -20deg;
 }
 .ahsoka-card img {
-    height: 300px;
+    height: 60%;
     transform: scaleX(-1);
 }
 .luke-card img {
-    height: 375px;
+    height: 75%;
 }
 .duel-card img {
-    height: 240px;
+    height: 45%;
 }
 .card-back {
     background-color: #0A1F44;
