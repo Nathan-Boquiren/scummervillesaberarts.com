@@ -3,6 +3,7 @@
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,6 +26,7 @@ header {
         text-decoration: none;
     }
 }
+
 .ScummervilleSaberArtsLogo {
     display: none;
 }
@@ -74,7 +76,6 @@ nav ul li a:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .hamburger {
     margin: 2vh 4vw;
     display: none;
@@ -82,6 +83,7 @@ nav ul li a:hover {
 }
 
 /* ------ header icons ------ */
+
 .anakin {
     max-height: 100px;
     float: left;
@@ -101,7 +103,6 @@ h1 {
     color: white;
     font-size: 50px;
     text-align: center;
-    font-style: normal;
     font-weight: 300;
     text-shadow: #0C090A;
 }
@@ -111,11 +112,11 @@ h2 {
     color: white;
     font-size: 70px;
     text-align: left;
-    font-style: normal;
     font-weight: 600;
     text-shadow: #0C090A;
     margin-left: 15px;
 }
+
 .name {
     padding-top: 10px;
     margin-top: 0px;
@@ -126,6 +127,7 @@ h2 {
 .name-abb {
     display: none;
 }
+
 .location {
     text-align: center;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -135,13 +137,9 @@ h2 {
     margin: 0px;
 }
 
-
-/* ------ Media Query for smaller screens ------ */
-
+/* ------ Responsive Design ------ */
 
 @media (max-width: 768px) {
-
-    /* Adjust header */
     header {
         position: fixed;
         top: 0;
@@ -170,8 +168,6 @@ h2 {
         position: absolute;
         right: 0;
     }
-    /* Adjust navigation */
-    
 
     nav.navbar {
         position: fixed;
@@ -186,20 +182,19 @@ h2 {
     }
     nav ul {
         display: flex;
-        flex-direction: column; /* Stack the menu items vertically */
+        flex-direction: column;
         align-items: center; 
         justify-content: center;
         gap: 10px;
-        
     }
 
     nav ul li {
-        float: none; /* Clear float to stack items */
+        float: none;
     }
 
     nav ul li a {
         padding: 10px 3vh;
-        font-size: 20px; /* Make text smaller */
+        font-size: 20px;
     }
 
     .hamburger {
@@ -231,155 +226,6 @@ h2 {
     }
 }
 
-
-/* ------- Hero Section ------- */
-
-.hero {
-    position: absolute;
-    top: 147px;
-    left: 0;
-    width: 100%;
-    height: 85vh;
-    overflow: hidden;
-}
-
-#background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-
-.tagline {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 242, 0);
-    font-size: 80px;
-    text-align: center;
-    font-style: italic;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5) ;
-    font-weight: 300;
-    margin-top: 250px;
-    margin-bottom: 30px;
-    padding-top: 20px;
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    z-index: 1;
-}
-
-.container {
-    text-align: center;
-    margin-top: 20px;
-    z-index: 1;
-}
-
-.cta {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
-    padding: 8px 20px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    display: inline-block;
-    z-index: 1;
-}
-
-.cta:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-
-
-@media (max-width: 768px) {
-     
-    .hero {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    .tagline {
-        font-size: clamp(30px, 12vw, 75px);
-        padding: 20px;
-    }
-
-    
-    .cta {
-        font-size: clamp(20px, 3.5vw, 40px);
-    }
-    
-}
-
-
-
-
-
-
-/* ------ Welcome Section ------ */
-.welcome {
-    position: relative;
-    padding-top: 50px;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
-    max-width: 100%;
-    margin-top: 80vh;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.text-container {
-    grid-column: 1 / 2;
-    text-align: left;
-}
-
-.text-container h2 {
-    font-size: 50px;
-    color: #ffeb38;
-    /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); */
-    margin-bottom: 0px;
-}
-
-.image-container {
-    grid-column: 2 / 3;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0;
-    padding: 0;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
-    scale: 0.95; opacity: 0.5;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
 p {
     font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -393,28 +239,8 @@ p {
 
 
 @media (max-width: 768px) {
-
-    .welcome {
-        display: block;
-        margin: 30px;
-        padding: 0;
-        align-items: center;
-        height: 95vh;
-    }
-    
-    .text-container h2 {
-        text-align: center;
-        font-size: 40px;
-        color: #ffeb38;
-        padding: 20px 0;
-    }
-    
     section h2 {
         font-size: 40px;
-    }
-    
-    .image-container img {
-        display: none;
     }
     
     p {
@@ -425,286 +251,7 @@ p {
         padding-top: 0px;
         line-height: 1.5;
     }
-
-    p.ezra-quote {
-        visibility: hidden;
-        margin-top: 50px;
-        font-weight: 600;
-    }
-    p.ezra-quote::before {
-        content: "The force will be with you. Always.";
-        visibility: visible;
-    }
 }
-
-
-
-/* ------ Featured Classes Section ------ */
-
-.featured-classes {
-    background-color: #233a5d;
-    padding-bottom: 50px;
-}
-.featured-classes h2 {
-    font-family: 'Montserrat', 'Times New Roman', Times, serif;
-    font-weight: 700;
-    text-align: center;
-    color: #ffeb38;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 0;
-    margin-left: 0;
-    padding: 30px;
-}
-.featured-classes h3 {
-    margin-top: 10px;
-    font-family: 'Montserrat', 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-.featured-classes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.featured-class {
-    background-color: #1A2B45;
-    border-radius: 10px;
-    border-style: solid;
-    box-shadow: 1px 1px 20px #0000005f;
-    padding: 0px;
-    padding-right: 2px;
-    color: white;  
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    text-align: center;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-}
-.featured-class h4 {
-    background-color: #0A1F44;
-    margin: 0px;
-    border-radius: 10px 10px 0 0;
-    padding: 5px;
-}
-
-.see-more-classes {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
-    padding: 8px 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 70px;
-}
-.see-more-classes:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-
-@media (max-width: 768px) {
-    .featured-classes h2 {
-        font-size: 35px;
-    }
-    .featured-classes h3 {
-        display: none;
-    }
-}
-
-
-/* ----- Lightsaber/Quote ----- */
-
-
-.lightsaber {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-}
-  
-.hilt {
-    width: 300px;
-    cursor: pointer;
-    animation: breathe 1s ease-in-out infinite;
-}
-@keyframes breathe {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-}
-.hilt:hover {
-    animation-play-state: paused;
-}
-.blade {
-    width: 0;
-    height: 28px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px 14px 14px 0px;
-    box-shadow: 0px 0px 10px rgb(228, 247, 255), 0px 0px 20px rgb(0, 115, 255), 0px 0px 40px rgba(0, 123, 255, 0.682);
-    transition: width 0.2s ease-out;
-}
-  
-.hilt:hover + .blade {
-    width: 1500px;
-}
-
-.obi-wan-quote {
-    padding-bottom: 70px;
-    font-family: 'Cinzel', Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    color:#ffeb38;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 200;
-    text-align: center;
-    margin: 0px;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Testamonials --- */
-.testimonials {
-    padding: 30px;
-    background-color: #233a5d;
-}
-.testimonials h2 {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 0px;
-}
-.testimonials p {
-    text-align: center;
-}
-
-.testimonial-card {
-    border: 2px solid #b3cfff;
-    width: 800px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    background-color: #b3cfff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.311);
-    scale: 0.95; opacity: 0.5;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-.left-card {
-    position: relative;
-    right: 100px;
-}
-.right-card {
-    position: relative;
-    left: 100px;
-}
-.left-student {
-    flex: 1;
-    order: 1;
-}
-.right-student {
-    flex: 1;
-    order: 2;  
-}
-.left-testimonial {
-    flex: 2;
-    order: 1;
-}
-.right-testimonial {
-    flex: 2;
-    order: 2;
-}
-.testimonial-card-text {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-.testimonial-card-text p {
-    color: #172a4b;
-    text-align: left;
-}
-.student-quote {
-    font-size: 20px;
-    font-style: italic;
-    
-}
-.student-name {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: right;
-}
-
-.avatar img {
-    width: 300px;
-    padding: 0;
-    display: block;
-}
-.left-student img {
-    float: left;
-    border-radius: 10px 0 0 10px;
-}
-.right-student img {
-    float: right;
-    border-radius: 0 10px 10px 0;
-}
-
-/* --- quiz link section --- */
-
-.quiz-link-section {
-    background-image: url(2-saber-background.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 70vh;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    h2 {
-        color: rgb(255, 242, 0);
-        text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.349);
-        margin-bottom: 10px;
-        animation: breathe 1.5s ease-in-out infinite;
-
-    }
-    p {
-        font-weight: 600;
-    }
-}
-
-.quiz-button {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
-    padding: 8px 20px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    z-index: 1;
-
-}
-
-.quiz-button:hover {
-    transform: scale(1.05);
-}
-
 
 /* --- footer --- */
 footer {
@@ -748,6 +295,7 @@ footer {
         }
     }
 }
+
 .subscribe-section {
     margin: 0px 50px 20px 0;
     position: absolute;
@@ -755,6 +303,7 @@ footer {
     font-size: 20px;
     font-family: 'Helvetica', Arial, sans-serif;
 }
+
 .subscribe-section-input {
     display: flex;
     align-items: center;
@@ -763,14 +312,15 @@ footer {
         border: none;
     }
 }
+
 .subscribe-section-input [type="email"] {
     font-size: 20px;
     padding: 10px;
     border-radius: 15px 0 0 15px;
 
 }
+
 .subscribe-section-input button {
-    /* margin-top: 8px; */
     font-size: 20px;
     padding: 10px 15px;
     background-color: #ff4040;
@@ -780,9 +330,11 @@ footer {
     cursor: pointer;
     transition: background-color 0.15s ease;
 }
+
 .subscribe-section button:hover {
     background-color: #c51e1e;
 }
+
 .social-buttons {
     margin-top: 10px;
     a {
@@ -798,9 +350,11 @@ footer {
 .footer-link {
     transition: transform 0.2s ease;
 }
+
 .footer-link:hover {
     transform: scale(1.1);
 }
+
 .button-warning {
     margin-top: 0;
 }
@@ -811,7 +365,6 @@ footer {
     background-image: url(obi-wan-kenobi-vs-darth-vader.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    /* special new stuff */
     position: absolute;
     top: 100px;
     left: 0;
@@ -821,10 +374,8 @@ footer {
     background-size: cover;
 }
 .about-header h2 {
-    /* special new stuff */
     position: relative;
     top: 80px;
-
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 60px;
@@ -834,7 +385,6 @@ footer {
     padding-bottom: 0px;
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     margin-top: 0px;
-/* fade in animation */
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
@@ -898,7 +448,6 @@ footer {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     font-size: 30px;
-    font-style: normal;
     font-weight: 600;
     text-decoration: none;
     background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
@@ -944,7 +493,6 @@ footer {
 }
 .history h3 {
     text-align: center;
-    font-style: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     font-size: 45px;
@@ -978,7 +526,6 @@ footer {
 .why h3 {
     padding-left: 0px;
     padding-right: 0px;
-    font-style: normal;
     text-align: center;
     color: #b6e4ffcc;
     font-size: 50px;
@@ -1047,13 +594,12 @@ footer {
 .cta-message {
     font-family: "Cinzel", Georgia, Times, 'Times New Roman', serif;
     font-size: 100px;
-    font-style: normal;
+
     font-weight: 400;
     text-align: center;
     text-decoration: none;
     color: darkkhaki;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    /* font-size: 2em; */
     animation: breathe 3s ease-in-out infinite;
     transition: color 0.1s ease;
 }
@@ -1379,7 +925,7 @@ footer {
 }
 
 .card-front p em {
-    font-style: normal;
+
     border-radius: 5px;
     padding: 4px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -1778,7 +1324,7 @@ footer {
         background-color: #324b72;
 
         em {
-            font-style: normal;
+        
             font-weight: 600;
             font-size: 20px;
         }
@@ -1843,7 +1389,7 @@ footer {
         background-color: #324b72;
         width: auto;
         min-width: 100px;
-        font-style: normal;
+    
     }
 
     input[type="radio"]:checked + label {
@@ -1965,7 +1511,7 @@ label[for="no-sw"]:hover {
         color: yellow;
 
         em {
-            font-style: normal;
+        
             font-size: 50px;
             position: absolute;
             right: 50px;
@@ -2358,7 +1904,7 @@ label[for="no-sw"]:hover {
     text-decoration: none;
     color: white;
     font-size: 30px;
-    font-style: normal;
+
     font-weight: 600;
     text-decoration: none;
     background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));

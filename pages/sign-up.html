@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet"> 
+    <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
 
     <link rel="website icon" type="png" href="ssa.png">
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scummerville Saber Arts</title>
@@ -25,7 +23,9 @@
     <header>
         <img src="anakin-pose.png" class="anakin">
         <img src="obi-wan-pose.png" class="obi-wan">
-        <a href="index.html"><h1 class="name">Scummerville Saber arts</h1></a>
+        <a href="index.html">
+            <h1 class="name">Scummerville Saber arts</h1>
+        </a>
         <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
     </header>
 
@@ -46,24 +46,25 @@
         <section class="signup-header about-header">
             <h2>Register for Classes</h2>
         </section>
-        
+
         <section class="sign-up-section">
 
             <form id="signup-form">
 
-                 <section class="form-section">
+                <section class="form-section">
                     <div class="first-slide">
                         <div class="yoda-slide-text">
                             <h3>Want to become<br>powerful jedi, hmm?</h3>
                         </div>
                         <button type="button" onclick="nextStep()">Begin →</button>
                     </div>
-                 </section>
+                </section>
 
-                 <section class="form-section step-one" style="display: none;">
+                <section class="form-section step-one" style="display: none;">
                     <h3>Step 1: Personal Info</h3>
                     <input type="text" id="name" name="name" placeholder="Full Name (Remember to Capitalize)"><br>
-                    <input type="number" id="age" name="age" placeholder="Age (at least 13, this ain't for young'uns)" min="10" max="60" step="1"><br>
+                    <input type="number" id="age" name="age" placeholder="Age (at least 13, this ain't for young'uns)"
+                        min="10" max="60" step="1"><br>
                     <div class="m-f">
                         <input type="radio" id="male" name="gender" value="male">
                         <label for="male">Male</label><br>
@@ -85,9 +86,12 @@
 
                 <section class="form-section step-one" style="display: none;">
                     <h3>Step 2: Contact Info</h3>
-                    <input type="email" id="email" name="email" placeholder="Email Address (to send you annoying junk)"><br>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number (to call you at the worst time)"><br>
-                    <input type="text" id="address" name="address" placeholder="Address (to randomly drive by...for no reason)"><br>
+                    <input type="email" id="email" name="email"
+                        placeholder="Email Address (to send you annoying junk)"><br>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="Phone Number (to call you at the worst time)"><br>
+                    <input type="text" id="address" name="address"
+                        placeholder="Address (to randomly drive by...for no reason)"><br>
                     <button type="button" onclick="nextStep()">Next →</button>
                 </section>
 
@@ -102,28 +106,25 @@
                         <br>
                         <strong>Learn basic combat and fourishes</strong>
                     </label><br>
-                    
+
                     <input type="radio" id="apprentice" name="path" value="apprentice">
                     <label for="apprentice">
                         <em>Apprentice</em>
                         <br>
                         <strong>Learn each of the lightsaber forms</strong>
                     </label><br>
-                    
+
                     <input type="radio" id="knight" name="path" value="knight">
                     <label for="knight">
-                        <em>Knight</em
-                            ><br>
+                        <em>Knight</em><br>
                         <strong>Learn advanced combat techniques</strong>
                     </label><br>
 
                     <input type="radio" id="master" name="path" value="master">
                     <label for="master">
-                        <em>Master</em
-                            ><br>
-                        <strong>Learn everything about lightsaber combat</strong
-                            ></label><br>
-                
+                        <em>Master</em><br>
+                        <strong>Learn everything about lightsaber combat</strong></label><br>
+
                     <button type="button" onclick="nextStep()">Next →</button>
 
                 </section>
@@ -138,14 +139,14 @@
                         <br>
                         <strong>Learn to fight like Anakin, Obi-wan, Dooku...</strong>
                     </label><br>
-                    
+
                     <input type="radio" id="double-bladed" name="saber" value="double-bladed">
                     <label for="double-bladed">
                         <em>Double Bladed Saber</em>
                         <br>
                         <strong>Learn to fight like Maul, Opress, Bastila Shan...</strong>
                     </label><br>
-                    
+
                     <input type="radio" id="dual wielding" name="saber" value="dual wielding">
                     <label for="dual wielding">
                         <em>Dual Wield</em>
@@ -168,7 +169,8 @@
 
                     <h3>Step 5: Choose Class Schedule</h3>
                     <div class="schedule-instruction">
-                        <p>Select your preferred class days, choose how often you'd like to attend, and decide if you'd like to participate in the monthly tournament.</p>
+                        <p>Select your preferred class days, choose how often you'd like to attend, and decide if you'd
+                            like to participate in the monthly tournament.</p>
                     </div>
 
                     <div class="schedule-grid-container">
@@ -187,7 +189,7 @@
 
                         <input type="checkbox" id="Thur" name="schedule" value="Thur">
                         <label for="Thur">Thursday</label>
-                        
+
                         <div class="schedule-time">
                             <select id="schedule" name="schedule">
                                 <option value="">Select a time:</option>
@@ -222,12 +224,14 @@
                     </div>
 
                     <div class="m-f biweekly">
-                        <input type="radio" id="monthly-tournament-yes" name="monthly-tournament" value="monthly-tournament-yes">
+                        <input type="radio" id="monthly-tournament-yes" name="monthly-tournament"
+                            value="monthly-tournament-yes">
                         <label for="monthly-tournament-yes">Yes to Monthly Tournament</label>
 
                         <p>or</p>
 
-                        <input type="radio" id="monthly-tournament-no" name="monthly-tournament" value="monthly-tournament-no">
+                        <input type="radio" id="monthly-tournament-no" name="monthly-tournament"
+                            value="monthly-tournament-no">
                         <label for="monthly-tournament-no">No to Monthly Tournament</label>
                     </div>
 
@@ -243,7 +247,7 @@
                         <img src="visa-logo.png" alt="visa">
                         <em>Visa</em>
                     </label><br>
-                    
+
                     <input type="radio" id="mastercard" name="payment" value="mastercard">
                     <label for="mastercard">
                         <img src="mastercard-logo.png" alt="mastercard">
@@ -271,21 +275,24 @@
                     <h3>Step 7: Waste Your Money</h3>
 
                     <div class="form-group">
-                        <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="Card Number (Dew It.)" required>
+                        <input type="text" id="card-number" name="card-number" pattern="\d{16}"
+                            placeholder="Card Number (Dew It.)" required>
                     </div>
-        
+
                     <div class="form-group">
-                        <input type="month" id="expiration-date" name="expiration-date" placeholder="Expiration Date" required>
+                        <input type="month" id="expiration-date" name="expiration-date" placeholder="Expiration Date"
+                            required>
                     </div>
-        
+
                     <div class="form-group">
                         <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="CVV, CID, or CSC" required>
                     </div>
-        
+
                     <div class="form-group billing-address">
-                        <input type="text" id="billing-address" name="billing-address" placeholder="Billing Address (Yes, I know you've already entered your address)" required>
+                        <input type="text" id="billing-address" name="billing-address"
+                            placeholder="Billing Address (Yes, I know you've already entered your address)" required>
                     </div>
-        
+
                     <button type="button" onclick="nextStep()">Submit Payment →</button>
 
                 </section>
@@ -296,7 +303,7 @@
                     <p>Do you like Star Wars?</p>
 
                     <div class="sw-q">
-                        
+
                         <input type="radio" id="yes-sw" name="sw-q" value="yes-sw">
                         <label for="yes-sw">Yes</label><br>
 
@@ -306,10 +313,10 @@
                         <label for="no-sw">No</label><br>
                     </div>
 
-                    <button type="button"onclick="nextStep()">Complete</button>
+                    <button type="button" onclick="nextStep()">Complete</button>
                 </section>
 
-                
+
                 <section class="form-section last-slide">
 
                     <div class="last-slide-text">
@@ -324,17 +331,17 @@
                             <p>View your<br>class schedule</p>
                         </a>
                     </div>
-                    
+
 
                 </section>
-                
+
             </form>
         </section>
 
     </main>
 
     <footer>
-        
+
         <div class="affiliate-link">
             <h3>You WILL check out our partner.</h3>
             <a href="https://darth-jacob.github.io/durrr/index.html" target="_blank">
@@ -352,25 +359,26 @@
         <div class="social-buttons">
 
             <a class="facebook-icon" href="facebook.html" target="_blank" rel="noopener noreferrer">
-                <img  class="footer-link" src="facebook-icon.png" alt="">
+                <img class="footer-link" src="facebook-icon.png" alt="">
             </a>
-            
+
 
             <a href="fake-instagram-page.html" target="_blank" rel="noopener noreferrer">
-                <img  class="footer-link" src="instagram-icon.png" alt="">
+                <img class="footer-link" src="instagram-icon.png" alt="">
             </a>
 
             <a href="youtube.html" target="_blank" rel="noopener noreferrer">
-                <img  class="footer-link" src="youtube-icon.png" alt="">
+                <img class="footer-link" src="youtube-icon.png" alt="">
             </a>
         </div>
         <p class="button-warning">Don't Click Any of These!</p>
 
         <p>&copy; 2024 Scummerville Saber Arts. All rights reserved.</p>
-    
+
     </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
