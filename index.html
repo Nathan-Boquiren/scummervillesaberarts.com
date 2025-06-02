@@ -19,8 +19,8 @@
 
 <body>
     <header class="page-header">
-        <img src="anakin-pose.png" class="anakin">
-        <img src="obi-wan-pose.png" class="obi-wan">
+        <img src="anakin-pose.png" class="anakin" alt="anakin">
+        <img src="obi-wan-pose.png" class="obi-wan" alt="obi-wan">
         <a href="index.html">
             <h1 class="name">Scummerville Saber arts</h1>
         </a>
@@ -52,17 +52,14 @@
     <main>
         <section class="hero">
             <div class="hero-video">
-                <video autoplay muted loop id="background-video">
+                <!-- autoplay disabled temporarily -->
+                <video muted loop id="background-video">
                     <source src="hero-video-final.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="hero-content">
-                <h2 class="tagline">Master the Art of Lightsaber Combat</h2>
-                <div class="container">
-                    <a href="pages/classes.html" class="cta">Start your training</a>
-                </div>
-            </div>
+            <h2 class="hero-tagline">Master the Art of Lightsaber Combat</h2>
+            <a href="pages/classes.html" class="button hero-cta">Start your training</a>
         </section>
 
         <section class="welcome">
@@ -73,7 +70,8 @@
                     For over 15 years, our academy has been dedicated to teaching the art of lightsaber dueling, from
                     flourishes to form VI,
                     we blend the rich lore of the <em>Star Wars</em> universe with real-world combat techniques.</p>
-                <strong class="ezra-quote">"The force will be with you . . . always"</strong>
+                <strong>"The force will be with you . . . always"</strong>
+
             </div>
             <div class="image-container">
                 <img src="obi-wan-face.png" alt="obi-wan kenobi">
@@ -84,7 +82,7 @@
             <h2>Featured Classes</h2>
             <h3>Discover what you're capable of</h3>
 
-            <div class="featured-classes-grid">
+            <div class="featured-classes-container">
 
                 <div class="class-card">
                     <div class="card-inner">
@@ -154,36 +152,26 @@
                 </div>
 
             </div>
+            <a href="pages/classes.html" class="button">See more classes →</a>
 
-            <div class="container">
-                <a href="pages/classes.html" class="see-more-classes">See more classes →</a>
+        </section>
+
+        <section class="lightsaber-quote">
+            <div class="lightsaber-wrapper">
+                <img src="lightsaber-hilt.png" alt="Lightsaber Hilt" class="hilt">
+                <div class="blade"></div>
             </div>
-
+            <h2 class="obi-wan-quote">“This is the weapon of a Jedi Knight. Not as clumsy or random as a
+                blaster; an elegant weapon for a more civilized age.”<br>- Obi-Wan Kenobi</h2>
         </section>
-
-        <section class="lightsaber">
-            <img src="lightsaber-hilt.png" alt="Lightsaber Hilt" class="hilt">
-            <div class="blade"></div>
-        </section>
-        <h3 class="obi-wan-quote">This is the weapon of a Jedi Knight.<br>Not as clumsy or random as a blaster;<br>an
-            elegant weapon for a more civilized age. <br>- Obi-Wan Kenobi</h3>
 
         <section class="testimonials">
+            <h2>Testimonials</h2>
+            <h3>See what students have to say.</h3>
 
-            <div class="testimonials-header">
-                <span>
-                    <h2>Testimonials</h2>
-                    <p>See what students have to say.</p>
-                </span>
-            </div>
-
-            <div class="testimonial-cards">
-
-                <div class="testimonial-card left-card">
-
-                    <div class="avatar left-student">
-                        <img src="student 1.jpeg" alt="student">
-                    </div>
+            <div class="testimonial-card-container">
+                <div class="testimonial-card">
+                    <img src="student 1.jpeg" alt="student">
 
                     <div class="testimonial-card-text right-testimonial">
                         <p class="student-quote">"Joining Saber Combat Academy has been an incredible journey. The
@@ -193,11 +181,9 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card right-card">
+                <div class="testimonial-card">
+                    <img src="student 2.webp" alt="student">
 
-                    <div class="avatar right-student">
-                        <img src="student 2.webp" alt="student">
-                    </div>
                     <div class="testimonial-card-text left-testimonial">
                         <p class="student-quote">"I never thought learning lightsaber combat could be so much fun! The
                             classes are challenging but in the best way possible. Every lesson feels like a step closer
@@ -206,11 +192,8 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card left-card">
-
-                    <div class="avatar left-student">
-                        <img src="student 3.webp" alt="student">
-                    </div>
+                <div class="testimonial-card">
+                    <img src="student 3.webp" alt="student">
 
                     <div class="testimonial-card-text right-testimonial">
                         <p class="student-quote">"As a total beginner, I was nervous about starting, but the Academy
@@ -220,11 +203,8 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card right-card">
-
-                    <div class="avatar right-student">
-                        <img src="student 4.jpeg" alt="student">
-                    </div>
+                <div class="testimonial-card">
+                    <img src="student 4.jpeg" alt="student">
 
                     <div class="testimonial-card-text left-testimonial">
                         <p class="student-quote">"Saber Combat Academy has pushed me to become the best version of
@@ -240,8 +220,8 @@
 
         <section id="quiz-section" class="quiz-link-section">
             <h2>Test Your Lightsaber Knowledge!</h2>
-            <p>Think you know everything about lightsaber combat? Take our quiz to prove it!</p>
-            <a href="pages/quiz.html" class="quiz-button">Take the Quiz →</a>
+            <h3>Think you know everything about lightsaber combat?<br>Take our quiz to prove it!</h3>
+            <a href="pages/quiz.html" class="quiz-button button">Take the Quiz →</a>
         </section>
 
     </main>
@@ -294,10 +274,7 @@
     </footer>
 
     <script>
-
-        const cardInners = document.querySelectorAll('.card-inner');
-
-        cardInners.forEach(cardInner => {
+        document.querySelectorAll('.card-inner').forEach(cardInner => {
             const cardFront = cardInner.querySelector('.card-front');
             const cardBack = cardInner.querySelector('.card-back');
 
@@ -312,9 +289,12 @@
             cardFront.addEventListener('click', flipCard);
             cardBack.addEventListener('click', flipCard);
         });
+
+
     </script>
 
     <script src="scripts/hamburger.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
