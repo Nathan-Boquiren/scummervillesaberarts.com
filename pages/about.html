@@ -2,34 +2,43 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet">
+    <link rel="website icon" type="png" href="../assets/general/ssa.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/about.css">
 
-    <link rel="website icon" type="png" href="ssa.png">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scummerville Saber Arts</title>
 </head>
 
 <body>
     <header>
-        <img src="anakin-pose.png" class="anakin">
-        <img src="obi-wan-pose.png" class="obi-wan">
-        <a href="index.html">
-            <h1 class="name">Scummerville Saber arts</h1>
-        </a>
-        <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
+        <img src="../assets/general/anakin-pose.png" class="header-decor" alt="anakin">
+        <div class="header-txt-wrapper">
+            <a href="index.html" class="name txt-shadow">Scummerville Saber Arts</a>
+            <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
+        </div>
+        <img src="../assets/general/obi-wan-pose.png" class="header-decor" alt="obi-wan">
+
+        <div id="hamburger" class="hamburger">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+        </div>
+
+        <img src="../assets/general/ssa-logo.png" class="ssaLogo">
     </header>
 
-    <nav>
+    <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a>
+            <li><a href="../index.html">Home</a>
             <li><a href="about.html">About</a>
             <li><a href="classes.html">Classes</a></li>
             <li><a href="instructors.html">Instructors</a></li>
@@ -40,8 +49,8 @@
     </nav>
 
     <main>
-        <section class="about-header">
-            <h2>About Scummerville Saber Arts</h2>
+        <section class="page-header">
+            <h2 class="txt-shadow">About Scummerville Saber Arts</h2>
         </section>
 
         <section class="about-section">
@@ -50,8 +59,8 @@
                 <div class="our-mission-text-column">
                     <h3>Our Misson</h3>
                     <p> At Saber Combat Academy, we believe in the power of discipline, mastery, and the ancient art of
-                        lightsaber combat.
-                        Our mission is to guide students of all skill levels on a journey that transcends the ordinary,
+                        lightsaber combat. Our mission is to guide students of all skill levels on a journey that
+                        transcends the ordinary,
                         blending the thrill of cinematic action with real-world techniques.
                         Whether you’re just beginning to explore the ways of the saber or seeking to refine your skills
                         to a master level, our academy is your gateway to a galaxy of adventure and personal growth.
@@ -62,7 +71,7 @@
                     </div>
                 </div>
                 <div class="our-mission-image-column">
-                    <img src="ssa.png" alt="ssa logo" class="ssa-logo">
+                    <img src="../assets/general/ssa.png" alt="ssa logo" class="ssa-logo">
                 </div>
             </div>
 
@@ -86,22 +95,22 @@
             <div class="why-grid-container">
 
                 <div class="why-grid-item">
-                    <img src="lightsaber-icon.png">
+                    <img src="../assets/about/lightsaber-icon.png">
                     <p>Actual Lightsaber Dueling
                 </div>
 
                 <div class="why-grid-item">
-                    <img src="community-icon.png">
+                    <img src="../assets/about/community-icon.png">
                     <p>Amazing Community of Nerds
                 </div>
 
                 <div class="why-grid-item">
-                    <img src="trophy-icon.png">
+                    <img src="../assets/about/trophy-icon.png">
                     <p>Competitive Tournaments
                 </div>
 
                 <div class="why-grid-item">
-                    <img src="star-icon.png">
+                    <img src="../assets/about/star-icon.png">
                     <p>We're Awesome (obviously)
                 </div>
             </div>

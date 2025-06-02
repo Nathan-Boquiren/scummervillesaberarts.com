@@ -2,14 +2,26 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--main-font);
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+:root {
+    --dark-bg: #0a1f44;
+    --bg: #1A2B45;
+    --section-bg: #233a5d;
+    --light: #b3cfff;
+    --yellow: #ffeb38;
+
+    --main-font: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    --serif-font: 'Cinzel', Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
  
 body {
-    background-color: #1A2B45;
+    background-color: var(--bg);
     margin: 0;
     overflow-x: visible;
     position: relative;
@@ -18,25 +30,22 @@ body {
 /* ---------- Typography ---------- */
 
 h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Times New Roman', Times, serif;
     text-wrap: balance;
     text-align: center;
 }
 
 h2 {
     font-size: clamp(1.5rem, 5vw, 3rem);
-    color: #ffeb38;
+    color: var(--yellow);
 }
 
 h3 {
     font-size: clamp(1.3rem, 4vw, 1.8rem);
     font-weight: 600;
     color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
  
 p, strong, em {
-    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
     color: white;
     font-size: clamp(1rem, 2vw, 1.3rem);
     line-height: 1.5;
@@ -49,6 +58,8 @@ a {
     text-align: center;
 }
 
+.txt-shadow {text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4)}
+
 /* ------ Buttons ------ */
 
 .button {
@@ -56,7 +67,6 @@ a {
     width: fit-content;
     margin-inline: auto;
     background-image: linear-gradient(to bottom, #ff0000, #c00000);
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 600;
@@ -85,246 +95,149 @@ a {
     }
 }
 
+@keyframes fadeIn {to {opacity: 1}}
 
-/* ------ Naviigation Bar ------  */
+@keyframes fade-in {
+    to {scale:1; opacity: 1;}
+}
+/* ------ Header ------  */
 
 header {
-    background-color: #0A1F44;
+    background-color: var(--dark-bg);
     z-index: 9;
-    height: clamp(140px, 17vh, 150px);
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
 }
 
-.ScummervilleSaberArtsLogo {
-    display: none;
+.header-decor {height: 100%}
+
+.name {
+    font-family: var(--serif-font);
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
 }
+
+.location {
+    font-weight: 400;
+    font-size: 1rem;
+    color: color-mix(in srgb, var(--dark-bg) 60%, white 40%);
+}
+
+/* ------ Nav Bar ------  */
 
 nav {
-    margin-top: -60px;
     display: flex;
     justify-content: center;
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: #0a1f44;
-    width: 100%;
+    background-color: var(--dark-bg);
     padding-bottom: 5px;
     flex-wrap: wrap;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding-block: 1rem;
 }
 
 nav ul li a {
-    display: inline-block;
-    color: #F0F0F0;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
     font-weight: 600;
-    margin-left:10px;
-    margin-right: 10px;
-    text-decoration: none;
-    font-family:'Montserrat', Arial, sans-serif;
-    font-size: 15px;
-    text-shadow: #0C090A;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.1);
-    color: #ffeb38;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #ff0000;
 }
-
-.hamburger {
-    margin: 2vh 4vw;
-    display: none;
-    cursor: pointer;
-}
-
-/* ------ header icons ------ */
-
-.anakin {
-    max-height: 100px;
-    float: left;
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
-.obi-wan {
-    max-height: 100px;
-    float: right;
-    margin-right: 100px;
-    margin-top: 20px;
-}
-
-h1 {
-    font-family: 'Cinzel', Times, serif;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 300;
-    text-shadow: #0C090A;
-}
-
-
-
-.name {
-    padding-top: 10px;
-    margin-top: 0px;
-    padding-bottom: 2px;
-    margin-bottom: 2px;
-}
-
-.name-abb {
-    display: none;
-}
-
-.location {
-    text-align: center;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    color:#ffffff58;
-    margin: 0px;
-}
+.ssaLogo, .hamburger {display: none}
 
 /* ------ Responsive Design ------ */
 
 @media (max-width: 768px) {
+    body {
+        --header-height: 5rem;
+        margin-top: var(--header-height);
+    }
+
     header {
         position: fixed;
         top: 0;
-        max-height: 100px;
-        width: 100vw;
-        display: flex;
-        align-items: center;
+        max-height: var(--header-height);
+        width: 100%;
+        padding: 0 2rem;
         z-index: 20;
-        
-    }
-    .anakin, .obi-wan {
-        display: none;
     }
 
-    .location {
-        display: none;
-    }
-    .name {
-        display: none;
-    }
-    .name-abb {
-        display: inline;
-        margin: 0;
-        padding-right: 20px;
-        font-size: 35px;
-        position: absolute;
-        right: 0;
-    }
+    .header-txt-wrapper, .header-decor {display: none}
 
-    nav.navbar {
+    nav {
+        --width: 60%;
         position: fixed;
-        left: -60vw;
-        top: 0;
+        width: var(--width);
+        left: calc(var(--width) * -1);
+        inset-block: 0;
         transition: left 0.3s ease;
-        background-color: #0A1F44;
-        height: 100vh;
-        width: 60vw;
         z-index: 10;
-        margin: 0;
     }
+
     nav ul {
-        display: flex;
         flex-direction: column;
-        align-items: center; 
-        justify-content: center;
-        gap: 10px;
+        align-items: flex-start;
+        gap: 2rem;
     }
 
-    nav ul li {
-        float: none;
-    }
-
-    nav ul li a {
-        padding: 10px 3vh;
-        font-size: 20px;
+    .ssaLogo {
+        height: calc(var(--header-height) * 0.55);
+        display: block;
     }
 
     .hamburger {
-        padding-left: 20px;
         display: flex;
         flex-direction: column;
-        overflow: visible;
-        margin: 0;
-        position: absolute;
-        left: 0;
+        gap: 6px;
         z-index: 10;
+        width: 2rem;
+        --line-height: 3px;
     }
-    .hamburger-line {
-        margin: 3px auto;
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        border-radius: 3px;
-        transition: transform 0.2s ease, width 0.2s ease;
-    }
-    
 
-    .ScummervilleSaberArtsLogo {
-        display: inline;
-        height: 6.5vh;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .hamburger-line {
+        width: 100%;
+        height: var(--line-height);
+        background-color: white;
+        border-radius: 100vmax;
+        transition: all 0.2s ease;
     }
+
+    /* hamburger + navbar styles on open */
+
+    nav.open {left: 0}
+
+    .line-1, .line-3 {transform-origin: 0 50%}
+
+    body:has(nav.open) header .hamburger .line-1 {transform: rotate(45deg) translateY(calc(var(--line-height) * -1))}
+
+    body:has(nav.open) header .hamburger .line-2 {width: 0; opacity: 0}
+
+    body:has(nav.open) header .hamburger .line-3 {transform: rotate(-45deg) translateY(var(--line-height))}
+    
 }
 
 /* --- footer --- */
 footer {
-    background-color: #0A1F44;
+    background-color: var(--dark-bg);
     color: white;
     text-align: center;
     padding: 20px 0 20px;
-
-    p {
-        font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
-        color: white;
-        font-size: 20px;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-    }
-}
-
-.affiliate-link {
-    margin: 0px 0px 20px 50px;
-    h3 {
-        font-size: 25px;
-        font-family: 'Helvetica', Arial, sans-serif;
-    }
-    position: absolute;
-    left: 20px;
-    a {
-        text-decoration: none;
-        p {
-            font-family: 'Helvetica', Arial, sans-serif;
-            font-weight: 600;
-            font-size: 20px;
-            color: white;
-            background-image: linear-gradient(red, rgb(197, 0, 0));
-            border-radius: 10px;
-            transition: box-shadow 0.2s ease;
-        }
-        p:hover {
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
-
-        }
-    }
 }
 
 .subscribe-section {
@@ -332,7 +245,6 @@ footer {
     position: absolute;
     right: 20px;
     font-size: 20px;
-    font-family: 'Helvetica', Arial, sans-serif;
 }
 
 .subscribe-section-input {
@@ -390,265 +302,6 @@ footer {
     margin-top: 0;
 }
 
-/* ------ About Page ------ */
-
-.about-header {
-    background-image: url(obi-wan-kenobi-vs-darth-vader.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height:400px;
-    overflow: hidden;
-    background-size: cover;
-}
-.about-header h2 {
-    position: relative;
-    top: 80px;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 60px;
-    text-align: center;
-    color: #ffeb38;
-    padding-top: 40px;
-    padding-bottom: 0px;
-    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 0px;
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.about-section h3 {
-    color: #ffeb38;
-    font-size: 30px;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 65px;
-}
-
-/* --- Our Mission --- */
-.our-mission {
-    /* special new stuff */
-    position: relative;
-    margin-top: 350px;
-
-    display: flex;
-    margin-bottom: 100px;
-}
-  
-.our-mission-text-column {
-    flex: 1;
-    margin: 0 100px;
-}
-.our-mission-text-column h3 {
-    padding-left: 42px;
-}
-.our-mission-text-column p {
-    font-size: 20px;
-    margin-right: 0px;
-    padding-left: 30px;
-    padding-right: 0px;
-    line-height: 1.5;
-}
-.our-mission-image-column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
-.ssa-logo {
-    width: 350px;
-    height: 350px;
-    border-radius: 95px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
-}
-.about-cta {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
-    padding: 8px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    display: inline-block;
-    z-index: 1;
-}
-.about-cta:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
-.mission-cta-container {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-/* --- history --- */
-.history {
-    background-image: url(black-sky.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 50px;
-    perspective: 1000px;
-    padding-bottom: 100px;
-}
-
-@keyframes fade-in {
-    to {scale:1; opacity: 1;}
-}
-.history-text {
-    transform: rotateX(30deg);
-    scale: 0.95; opacity: 0.5;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
-
-}
-.history h3 {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    font-size: 45px;
-    color: rgb(79, 208, 255);
-}
-.history p {
-    color: rgb(79, 208, 255);
-    text-align: center;
-    font-size: 35px;
-    font-weight: 400;
-    margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-/* --- why choose us --- */
-.why {
-    background-image: url(hallway.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    margin-left: 200px;
-    margin-right: 200px;
-    background-attachment: fixed;
-}
-.why h3 {
-    padding-left: 0px;
-    padding-right: 0px;
-    text-align: center;
-    color: #b6e4ffcc;
-    font-size: 50px;
-    filter: brightness(1.2);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.411), 0 0 10px #61c5ff, 0 0 20px #61c5ff, 0 0 30px #00c3ff58, 0 0 40px #00c3ff58, 0 0 50px #00c3ff58, 0 0 60px #00c3ff58, 0 0 70px #00c3ff58;
-    scale: 0.95; opacity: 0.5;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-.why-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-}
-.why-grid-item {
-    background-color: #3db8ffcc;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.432), 0 0 30px #00c3ffc5;
-    border-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.why-grid-item:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color: hsla(199, 100%, 64%, 0.873);
-}
-.why-grid-item img {
-    display: block;
-    margin: auto;
-    width: 100px;
-    height: 100px;
-    filter: invert(100%);
-    box-shadow: 0px 0px 0px white;
-}
-.why-grid-item p {
-    color: #ffffff;
-    text-align: center;
-    opacity: 0%;
-    transition: opacity 0.3s ease;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.334);
-}
-.why-grid-item:hover p {
-    opacity: 100%;
-    transition: opacity 0.3s ease;
-}
-.why-cta-container {
-    display: block;
-    text-align: center;
-}
-
-/* --- cta section --- */
-
-.about-cta-section {
-    background-image: url(jedi-path.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    height: 100vh;
-}
-.cta-message {
-    font-family: "Cinzel", Georgia, Times, 'Times New Roman', serif;
-    font-size: 100px;
-
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-    color: darkkhaki;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    animation: breathe 3s ease-in-out infinite;
-    transition: color 0.1s ease;
-}
-
-@keyframes breathe {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.cta-message:hover {
-    color: rgb(239, 236, 198);
-    transition: color 0.2s ease;
-}
-
 /* ------ Classes Page------ */
 
 .classes-header {
@@ -663,17 +316,17 @@ footer {
     width: 100%;
     height: 400px;
 }
+
 .classes-header h2 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 60px;
     text-align: center;
-    color: #ffeb38;
+    color: var(--yellow);
     padding-top: 40px;
     padding-bottom: 0px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 0px;
-    /* fade in animation */
+    
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
@@ -715,15 +368,14 @@ footer {
 .classes-intro-image img {
     border-radius: 10px;
     border: 3px solid;
-    border-color: #0A1F44;
+    border-color: var(--dark-bg);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.323);
     width: 60%;
     width: clamp(300px, 60%, 500px);
     height: auto;
 }
 .classes-intro h2 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: #ffeb38;
+    color: var(--yellow);
     font-size: 30px;
 }
 .classes-intro p {
@@ -775,11 +427,10 @@ footer {
 }
 
 .classes h3 {
-    font-family: 'Montserrat', 'Times New Roman', Times, serif;
     font-size: 30px;
     font-weight: 600;
     text-align: left;
-    color: #ffeb38;
+    color: var(--yellow);
     padding: 10px;
     padding-left: 6vw;
     border-bottom: 2px solid white;
@@ -832,9 +483,7 @@ footer {
     padding: 20px;
     transition: transform 0.2s ease;
     h4 {
-
         text-align: left;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-size: clamp(24px, 2vw, 40px);
         margin-left: 4%;
         margin-top: 10%;
@@ -923,7 +572,7 @@ footer {
     height: 45%;
 }
 .card-back {
-    background-color: #0A1F44;
+    background-color: var(--dark-bg);
     color: white;
     transform: rotateX(180deg);
 }
@@ -934,7 +583,6 @@ footer {
     background-color:  rgb(255, 0, 0);
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -977,7 +625,6 @@ footer {
 .card-back {
     padding: 20px;
     li {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-size: clamp(16px, 1vw, 25px);
         font-weight: 400;
         line-height: 1.2;
@@ -1007,7 +654,7 @@ footer {
     top: 50px;
 }
 .instructors-intro {
-    background-color: #233a5d;
+    background-color: var(--section-bg);
     display: flex;
     /* width: 1000px; */
     position: relative;
@@ -1033,8 +680,7 @@ footer {
     filter: opacity(0.8);
 }
 .instructors-intro h2 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: #ffeb38;
+    color: var(--yellow);
     font-size: 30px;
 }
 .instructors-intro p {
@@ -1054,8 +700,7 @@ footer {
 .grid-item {
     border-radius: 50px;
     padding: 15px;
-    color: white;  
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
     font-size: 30px;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
@@ -1065,7 +710,7 @@ footer {
 }
 
 .grid-item:hover {
-    background-color: #233a5d;
+    background-color: var(--section-bg);
     
 }
 
@@ -1102,7 +747,6 @@ footer {
     margin-bottom: 50px;
 }
 .contact-header h3 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 15px;
     text-align: center;
@@ -1137,7 +781,6 @@ footer {
 }
 
 .contact-form label {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     display: block;
     margin-bottom: 8px;
@@ -1154,7 +797,6 @@ footer {
     border: 1px solid #93939374;
     border-radius: 8px;
     box-sizing: border-box;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 
@@ -1173,7 +815,6 @@ footer {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 .contact-form button:hover {
@@ -1251,14 +892,12 @@ footer {
 
     h3 {
         text-align: center;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 600;
         font-size: 40px;
         color: #ffffff;
         margin-bottom: 20px;
     }
     p {
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
         color: #cacaca;
@@ -1307,7 +946,6 @@ footer {
 
     input[type="month"] {
         color: #cacaca;
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
     }
@@ -1319,7 +957,6 @@ footer {
     }
     
     input::placeholder {
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
         color: #cacaca;
@@ -1337,7 +974,6 @@ footer {
     }
 
     label {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 400;
         line-height: 1.5;
         display: inline-block;
@@ -1373,7 +1009,6 @@ footer {
         border-radius: 20px;
         background-color: #324b72;
         color: #ffffff;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         border: none;
         margin: 0px 60px;
     }
@@ -1384,7 +1019,6 @@ footer {
     }
 
     option {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         color: #e6e6e6;
         font-size: 20px;
     }
@@ -1575,7 +1209,6 @@ label[for="no-sw"]:hover {
 }
 
 .form-section button {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding: 10px 20px;
     background-color: #4a7ebd;
@@ -1638,7 +1271,6 @@ label[for="no-sw"]:hover {
 }
 .blog-item {
     text-align: center;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     background-image: linear-gradient(-45deg, #1975b3, #308cc9);
     border-radius: 20px;
     padding-bottom: 20px;
@@ -1654,7 +1286,7 @@ label[for="no-sw"]:hover {
     }
 
     h3 {
-        color: #ffeb38;
+        color: var(--yellow);
         font-size: 30px;
         padding-left: 50px;
         padding-right: 50px;
@@ -1670,7 +1302,7 @@ label[for="no-sw"]:hover {
     }
     p:hover {
         transform: scale(1.03);
-        color: #ffeb38;
+        color: var(--yellow);
     }
 }
 
@@ -1736,7 +1368,6 @@ label[for="no-sw"]:hover {
     }
 }
 .blog-signature p {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-align: right;
 }
 
@@ -1783,7 +1414,6 @@ label[for="no-sw"]:hover {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.21);
     padding: 50px;
     width: 50%;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
     display: none;
     margin: auto;
@@ -1797,7 +1427,6 @@ label[for="no-sw"]:hover {
     background-color: red;
     color: white;
     font-size: 20px;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 500;
     padding: 8px 15px;
     border: none;
@@ -1894,7 +1523,7 @@ label[for="no-sw"]:hover {
     display: inline-block;
     padding: 7px 15px;
     border-radius: 20px;
-    border: 5px solid #0A1F44;
+    border: 5px solid var(--dark-bg);
     margin: 0 auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.212);
 }
@@ -1923,7 +1552,7 @@ label[for="no-sw"]:hover {
     border-radius: 10px;
     margin: 20px auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #0A1F44;
+    border: 3px solid var(--dark-bg);
 }
 .link-to-classes {
     display: flex;

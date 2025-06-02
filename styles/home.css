@@ -18,12 +18,9 @@
 }
 
 .hero-tagline {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 242, 0);
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    text-align: center;
-    font-style: italic;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: var(--main-font);
+    color: var(--yellow);
+    font-size: clamp(2rem, 5vw, 4rem);
     opacity: 0;
     margin-bottom: 2rem;
     animation: fadeIn 0.5s ease-in forwards;
@@ -36,8 +33,7 @@
 }
 
 section {
-    padding-inline: clamp(1rem, 5vw, 4rem);
-    padding-block: 3rem;
+    padding: 3rem clamp(1rem, 5vw, 4rem);
 }
 
 /* ------ Welcome Section ------ */
@@ -74,7 +70,7 @@ section {
 /* ------ Featured Classes Section ------ */
 
 .featured-classes {
-    background-color: #233a5d;
+    background-color: var(--section-bg);
     text-align: center;
 }
 
@@ -118,7 +114,7 @@ section {
     height: 28px;
     background-color: white;
     border-radius: 0 100vmax 100vmax 0;
-    box-shadow: 0px 0px 10px rgb(228, 247, 255), 0px 0px 20px rgb(0, 115, 255), 0px 0px 40px rgba(0, 123, 255, 0.682);
+    box-shadow: 0 0 0.5rem #e4f7ff, 0 0 1rem #0073ff, 0 0 2rem #007bffae;
     transition: width 200ms ease;
 }
 
@@ -127,11 +123,8 @@ section {
 .hilt:hover + .blade {width: calc(100% - var(--hilt-width))}
 
 .obi-wan-quote {
-    font-family: 'Cinzel', Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    color:#ffeb38;
+    font-family: var(--serif-font);
     font-weight: 200;
-    text-align: center;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -142,9 +135,7 @@ section {
 
 /* --- Testamonials --- */
 
-.testimonials {
-    background-color: #233a5d;
-}
+.testimonials {background-color: var(--section-bg)}
 
 .testimonials h2 {margin-bottom: 1rem}
 
@@ -158,7 +149,7 @@ section {
 
 .testimonial-card {
     position: relative;
-    background-color: #b3cfff;
+    background-color: var(--light);
     width: 80%;
     padding: 1.5rem;
     display: flex;
@@ -183,13 +174,9 @@ section {
     border-radius: 0.5rem;
 }
 
-.testimonial-card-text p {
-    color: #172a4b;
-}
+.testimonial-card-text p {color: var(--dark-bg)}
 
-.student-quote {
-    font-style: italic;
-}
+.student-quote {font-style: italic}
 
 .student-name {
     font-weight: 600;
@@ -216,11 +203,11 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 5px solid #b3cfff;
+        border: 5px solid var(--light);
     }
 }
 
-
+@media (max-width: 425px) {.testimonial-card {align-self: center !important}}
 
 /* --- quiz link section --- */
 
@@ -234,7 +221,4 @@ section {
     gap: 1.5rem;
 }
 
-.quiz-link-section h2 {
-    text-shadow: 5px 5px 5px rgba(0 0 0 / 0.2);
-    animation: breathe 1.5s ease alternate infinite;
-}
+.quiz-link-section h2 {animation: breathe 1.5s ease alternate infinite}

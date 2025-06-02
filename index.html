@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="ssa.png">
+    <link rel="website icon" type="png" href="assets/general/ssa.png">
     <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,34 +18,32 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <img src="anakin-pose.png" class="anakin" alt="anakin">
-        <img src="obi-wan-pose.png" class="obi-wan" alt="obi-wan">
-        <a href="index.html">
-            <h1 class="name">Scummerville Saber arts</h1>
-        </a>
-        <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
+    <header>
+        <img src="assets/general/anakin-pose.png" class="header-decor" alt="anakin">
+        <div class="header-txt-wrapper">
+            <a href="index.html" class="name txt-shadow">Scummerville Saber Arts</a>
+            <h4 class="location">412 Old Trolley Rd, Scummerville, SC 29485</h4>
+        </div>
+        <img src="assets/general/obi-wan-pose.png" class="header-decor" alt="obi-wan">
 
-        <div class="hamburger" onclick="navBarShow()">
+        <div id="hamburger" class="hamburger">
             <span class="hamburger-line line-1"></span>
             <span class="hamburger-line line-2"></span>
             <span class="hamburger-line line-3"></span>
         </div>
 
-        <img src="ssa-logo.png" class="ScummervilleSaberArtsLogo">
-
-        <h1 class="name-abb">S.S.A.</h1>
+        <img src="assets/general/ssa-logo.png" class="ssaLogo">
     </header>
 
     <nav class="navbar">
         <ul class="navbar-links">
-            <li><a href="index.html">Home</a>
-            <li><a href="pages/about.html">About</a>
-            <li><a href="pages/classes.html">Classes</a></li>
-            <li><a href="pages/instructors.html">Instructors</a></li>
-            <li><a href="pages/blog.html">Blog</a></li>
-            <li><a href="pages/sign-up.html">Sign Up</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a class="txt-shadow" href="index.html">Home</a>
+            <li><a class="txt-shadow" href="pages/about.html">About</a>
+            <li><a class="txt-shadow" href="pages/classes.html">Classes</a></li>
+            <li><a class="txt-shadow" href="pages/instructors.html">Instructors</a></li>
+            <li><a class="txt-shadow" href="pages/blog.html">Blog</a></li>
+            <li><a class="txt-shadow" href="pages/sign-up.html">Sign Up</a></li>
+            <li><a class="txt-shadow" href="pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -58,7 +56,7 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <h2 class="hero-tagline">Master the Art of Lightsaber Combat</h2>
+            <h2 class="hero-tagline txt-shadow">Master the Art of Lightsaber Combat</h2>
             <a href="pages/classes.html" class="button hero-cta">Start your training</a>
         </section>
 
@@ -70,7 +68,7 @@
                     For over 15 years, our academy has been dedicated to teaching the art of lightsaber dueling, from
                     flourishes to form VI,
                     we blend the rich lore of the <em>Star Wars</em> universe with real-world combat techniques.</p>
-                <strong>"The force will be with you . . . always"</strong>
+                <strong class="txt-shadow">"The force will be with you . . . always"</strong>
 
             </div>
             <div class="image-container">
@@ -80,7 +78,7 @@
 
         <section class="featured-classes">
             <h2>Featured Classes</h2>
-            <h3>Discover what you're capable of</h3>
+            <h3 class="txt-shadow">Discover what you're capable of</h3>
 
             <div class="featured-classes-container">
 
@@ -161,7 +159,7 @@
                 <img src="lightsaber-hilt.png" alt="Lightsaber Hilt" class="hilt">
                 <div class="blade"></div>
             </div>
-            <h2 class="obi-wan-quote">“This is the weapon of a Jedi Knight. Not as clumsy or random as a
+            <h2 class="obi-wan-quote txt-shadow">“This is the weapon of a Jedi Knight. Not as clumsy or random as a
                 blaster; an elegant weapon for a more civilized age.”<br>- Obi-Wan Kenobi</h2>
         </section>
 
@@ -219,28 +217,23 @@
         </section>
 
         <section id="quiz-section" class="quiz-link-section">
-            <h2>Test Your Lightsaber Knowledge!</h2>
-            <h3>Think you know everything about lightsaber combat?<br>Take our quiz to prove it!</h3>
+            <h2 class="txt-shadow">Test Your Lightsaber Knowledge!</h2>
+            <h3 class="txt-shadow">Think you know everything about lightsaber combat?<br>Take our quiz to prove it!</h3>
             <a href="pages/quiz.html" class="quiz-button button">Take the Quiz →</a>
         </section>
-
     </main>
 
     <footer>
-
         <div class="affiliate-link">
             <h3>You WILL check out our partner.</h3>
-            <a href="https://darth-jacob.github.io/durrr/index.html" target="_blank">
-                <p>United Sabers of Corellia →</p>
-            </a>
+            <a class="button" href="https://darth-jacob.github.io/durrr/index.html" target="_blank">United Sabers of
+                Corellia →</a>
         </div>
-
         <div class="subscribe-section">
 
             <h3>You WILL subscribe to our newsletter.</h3>
 
             <div class="subscribe-section-input">
-
                 <div class="newsletter-input">
                     <input type="email" id="email" placeholder="You WILL enter your email">
                 </div>
@@ -249,12 +242,10 @@
                     <button
                         onclick="alert('Now I will send you a ton of annoying emails! HA HA HAAA!')">Subscribe</button>
                 </div>
-
             </div>
 
         </div>
         <div class="social-buttons">
-
             <a class="facebook-icon" href="facebook.html" target="_blank" rel="noopener noreferrer">
                 <img class="footer-link" src="facebook-icon.png" alt="">
             </a>
@@ -289,8 +280,6 @@
             cardFront.addEventListener('click', flipCard);
             cardBack.addEventListener('click', flipCard);
         });
-
-
     </script>
 
     <script src="scripts/hamburger.js"></script>
