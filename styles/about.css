@@ -1,6 +1,6 @@
-.page-header {background-image: url(../assets/about/obi-wan-kenobi-vs-darth-vader.jpg);}
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
 
-body {overflow-x: hidden}
+.page-header {background-image: url(../assets/about/obi-wan-kenobi-vs-darth-vader.jpg);}
 
 /* --- Our Mission --- */
 .mission-container {
@@ -31,13 +31,19 @@ body {overflow-x: hidden}
 
 /* --- history --- */
 
-.history-container {background: url(../assets/about/balck-sky.jpg) no-repeat center/cover fixed}
+.history-container {
+    background: url(../assets/about/balck-sky.jpg) no-repeat center/cover fixed;
+    border-image: fill 1 linear-gradient(rgb(0 0 0 / 0.2), rgb(0 0 0 / 0.2));
+    width: 100%;
+}
 
-.history-container > * {
+.history-container :is(h2, p) {
     color: var(--yellow);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pathway Gothic One", Helvetica, sans-serif;
     margin-bottom: 2rem;
 }
+
+.history-container h2 {font-size: clamp(1.55rem, 5vw, 4rem)}
 
 .history-container p {
     text-align: justify;
@@ -45,7 +51,7 @@ body {overflow-x: hidden}
     max-width: 50ch;
     margin-inline: auto;
     line-height: 2;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
 /* --- why choose us --- */
@@ -106,6 +112,7 @@ body {overflow-x: hidden}
 
 .about-cta-section {
     background: url(../assets/about/jedi-path.jpg) center / cover no-repeat;
+    border-image: fill 1 radial-gradient(transparent, rgb(0 0 0 / 0.6));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,11 +120,12 @@ body {overflow-x: hidden}
     gap: 1rem;
     height: 80vh;
 }
+
 .about-cta-section h2 {
     display: inline-block;
     font-family: var(--serif-font);
     font-size: clamp(2rem, 5vw, 6rem);
-    font-weight: 600;
+    font-weight: 400;
     color: white;
     transition: color 0.2s ease;
 }
