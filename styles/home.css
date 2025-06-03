@@ -32,10 +32,6 @@
     }
 }
 
-section {
-    padding: 3rem clamp(1rem, 5vw, 4rem);
-}
-
 /* ------ Welcome Section ------ */
 .welcome {
     display: grid;

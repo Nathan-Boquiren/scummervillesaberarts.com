@@ -1,18 +1,44 @@
-function nextStep() {
-    const currentSection = document.querySelector('.form-section:not([style*="display: none"])');
-    const nextSection = currentSection.nextElementSibling;
-    if (nextSection) {
-        currentSection.style.display = 'none';
-        nextSection.style.display = 'block';
-    }
-}
+let cl = console.log;
 
-document.getElementById('phone').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length > 3 && value.length <= 6) {
-        value = value.replace(/(\d{3})(\d+)/, '$1-$2');
-    } else if (value.length > 6) {
-        value = value.replace(/(\d{3})(\d{3})(\d+)/, '$1-$2-$3');
-    }
-    e.target.value = value.slice(0, 12); // Ensure the formatted value does not exceed 12 characters (including dashes)
+// Dom Elements
+const hamburger = document.getElementById("hamburger");
+const hamburgerLines = document.querySelectorAll(".hamburger-line");
+const navBar = document.querySelector(".navbar");
+const btns = document.querySelectorAll(".button");
+
+// hamburger menu
+
+document.addEventListener("pointerdown", (e) => {
+  const isHamburger = hamburger.contains(e.target);
+  const isNavBar = navBar.contains(e.target);
+
+  if (isHamburger) {
+    navBar.classList.toggle("open");
+  } else if (!isNavBar && navBar.classList.contains("open")) {
+    navBar.classList.remove("open");
+  }
+});
+
+// Button Animation
+
+btns.forEach((btn) => {
+  btn.innerHTML = btn.innerText
+    .split("")
+    .map(
+      (ch) => `<span class="btn-ch${ch === " " ? " space" : ""}">${ch}</span>`
+    )
+    .join("");
+
+  btn.addEventListener("mouseover", () => {
+    btn.querySelectorAll(".btn-ch").forEach((ch, idx) => {
+      ch.classList.add("hover");
+      ch.style.animationDelay = `${idx * 10}ms`;
+    });
+  });
+
+  btn.addEventListener("mouseout", () => {
+    btn
+      .querySelectorAll(".btn-ch")
+      .forEach((ch) => ch.classList.remove("hover"));
+  });
 });

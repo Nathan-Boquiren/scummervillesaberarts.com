@@ -29,7 +29,7 @@ body {
 
 /* ---------- Typography ---------- */
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
     text-align: center;
 }
@@ -78,6 +78,7 @@ a {
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 5px rgb(0 0 0 / 0.15);
+    text-shadow: 0 2px 5px rgb(0 0 0 / 0.4);
 }
 
 .btn-ch {display: inline-block}
@@ -157,8 +158,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff0000;
+    color: var(--yellow);
 }
+
 .ssaLogo, .hamburger {display: none}
 
 /* ------ Responsive Design ------ */
@@ -230,6 +232,30 @@ nav ul li a:hover {
 
     body:has(nav.open) header .hamburger .line-3 {transform: rotate(-45deg) translateY(var(--line-height))}
     
+}
+
+/* General Page Styles */
+
+.page-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+}
+
+.page-header h1 {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    font-size: clamp(1.6rem, 5vw, 3.5rem);
+    color: var(--yellow);
+}
+
+section {
+    padding: 3rem clamp(1rem, 5vw, 4rem);
 }
 
 /* --- footer --- */
