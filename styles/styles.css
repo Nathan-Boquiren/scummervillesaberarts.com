@@ -48,7 +48,7 @@ h3 {
     color: white;
 }
  
-p, strong, em {
+p, strong, em, li, a {
     color: white;
     font-size: clamp(1rem, 2vw, 1.3rem);
     line-height: 1.5;

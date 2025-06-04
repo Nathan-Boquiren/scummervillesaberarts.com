@@ -27,75 +27,86 @@
     border-radius: 2rem;
 }
 
-.intro-container .content-wrapper h2 {margin-bottom: 1.5rem}
-
 .intro-container .content-wrapper :is(h2, p) {
     text-align: left;
     max-width: unset;
 }
 
+.intro-container .content-wrapper h2 {margin-bottom: 1.5rem}
+
+.intro-container .content-wrapper p {line-height: 1.8}
+
 .intro-container .content-wrapper {
-    max-width: 80rem;
+    max-width: 70rem;
     margin-inline: auto;
 }
 
 .classes-intro-person {
-    margin-right: 5rem;
     float: right;
     shape-outside: url(../assets/classes/classes-intro-person-2.webp);
-    shape-margin: 1rem;
-    height: 30rem;
+    shape-margin: 1.5rem;
+    width: 20rem;
+    height: auto;
     pointer-events: none;
 }
 
-@media (max-width: 1024px) {.classes-intro-person {margin-right: 0}}
+@media (max-width: 1024px) {
+    .classes-intro-person {margin-right: 0}
+    .intro-container .content-wrapper p {line-height: 1.5}
+}
 
-@media (max-width: 768px) {.classes-intro-person {height: 20rem}}
+@media (max-width: 768px) {
+    .intro-container .content-wrapper {padding-right: 0}
 
-@media (max-width: 425px) {
-    .classes-intro-person {display: none}
-    .intro-container .content-wrapper {padding-bottom: 2rem}
+    .classes-intro-person {
+        width: 16rem;
+        width: clamp(10rem, 40%, 16rem);
+        border-bottom-right-radius: 2rem;
+    }
+
+    .intro-container .content-wrapper p {line-height: 1.3}
+}
+
+@media (max-width: 500px) {
+    .classes-intro-person {
+        display: block;
+        float: none;
+        margin: 0 auto 1rem;
+        border-bottom-right-radius: 0;
+    }
+
+    .intro-container .content-wrapper {padding: 1.5rem !important}
     .intro-container .content-wrapper h2 {text-align: center}
+    .intro-container .content-wrapper p {line-height: 1.5}
 }
 
-/* --- Class Cards --- */
+/* --- Class Cards Container --- */
 
-.classes-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 30px 5vw;
-
-    opacity: 0.7;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
-.classes h3 {
-    font-size: 30px;
-    font-weight: 600;
+.category-container .category-name {
     text-align: left;
     color: var(--yellow);
-    padding: 10px;
     padding-left: 6vw;
-    border-bottom: 2px solid white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    
+    text-transform: capitalize;
 }
-.classes-grid-container {
+
+.category-container .line  {
+    margin-block: 1rem;
+    height: 2px;
+    border: none;
+    border-radius: 100vmax;
+    background-color: white;
+}
+
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    margin: 0 2vw;
 }
 
 .class-card {
     aspect-ratio: 1;
-    height: clamp(300px, 30vw, 500px)
+    height: clamp(18rem, 25vw, 25rem);
 }
 
 .card-inner {
@@ -103,142 +114,133 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-    transition-delay: 0s;
+    transition: transform 300ms ease;
+    cursor: pointer;
 }
 
-
+.card-inner.flipped {
+    transform: rotateX(180deg);
+}
 
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 1.5rem;
+    padding: clamp(1rem, 3vw, 3rem);
 }
+
 .class-card p {
-    text-align: left;
-    font-size: clamp(16px, 1vw, 25px);
-    position: relative;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 .card-front {
-    background-image: linear-gradient(-45deg, #1975b3, #308cc9);
+    background-image: linear-gradient(to bottom right, #308cc9, #1975b3);
     color: white;
-    padding: 20px;
     transition: transform 0.2s ease;
-    h4 {
-        text-align: left;
-        font-size: clamp(24px, 2vw, 40px);
-        margin-left: 4%;
-        margin-top: 10%;
-    }
-    p {
-        padding-right: 40%;
-        z-index: 100;
-    }
-    img {
-        height: 70%;
-        position: absolute;
-        bottom: 0px;
-        right: 20px;
-    }
+    padding-bottom: 0;
+    padding-right: 1rem;
 }
 
-@media (max-width: 1024px) {
-    .class-card {
-        aspect-ratio: 8/9;
-        min-width: 300px;
-        min-height: 300px;
-    }
-    .card-front {
-        padding: 15px;
-    }
-    .card-front p strong {
-        display: none;
-    }
-    .card-front h4 {
-        margin: 10% 6% 0 ;
-    }
-    .card-front p em {
-        margin-left: 0;
-    }
+.card-front::after {
+    content: "";
+    display: table;
+    clear: both;
 }
+
+.card-front h4 {
+    text-align: left;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.card-front :is(h4, .difficulty-wrapper) {margin-bottom: 10px}
+
+.prev-txt {z-index: 100}
+
+.difficulty-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.difficulty-wrapper strong {font-weight: 600}
+
+.difficulty-wrapper span {
+    font-size: inherit;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.easy {background-color: #00bd00}
+.moderate {background-color: #a68d00}
+.advanced {background-color: #da0000}
+
+.card-img {
+    float: right;
+    shape-margin: 5px;
+}
+
+.card-img.horizontal {width: 70%; height: auto}
+
+.card-img.vertical {width: auto; height: 70%}
+
 @media (max-width: 768px) {
-    .card-front p:nth-child(3) {
-        display: none;
-    }
+    .card-front {padding-right: auto}
+    .prev-txt {display: none}
+
     .card-front img {
-        right: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 0 !important;
+        float: none;
+        position: absolute;
+        bottom: 0;
+        inset-inline: 0;
+        margin-inline: auto;
     }
+
+    .card-front img.vertical {height: 60% !important}
+
+    .card-front img.horizontal {width: 80% !important}
 }
 
 .card-front:hover {
     transform: scale(1.02);
-    cursor: pointer;
 }
 
-
-.juyo-card img,
-.trakata-card img,
-.holocron-card img {
-    height: 46%;
-}
-
-.spin-card img,
-.holocron-card img,
-.lightsaber-card img {
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.11));
-}
-.spin-card img {
-    height: 40%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    
-}
-.holocron-card img {
-    margin-bottom: 5px;
-}
-.lightsaber-card img {
-    margin-bottom: 20px;
-    margin-right: 40px;
-    rotate: -20deg;
-}
-.ahsoka-card img {
-    height: 60%;
-    transform: scaleX(-1);
-}
-.luke-card img {
-    height: 75%;
-}
-.duel-card img {
-    height: 45%;
-}
 .card-back {
     background-color: var(--dark-bg);
-    color: white;
     transform: rotateX(180deg);
+    padding: 2rem;
 }
-.sign-up-class {
-    display: block;
-    width: 100px;
-    margin: 10% auto 0;
-    background-color:  rgb(255, 0, 0);
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 600;
+
+.card-back > * {
+    margin-bottom: 0.5rem;
+}
+
+.card-back h5 {
     color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: clamp(16px, 1.2vw, 20px);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: left;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
 }
-.sign-up-class:hover {
-    transform: scale(1.05);
-    background-color:  rgb(221, 1, 1);
+
+.card-back hr {
+    border: none;
+    height: 2px;
+    border-radius: 100vmax;
+    background-color: rgb(255 255 255 / 0.5);
+}
+
+.card-back li {
+    font-size: clamp(16px, 1vw, 25px);
+    font-weight: 400;
+    line-height: 1.2;
+    list-style-position: inside;
+}
+
+
+.card-back .button {
+    font-size: clamp(1rem, 1vw, 1.3rem);
 }
 
 
@@ -249,33 +251,8 @@
     }
 }
 
-.card-front p em {
-
-    border-radius: 5px;
-    padding: 4px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    margin-left: 5px;
-}
-.easy {
-    background-color: rgb(0, 189, 0);
-}
-.moderate {
-    background-color: rgb(166, 141, 0);
-}
-.advanced {
-    background-color: rgb(218, 0, 0);
-}
 
 
-
-.card-back {
-    padding: 20px;
-    li {
-        font-size: clamp(16px, 1vw, 25px);
-        font-weight: 400;
-        line-height: 1.2;
-    }
-}
 
 
 @media (max-width: 1024px) {

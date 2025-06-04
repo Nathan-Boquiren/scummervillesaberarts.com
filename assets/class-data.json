@@ -1,0 +1,313 @@
+[
+  {
+    "name": "form",
+    "classes": [
+      {
+        "front": {
+          "name": "Form 1: Shii-Cho",
+          "difficulty": "easy",
+          "prevTxt": "Master the basics and build your path to greatness",
+          "imgUrl": "../assets/classes/class-imgs/form-1-shii-cho.png"
+        },
+        "back": {
+          "overview": "Learn the foundational techniques of lightsaber combat. This is where all aspiring students begin their journey.",
+          "skills": [
+            "Basic attacks",
+            "Defense stances",
+            "Lightsaber control"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 2: Makashi",
+          "difficulty": "moderate",
+          "prevTxt": "Elegance, precision, and victory in every duel",
+          "imgUrl": "../assets/classes/class-imgs/form-2-makashi.png"
+        },
+        "back": {
+          "overview": "A refined form focused on elegance and precision, ideal for one-on-one dueling.",
+          "skills": [
+            "Footwork",
+            "Balance",
+            "Precise strikes",
+            "Blade manipulation"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 3: Soresu",
+          "difficulty": "easy",
+          "prevTxt": "Become an impenetrable force of defense",
+          "imgUrl": "../assets/classes/class-imgs/form-3-soresu.png"
+        },
+        "back": {
+          "overview": "Master the art of defense with Soresu, the ultimate form for countering aggressive attacks.",
+          "skills": [
+            "Defensive postures",
+            "Energy conservation",
+            "Turning defense into counterattack"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 4: Ataru",
+          "difficulty": "advanced",
+          "prevTxt": "Speed, agility, and high-flying combat moves await",
+          "imgUrl": "../assets/classes/class-imgs/form-4-ataru.png"
+        },
+        "back": {
+          "overview": "A fast, acrobatic form designed for mobility and dynamic strikes.",
+          "skills": [
+            "High-speed maneuvers",
+            "Aerial combat techniques",
+            "Outflanking your opponent"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 5: Djem So",
+          "difficulty": "moderate",
+          "prevTxt": "Overpower your opponents with relentless strength",
+          "imgUrl": "../assets/classes/class-imgs/form-5-djem-so.png"
+        },
+        "back": {
+          "overview": "Focus on raw power, strength, and aggressive defense, perfect for overwhelming opponents.",
+          "skills": [
+            "Strong counterattacks",
+            "Using your opponent's energy against them",
+            "Dominating offensive strikes"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 6: Niman",
+          "difficulty": "easy",
+          "prevTxt": "The balanced form—where versatility meets control",
+          "imgUrl": "../assets/classes/class-imgs/form-6-niman.png"
+        },
+        "back": {
+          "overview": "A balanced form that blends the techniques of all forms, offering versatility in combat.",
+          "skills": [
+            "A mix of defensive and offensive moves",
+            "Integrating 'Force' powers into combat",
+            "How to die at the Battle of Geonosis"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 7: Vaapad",
+          "difficulty": "advanced",
+          "prevTxt": "Unleash your full potential with the most intense form of all",
+          "imgUrl": "../assets/classes/class-imgs/form-7-vaapad.png"
+        },
+        "back": {
+          "overview": "A highly aggressive and fast-paced form, requiring intense focus and control of emotions.",
+          "skills": [
+            "Swift, unpredictable strikes",
+            "Balancing on the edge of Light and Dark",
+            "How to talk like Samuel L. Jackson"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 7: Juyo (Sith)",
+          "difficulty": "advanced",
+          "prevTxt": "Chaos and rage in its purest, most destructive form",
+          "imgUrl": "../assets/classes/class-imgs/form-7-juyo.png"
+        },
+        "back": {
+          "overview": "The Sith variant of Form 7, characterized by chaotic, aggressive movements driven by raw emotion.",
+          "skills": [
+            "Unleashing rage for devastating attacks",
+            "Unorthodox techniques to overwhelm opponents",
+            "How to scream during combat properly"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Form 8: Trakata (Forbidden)",
+          "difficulty": "advanced",
+          "prevTxt": "Deception is your greatest weapon",
+          "imgUrl": "../assets/classes/class-imgs/form-8-trakata.png"
+        },
+        "back": {
+          "overview": "The rare and controversial form that uses deception and tactical deactivation of the lightsaber.",
+          "skills": [
+            "Stealth tactics",
+            "Misderection",
+            "Illegal lightsaber techniques to outsmart enemies"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "subject",
+    "classes": [
+      {
+        "front": {
+          "name": "Spins and Flourishes",
+          "difficulty": "moderate",
+          "prevTxt": "Add flair to your fighting style—look good while winning!",
+          "imgUrl": "../assets/classes/class-imgs/spins-and-flourishes.gif"
+        },
+        "back": {
+          "overview": "Add style to your combat with advanced spins and flourishes, increasing fluidity and intimidation.",
+          "skills": [
+            "Basic flows and figure 8",
+            "Obi-Ani spin and variations",
+            "Reverse-grip flourishes",
+            "Grip switches"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "History and Lore",
+          "difficulty": "easy",
+          "prevTxt": "The story behind the blade—discover the legends of lightsabers",
+          "imgUrl": "../assets/classes/class-imgs/history.png"
+        },
+        "back": {
+          "overview": "Dive into the rich history of lightsabers, exploring their origins and cultural significance.",
+          "skills": [
+            "The evolution of lightsaber combat",
+            "Famous wielders",
+            "Legendary lightsabers throughout the galaxy"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Lightsaber Technology",
+          "difficulty": "moderate",
+          "prevTxt": "Build, customize, and understand the weapon of the Jedi",
+          "imgUrl": "../assets/classes/class-imgs/lightsaber-technology.png"
+        },
+        "back": {
+          "overview": "Understand the inner workings of lightsabers, from kyber crystals to advanced customization.",
+          "skills": [
+            "The science behind lightsabers",
+            "Kyber crystal functions",
+            "Customization and maintenance techniques"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "saber technique",
+    "classes": [
+      {
+        "front": {
+          "name": "Double-Bladed Technique",
+          "difficulty": "advanced",
+          "prevTxt": "Double the blade, double the danger",
+          "imgUrl": "../assets/classes/class-imgs/double-bladed.png"
+        },
+        "back": {
+          "overview": "Learn to wield the double-bladed saber, mastering offense and defense in a single weapon.",
+          "skills": [
+            "Control of double-bladed saber",
+            "Rapid attacks with double-bladed saber",
+            "Unique defensive capabilities double-bladed saber"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Reverse Grip Technique",
+          "difficulty": "advanced",
+          "prevTxt": "Fight from the shadows with swift, unexpected strikes",
+          "imgUrl": "../assets/classes/class-imgs/reverse-grip.png"
+        },
+        "back": {
+          "overview": "A specialized style focused on wielding the lightsaber in reverse grip for unexpected attacks.",
+          "skills": [
+            "Stealthy, quick-strike techniques",
+            "Handling close-quarters combat effectively",
+            "How to switch grips easily"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Jar-Kai Technique",
+          "difficulty": "advanced",
+          "prevTxt": "Why have one saber when you can have two?",
+          "imgUrl": "../assets/classes/class-imgs/jar-kai.png"
+        },
+        "back": {
+          "overview": "Master the art of wielding two lightsabers simultaneously for increased versatility and power.",
+          "skills": [
+            "How to coordinate two sabers",
+            "Balancing offense and defense",
+            "Overwhelm opponents with rapid strikes"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "other random things",
+    "classes": [
+      {
+        "front": {
+          "name": "Blaster Defense (Shein)",
+          "difficulty": "moderate",
+          "prevTxt": "Reflect nerf gun fire with precision and style",
+          "imgUrl": "../assets/classes/class-imgs/blaster-defense.png"
+        },
+        "back": {
+          "overview": "Learn to deflect blaster fire with precision and protect yourself from ranged attacks.",
+          "skills": [
+            "Reflecting shots back at enemies",
+            "Deflection techniques",
+            "Timing blaster counterattacks"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "Stances",
+          "difficulty": "easy",
+          "prevTxt": "Find your footing—master the foundations of every battle",
+          "imgUrl": "../assets/classes/class-imgs/stances.png"
+        },
+        "back": {
+          "overview": "The foundation of all lightsaber combat, focusing on proper posture and looking cool.",
+          "skills": [
+            "Defensive and offensive stances",
+            "How to balance",
+            "How to prepare for different combat situations",
+            "How to pose for the camera"
+          ]
+        }
+      },
+      {
+        "front": {
+          "name": "The Art of Duels",
+          "difficulty": "easy",
+          "prevTxt": "Study the greatest duels of Star Wars History",
+          "imgUrl": "../assets/classes/class-imgs/art-of-duels.png"
+        },
+        "back": {
+          "overview": "Analyze iconic lightsaber duels from the movies to gain insight into advanced techniques and tactics.",
+          "skills": [
+            "Breakdown of famous combat scenes",
+            "Key moves",
+            "How to apply cinematic techniques to real-life dueling"
+          ]
+        }
+      }
+    ]
+  }
+]
