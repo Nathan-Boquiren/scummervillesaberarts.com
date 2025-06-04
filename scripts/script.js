@@ -22,6 +22,7 @@ document.addEventListener("pointerdown", (e) => {
 // Button Animation
 
 btns.forEach((btn) => {
+  btn.tabIndex = 0;
   btn.innerHTML = btn.innerText
     .split("")
     .map(

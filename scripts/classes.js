@@ -61,11 +61,12 @@ function createFront(data) {
   const front = createElement("div", "card-front");
   front.innerHTML = `
     <h4>${data.name}</h4>
+    <img src=${data.imgUrl} class="card-img" style="shape-outside: url(${data.imgUrl})">
     <div class="difficulty-wrapper">
         <strong>Difficulty:</strong>
         <span class="${data.difficulty} txt-shadow">${data.difficulty}</span>
     </div>
-    <img src=${data.imgUrl} class="card-img" style="shape-outside: url(${data.imgUrl})">
+   
     <p class="prev-txt">${data.prevTxt}</p>`;
 
   return front;
@@ -76,8 +77,8 @@ function createBack(data) {
   back.innerHTML = `
     <h5>Overview</h5>
     <hr>
-    <p>${data.overview}</p>
-    <p>What You'll Learn:</p>
+    <p class="overview-txt">${data.overview}</p>
+    <p class="skills-list-header">What You'll Learn:</p>
     <ul>
        ${data.skills.map((skill) => `<li>${skill}</li>`).join("")}
     </ul>
@@ -102,7 +103,7 @@ function addDynamicStyles() {
 }
 
 function addFlip(cards) {
-  document.addEventListener("pointerdown", (e) => {
+  document.addEventListener("click", (e) => {
     for (const c of cards) {
       if (c.contains(e.target)) {
         c.classList.toggle("flipped");

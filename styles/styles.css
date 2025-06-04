@@ -157,12 +157,11 @@ nav ul li a {
     color: white;
     text-align: center;
     font-weight: 600;
+    font-size: 1rem;
     transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
-    color: var(--yellow);
-}
+nav ul li a:hover {color: var(--yellow)}
 
 .ssaLogo, .hamburger {display: none}
 

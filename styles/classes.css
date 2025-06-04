@@ -81,7 +81,6 @@
 }
 
 /* --- Class Cards Container --- */
-
 .category-container .category-name {
     text-align: left;
     color: var(--yellow);
@@ -90,7 +89,7 @@
 }
 
 .category-container .line  {
-    margin-block: 1rem;
+    margin-block: 2rem;
     height: 2px;
     border: none;
     border-radius: 100vmax;
@@ -101,12 +100,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
+    max-width: 90rem;
+    margin-inline: auto;
 }
 
 .class-card {
+    max-width: 25rem;
     aspect-ratio: 1;
-    height: clamp(18rem, 25vw, 25rem);
+    flex: 0.5 1 clamp(20rem, 29%, 25rem);
 }
 
 .card-inner {
@@ -118,9 +120,7 @@
     cursor: pointer;
 }
 
-.card-inner.flipped {
-    transform: rotateX(180deg);
-}
+.card-inner.flipped {transform: rotateX(180deg)}
 
 .card-front, .card-back {
     position: absolute;
@@ -131,23 +131,19 @@
     padding: clamp(1rem, 3vw, 3rem);
 }
 
-.class-card p {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+.class-card :is(p, li) {
+    line-height: 1.5;
+    font-size: clamp(1rem, 1vw, 1.5rem);
 }
 
 .card-front {
     background-image: linear-gradient(to bottom right, #308cc9, #1975b3);
     color: white;
     transition: transform 0.2s ease;
-    padding-bottom: 0;
     padding-right: 1rem;
 }
 
-.card-front::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+.card-front:hover {transform: scale(1.02)}
 
 .card-front h4 {
     text-align: left;
@@ -179,16 +175,18 @@
 
 .card-img {
     float: right;
-    shape-margin: 5px;
+    shape-margin: .5rem;
 }
 
-.card-img.horizontal {width: 70%; height: auto}
+.card-img.horizontal {width: 80%; height: auto}
 
 .card-img.vertical {width: auto; height: 70%}
 
 @media (max-width: 768px) {
-    .card-front {padding-right: auto}
-    .prev-txt {display: none}
+    .card-front, .card-back {padding: clamp(1.5rem, 3vw, 3rem) !important}
+    .class-card :is(p, li) {line-height: 1.3}
+
+    .prev-txt, .overview-txt {display: none}
 
     .card-front img {
         margin-top: 0 !important;
@@ -202,20 +200,19 @@
     .card-front img.vertical {height: 60% !important}
 
     .card-front img.horizontal {width: 80% !important}
-}
 
-.card-front:hover {
-    transform: scale(1.02);
+    .card-back {gap: 1rem !important}
 }
 
 .card-back {
     background-color: var(--dark-bg);
     transform: rotateX(180deg);
     padding: 2rem;
-}
-
-.card-back > * {
-    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
 }
 
 .card-back h5 {
@@ -227,36 +224,23 @@
 .card-back hr {
     border: none;
     height: 2px;
+    width: 100%;
     border-radius: 100vmax;
-    background-color: rgb(255 255 255 / 0.5);
+    background-color: white;
 }
 
-.card-back li {
-    font-size: clamp(16px, 1vw, 25px);
-    font-weight: 400;
-    line-height: 1.2;
-    list-style-position: inside;
+.card-back .skills-list-header {font-weight: 700}
+
+.card-back li {list-style-position: inside}
+
+.card-back li::marker {
+    content: "✓\00a0\00a0\00a0";
+    font-weight: 600;
+    color: var(--yellow);
 }
 
 
 .card-back .button {
     font-size: clamp(1rem, 1vw, 1.3rem);
-}
-
-
-@media (max-width: 768px) {
-    .sign-up-class {
-        padding: 7px 5px;
-        width: 80px;
-    }
-}
-
-
-
-
-
-@media (max-width: 1024px) {
-    .card-back {
-        padding: 10px;
-    }
+    margin-top: auto;
 }

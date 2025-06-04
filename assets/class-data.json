@@ -157,7 +157,7 @@
           "name": "Spins and Flourishes",
           "difficulty": "moderate",
           "prevTxt": "Add flair to your fighting style—look good while winning!",
-          "imgUrl": "../assets/classes/class-imgs/spins-and-flourishes.gif"
+          "imgUrl": "../assets/classes/class-imgs/spins-and-flourishes.png"
         },
         "back": {
           "overview": "Add style to your combat with advanced spins and flourishes, increasing fluidity and intimidation.",
@@ -174,7 +174,7 @@
           "name": "History and Lore",
           "difficulty": "easy",
           "prevTxt": "The story behind the blade—discover the legends of lightsabers",
-          "imgUrl": "../assets/classes/class-imgs/history.png"
+          "imgUrl": "../assets/classes/class-imgs/history-and-lore.png"
         },
         "back": {
           "overview": "Dive into the rich history of lightsabers, exploring their origins and cultural significance.",
@@ -297,7 +297,7 @@
           "name": "The Art of Duels",
           "difficulty": "easy",
           "prevTxt": "Study the greatest duels of Star Wars History",
-          "imgUrl": "../assets/classes/class-imgs/art-of-duels.png"
+          "imgUrl": "../assets/classes/class-imgs/duels.png"
         },
         "back": {
           "overview": "Analyze iconic lightsaber duels from the movies to gain insight into advanced techniques and tactics.",
