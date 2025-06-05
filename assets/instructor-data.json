@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Joseph Johnson",
+    "rank": "Master",
+    "bio": "Joseph Johnson is a highly experienced lightsaber combat instructor with a passion for guiding students toward mastery. When he's not teaching, Joseph is often found diving deep into ancient lightsaber lore and refining his skills in the dojo.",
+    "specialties": "Joseph specializes in Form IV - Ataru, focusing on acrobatics, speed, and fluid motion. He teaches students how to harness their agility and energy to execute dynamic, high-flying maneuvers, making them swift and unpredictable in combat.",
+    "quote": "Master the flow, and you'll always be one step ahead.",
+    "imgUrl": "../assets/instructors/joseph-johnson.jpeg"
+  },
+  {
+    "name": "Soi Sawce",
+    "rank": "Grand Master",
+    "bio": "Master Soi Sawce is as legendary for his quick wit as he is for his lightsaber skills. Despite his playful demeanor, his students quickly learn that he’s a true master of combat—one who can make even the most difficult techniques seem easy.",
+    "specialties": "Master Soi Sawce specializes in Form VI - Niman, the balanced form that blends elements of all other techniques. His ability to seamlessly switch between styles has earned him the title of 'The Jester Master,' as he keeps opponents and students guessing at every turn.",
+    "quote": "A lightsaber is like cheesecake.",
+    "imgUrl": "../assets/instructors/soi-sawce.jpeg"
+  },
+  {
+    "name": "Jaquaveus",
+    "rank": "Master",
+    "bio": "Master Jaquaveus is a force of nature, blending raw power with tactical precision. Known for his intense training sessions and unwavering dedication, he pushes his students to their limits while keeping them focused on growth. Behind his serious exterior is a teacher who deeply cares about every student’s progress, guiding them not only as warriors but as leaders.",
+    "specialties": "Master Jaquaveus is a master of Form V - Shien/Djem So, the form of controlled power and relentless offense. His teachings focus on turning defense into a dominating counterattack, making sure his students are always ready to strike with precision and force.",
+    "quote": "Strength without control is just noise. Let’s make it music.",
+    "imgUrl": "../assets/instructors/jaquaveus.jpeg"
+  },
+  {
+    "name": "Ching Chong",
+    "rank": "Grand Master",
+    "bio": "Ching is a seasoned lightsaber instructor with a passion for traditional combat techniques. His approach blends classic training with modern interpretations, making each lesson engaging and informative. With a focus on discipline and respect for the craft, Ching fosters a supportive environment for students of all skill levels.",
+    "specialties": "Ching specializes in Form II - Makashi, which emphasizes elegance and precision. His training focuses on mastering footwork, blade control, and strategic dueling techniques. Students learn to exploit openings in their opponent's defenses while maintaining a graceful posture.",
+    "quote": "Failure is unacceptable.",
+    "imgUrl": "../assets/instructors/ching-chong.jpeg"
+  },
+  {
+    "name": "Eric Gingerman",
+    "rank": "Master",
+    "bio": "With a rich background in martial arts and performance combat, Eric brings a unique flair to lightsaber training. Known for his expertise in dual-wielding, he emphasizes agility and creativity in combat. His training focuses on fluidity and coordination, teaching how to seamlessly integrate two blades into a dynamic style.",
+    "specialties": "Eric specializes in dual-wielding lightsabers, focusing on precision and agility. He teaches students to coordinate their movements, creating fluid combinations of attacks and defenses. His classes emphasize situational awareness and adaptability.",
+    "quote": "Every duel is an Irish jig.",
+    "imgUrl": "../assets/instructors/eric-gingerman.jpeg"
+  },
+  {
+    "name": "Reelie Sirius",
+    "rank": "Grand Master",
+    "bio": "A distinguished master with decades of experience, Reelie Sirius brings deep wisdom and insight to the lightsaber academy. Known for his calm demeanor and profound understanding of the Force, he inspires students to connect with their inner selves while honing their combat skills.",
+    "specialties": "Master Sirius specializes in Form I - Shii-Cho, the foundational style of lightsaber combat. He emphasizes the basics of footwork, posture, and timing, ensuring students build a strong foundation for advanced techniques.",
+    "quote": "...",
+    "imgUrl": "../assets/instructors/reelie-sirius.jpeg"
+  },
+  {
+    "name": "DaRock",
+    "rank": "Grand Master",
+    "bio": "Master Dwayne DaRock is a charismatic and dynamic lightsaber instructor who combines his love for performance with rigorous training. Known for his engaging teaching style, he motivates students to push their limits while fostering a strong sense of camaraderie.",
+    "specialties": "DaRock specializes in Form III - Soresu and Shien, focusing on blaster deflection and strategic defense. His signature 'Aiburao' technique adds a creative twist to traditional combat methods.",
+    "quote": "Eyebrow raise",
+    "imgUrl": "../assets/instructors/darock.jpeg"
+  },
+  {
+    "name": "McHighground",
+    "rank": "Master",
+    "bio": "Master McHighground is a legendary lightsaber instructor renowned for his wisdom, skill, and calm demeanor. He embodies the principles of the Jedi Order and teaches balance in both combat and life.",
+    "specialties": "Master McHighground specializes in Form IV - Ataru, emphasizing agility and aerial maneuvers. He teaches students to harness momentum and intuition to outmaneuver their foes.",
+    "quote": "I have the high ground.",
+    "imgUrl": "../assets/instructors/master-highground.jpg"
+  },
+  {
+    "name": "Idonlykzand",
+    "rank": "Not Master",
+    "bio": "Anakin Skywalker is a passionate and talented lightsaber instructor known for his bold approach to combat. His lessons are intense and challenging, pushing students to exceed their limits.",
+    "specialties": "Anakin specializes in Form V - Djem So, focusing on strength and aggressive counterattacks. He encourages confident, decisive action in combat.",
+    "quote": "I don't like sand.",
+    "imgUrl": "../assets/instructors/idonlykzand.jpg"
+  },
+  {
+    "name": "Bean Solo",
+    "rank": "Grand Master",
+    "bio": "Mister Bean Solo is an eccentric yet highly skilled lightsaber instructor known for his unique perspective on combat. With a playful demeanor and a penchant for creativity, he engages students through unconventional methods.",
+    "specialties": "Bean specializes in Form VII - Vaapad, using a reverse grip to enhance agility and unpredictability. His training emphasizes improvisation and emotional control.",
+    "quote": "Da Beach.",
+    "imgUrl": "../assets/instructors/bean-solo.png"
+  },
+  {
+    "name": "Keanu Revan",
+    "rank": "Master",
+    "bio": "Keanu Revan is a formidable lightsaber instructor known for his calm demeanor and strategic mindset. He encourages students to explore the depths of their abilities while staying focused and respectful.",
+    "specialties": "Keanu specializes in double-bladed lightsaber combat. His training emphasizes rhythm, timing, and graceful control in dynamic situations.",
+    "quote": "In the dance of combat, each move tells a story; make yours unforgettable.",
+    "imgUrl": "../assets/instructors/keanu-revan.png"
+  },
+  {
+    "name": "Gigachad Windu",
+    "rank": "Grand Master",
+    "bio": "Gigachad Windu is an imposing and charismatic lightsaber instructor known for his exceptional skill and confidence. His lessons combine intensity with humor, creating a dynamic and engaging atmosphere.",
+    "specialties": "Gigachad specializes in Form VI - Niman, blending elements from multiple styles for a balanced and adaptable approach. His focus is on fluid transitions, situational awareness, and personalized techniques.",
+    "quote": "Erm. What the sigma?",
+    "imgUrl": "../assets/instructors/gigachad-windu.jpg"
+  }
+]

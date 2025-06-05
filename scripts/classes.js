@@ -122,8 +122,8 @@ function styleCardImg(card) {
     img.classList.add(img.height > img.width ? "vertical" : "horizontal");
 
     const cardBottom = card.clientHeight;
-    const imgBottom =
-      img.getBoundingClientRect().bottom - card.getBoundingClientRect().top;
+    // prettier-ignore
+    const imgBottom = img.getBoundingClientRect().bottom - card.getBoundingClientRect().top;
 
     const heightDiff = cardBottom - imgBottom;
     img.style.marginTop = `${heightDiff}px`;
