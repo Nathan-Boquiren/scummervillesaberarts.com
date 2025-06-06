@@ -36,7 +36,7 @@
     
 /* new cards */
 
-.inst-card {
+.inst-card-container {
     --lighter-clr: color-mix(in srgb, var(--section-bg) 90%, white 10%);
     --time: 0.3s;
     flex: 1 1 27rem;
@@ -51,16 +51,16 @@
     transition: padding var(--time) ease, outline-color var(--time) ease;
 }
 
-.inst-card:hover {outline-color: color-mix(in srgb, var(--section-bg) 80%, white 20%)}
+.inst-card-container:hover {outline-color: color-mix(in srgb, var(--section-bg) 80%, white 20%)}
 
-.inst-card summary {
+.inst-card-container .card {
     display: flex;
     align-items: center;
     gap: 1rem;
     transition: all var(--time) ease;
 }
 
-.inst-card summary img {
+.inst-card-container .card img {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: top;
@@ -70,7 +70,7 @@
     transition: all var(--time) ease;
 }
 
-.inst-card .summary-txt > * {text-align: left}
+.card-txt > * {text-align: left}
 
 .inst-name {
     font-size: clamp(1.2rem, 1.5vw, 1.8rem);
@@ -87,19 +87,22 @@
     color: white;
 }
 
-.inst-card .info-wrapper {padding: 1.5rem; list-style-type: none}
+.inst-card-container .details-wrapper {
+    height: 0;
+    transition: height var(--time) ease;
+}
 
-.inst-card .info-wrapper li h4 {
+.info-wrapper {
+    padding: 1.5rem;
+    list-style-type: none;
+}
+
+.info-wrapper li h4 {
     text-align: left; 
     font-size: clamp(1.2rem, 1.5vw, 1.3rem);
 }
 
-.inst-card .info-wrapper li p {
-    font-size: clamp(1rem, 1.5vw, 1.1rem); 
-    line-height: 1.3;
-}
-
-.inst-card .info-wrapper hr {
+.info-wrapper hr {
     border: none;
     height: 2px;
     border-radius: 100vmax;
@@ -107,22 +110,109 @@
     margin-block: 1rem .5rem;
 }
 
-/* expand card */
+/* desktop modal style */
 
-.inst-card::details-content {
-    block-size: 0;
-    transition: block-size var(--time) ease, content-visibility var(--time) ease;
-    transition-behavior: allow-discrete;
+#inst-modal {
+    width: clamp(50rem, 65%, 65rem);
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    border: none;
+    border-radius: 1.7rem;
+    padding: 2.5rem;
+    background-color: var(--section-bg);
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 0.3);
+
+    opacity: 0; translate: 0 10vh;
+    transition-property: overlay opacity display translate; transition-duration: .3s; transition-timing-function: ease; transition-behavior: allow-discrete;
 }
 
-.inst-card[open]::details-content {block-size: auto}
+#inst-modal:focus {outline: none}
 
-.inst-card[open] {padding: 1.5rem; padding-top: 1rem}
-
-.inst-card[open] summary img {
-    width: 40%;
+#close-modal-btn {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    width: 2rem; height: 2rem;
     border-radius: 50%;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border: 2px solid white;
+    color: white;
+    font-size: 2rem; font-weight: 400;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s ease;
 }
 
-@media (max-width: 500px) {.inst-card[open] summary img {width: 30%}}
+#close-modal-btn:is(:focus, :hover) {
+    font-weight: 700;
+    outline: none;
+    transform: rotate(90deg);
+    color: var(--section-bg);
+    background-color: white;
+}
+
+#close-modal-btn::selection {background-color: transparent}
+
+/* modal content */
+
+#inst-modal::backdrop {
+    background: rgba(0 0 0 / 0.3);
+    opacity: 0; backdrop-filter: blur(4px);
+    transition: opacity .3s ease, display .3s ease, overlay .3s ease; transition-behavior: allow-discrete;
+}
+
+#inst-modal > * {transition: margin-bottom .3s ease}
+
+#inst-modal[open]::backdrop {opacity: 1}
+
+#inst-modal[open] {
+    opacity: 1; translate: 0 0vh;
+    & > *:not(:last-child) {margin-bottom: 2rem}
+}
+
+@starting-style {
+    #inst-modal[open] {opacity: 0; translate: 0 -10vh}
+    #inst-modal[open]::backdrop {opacity: 0}
+}
+
+#modal-meta-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#inst-modal[open] > hr {
+    display: block;
+    border: none;
+    border-radius: 100vmax;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255 255 255 / .5);
+}
+
+#modal-meta-wrapper {
+    & > img {width: 15%; border-radius: 50%}
+    & > .inst-name {font-size: clamp(1.3rem, 2vw, 2rem)}
+}
+
+#modal-details-wrapper .info-wrapper {padding: 0}
+
+#modal-details-wrapper h4 {margin-bottom: .5rem}
+
+#modal-details-wrapper p {font-size: clamp(1rem, 1.3vw, 1.25rem)}
+
+
+/* mobile card expand */
+
+@media(max-width: 768px) {
+    .inst-card-container.open .details-wrapper {height: auto}
+
+    .inst-card-container.open .card {padding: 1.5rem 1.5rem 0}
+
+    .inst-card-container.open .card img {
+        width: 30%;
+        border-radius: 35%;
+        box-shadow: 2px 2px 8px rgb(0 0 0 / 0.3);
+        clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 150%);
+    }
+}
