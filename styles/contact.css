@@ -1,0 +1,122 @@
+.page-header {
+    background-image: url(../assets/contact/contact-header.jpg);
+    background-position: 50% 55%;
+    border-image: fill 1 radial-gradient(rgb(0 0 0 / 0.5), transparent 20%);
+}
+
+.subtitle {
+    padding-inline: 1rem;
+    margin: 2rem auto 0;
+    font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.content-container > * {flex: 0.2 1 25rem;}
+
+.contact-form {
+    --padding: clamp(1.5rem, 3vw, 2rem);
+    padding: var(--padding);
+    border-radius: var(--padding);
+    background-color: var(--light-section);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 0.2);
+}
+
+.contact-form .input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .input-wrapper label {
+    width: fit-content; height: fit-content;
+    position: absolute;
+    inset-block: 0;
+    margin: auto;
+    padding: .3rem .5rem;
+    background-color: var(--section-bg);
+    border-radius: .5rem;
+    border-bottom-left-radius: 0;
+    color: rgb(255 255 255 / 0.4);
+    font-weight: 500;
+    z-index: 10;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.contact-form .input-wrapper:is(:focus-within, .filled) label {
+    bottom: unset;
+    transform: translateY(calc(-50% - 5px));
+    font-size: 0.75rem;
+    color: white;
+}
+
+.contact-form :is(input, select, textarea, button, .material-symbols-rounded) {transition: transform 0.25s ease, box-shadow 0.25s ease}
+
+.contact-form :is(input, select, textarea) {
+    width: 100%;
+    padding: .7rem .5rem;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    background-color: var(--section-bg);
+    font-size: 1rem; font-weight: 500;
+    color: white;
+}
+
+.contact-form textarea {resize: none}
+
+.contact-form .input-wrapper :is(input, select, textarea):is(:focus) {outline: none;}
+
+.contact-form .input-wrapper:not(.filled) :is(input, select, textarea):is(:focus) {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 0 var(--dark-bg);
+}
+
+.contact-form button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    background-color: var(--section-bg);
+    box-shadow: 0 2px 0 var(--dark-bg);
+    border: none;
+    border-radius: 1rem;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button:is(:hover, :focus) {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0 var(--dark-bg);
+    & > .material-symbols-rounded {transform: translateX(5px);}
+}
+
+/* contact methods */
+
+.methods-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 3rem);
+}
+
+.methods-container h4 {
+    text-align: start;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    color: white;
+}
+
+.methods-container span {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--yellow);
+}

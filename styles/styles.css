@@ -15,6 +15,7 @@ html {
     --dark-bg: #0a1f44;
     --bg: #1A2B45;
     --section-bg: #233a5d;
+    --light-section: #395784;
     --light: #b3cfff;
     --yellow: #ffeb38;
 
@@ -186,8 +187,8 @@ nav ul li a:hover {color: var(--yellow)}
     .header-txt-wrapper, .header-decor {display: none}
 
     nav {
-        background-color: rgb(0 0 0 / 0.2);
-        backdrop-filter: blur(0.6rem);
+        background-color: rgb(0 0 0 / 0.3);
+        backdrop-filter: blur(0.4rem);
         box-shadow: 2px 2px 5px rgb(0 0 0 / 0.15);
         border: 2px solid rgb(255 255 255 / 0.3);
         border-left: none;
@@ -339,105 +340,6 @@ footer {
 
 .button-warning {
     margin-top: 0;
-}
-
-/* ------ Contact Page ------ */
-
-.contact-header {
-    background-image: none;
-    height: auto;
-    margin-bottom: 50px;
-}
-.contact-header h3 {
-    font-weight: 400;
-    font-size: 15px;
-    text-align: center;
-    color: white;
-    position: relative;
-    margin-top: 100px;
-}
-
-.contact-page-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 200px;
-    margin-bottom: 100px;
-}
-
-.contact-form-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contact-form-container {
-    background-color: #395784;
-    border-radius: 15px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.21);
-    padding: 50px;
-    margin: 20px;
-    margin-right: 50px;
-    width: 100%;
-    max-width: 800px;
-}
-
-.contact-form label {
-    color: white;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #93939374;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0058dd;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.307);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.contact-form button:hover {
-    background-color: #0059ff;
-    transform: scale(1.03);
-}
-
-.contact-info-container {
-    margin-left: 50px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-    row-gap: 50px;
-}
-
-.contact-info-container p {
-    font-size: 20px;
-}
-.contact-info-container span {
-    font-size: 45px;
-    color: rgb(255, 242, 0);
 }
 
 /* ------ Fake Social Media Pages ------ */
