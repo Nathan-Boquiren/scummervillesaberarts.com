@@ -1,0 +1,82 @@
+[
+    {
+        "questionTxt": "What is the primary purpose of a lightsaber?",
+        "choices": [
+        "For Spinning",
+        "For Combat",
+        "What's a lightsaber?",
+        "For Cooking"
+        ],
+        "answer": "For Combat"
+    },
+    {
+        "questionTxt": "Which form of lightsaber combat is known for its acrobatic movements, agility, and aggressiveness?",
+        "choices": [
+        "Form I: Shii-Cho",
+        "Form II: Makashi",
+        "Form III: Soresu",
+        "Form IV: Ataru"
+        ],
+        "answer": "Form IV: Ataru"
+    },
+    {
+        "questionTxt": "Who is known for developing and mastering the form, Vaapad?",
+        "choices": [
+        "Obi-Wan Kenobi",
+        "Anakin Skywalker",
+        "Yoda",
+        "Mace Windu"
+        ],
+        "answer": "Mace Windu"
+    },
+    {
+        "questionTxt": "How do the Sith have red lightsabers?",
+        "choices": [
+        "By bleeding it",
+        "By getting a crystal from the Dark Side",
+        "Because yes",
+        "They paint the kyber crystal"
+        ],
+        "answer": "By bleeding it"
+    },
+    {
+        "questionTxt": "What is Jar'Kai?",
+        "choices": [
+        "A type of lightsaber crystal",
+        "A two-bladed lightsaber technique",
+        "A Jedi meditation technique",
+        "An ancient Sith lord"
+        ],
+        "answer": "A two-bladed lightsaber technique"
+    },
+    {
+        "questionTxt": "What form of lightsaber combat does Count Dooku use?",
+        "choices": [
+        "Djem So",
+        "Soresu",
+        "Jar'Kai",
+        "Makashi"
+        ],
+        "answer": "Makashi"
+    },
+    {
+        "questionTxt": "How many forms of lightsaber combat are there?",
+        "choices": [
+        "5",
+        "12",
+        "9",
+        "7"
+        ],
+        "answer": "7"
+    },
+    {
+        "questionTxt": "What is the forbidden form of lightsaber combat that is shunned by Jedi AND Sith?",
+        "choices": [
+        "Juyo",
+        "Trakata",
+        "Jar' Kai",
+        "Ataru"
+        ],
+        "answer": "Trakata"
+    }
+]

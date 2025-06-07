@@ -43,3 +43,8 @@ btns.forEach((btn) => {
       .forEach((ch) => ch.classList.remove("hover"));
   });
 });
+
+// create DOM elements master function
+function createElement(type, className) {
+  return Object.assign(document.createElement(type), { className: className });
+}

@@ -1,0 +1,171 @@
+.page-header {
+    background: var(--section-bg);
+    height: fit-content;
+    padding-block: 1.5rem;
+    h1 {font-size: clamp(1.5rem, 2.5vw, 2.5rem)}
+}
+
+#quiz-container {
+    width: clamp(18rem, 100%, 60rem);
+    margin-block: clamp(0rem, 5vw, 5rem);
+    margin-inline: auto;
+}
+
+.question-wrapper {
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.question-wrapper .question {
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    background-color: var(--section-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--section-bg) 60%, black 40%), -1px -1px 0 color-mix(in srgb, var(--section-bg) 90%, white 10%);
+}
+
+.choices-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.question-wrapper label {
+    flex: 1 1 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 2vw, 2rem);
+    border-radius: clamp(1rem, 2vw, 2rem);
+    border: 2px solid var(--section-bg);
+    color: white;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+    .question-wrapper label:hover {
+        transform: translateY(-5px);
+        border-color: var(--light-section);
+    }
+}
+
+.question-wrapper label:active {transform: translateY(2px)}
+
+.question-wrapper label:has(input:checked) {
+    background-color: var(--light-section);
+    border-color: var(--light-section);
+    font-weight: 700;
+}
+
+.question-wrapper input {display: none}
+
+.question-wrapper button {
+    text-transform: uppercase;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: red;
+    color: white;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    font-weight: 600;
+    padding: .5rem 1rem;
+    border-radius: 100vmax;
+    filter: opacity(.3);
+    border: none;
+    pointer-events: none;
+    cursor: default;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.question-wrapper button::after {
+    content: "arrow_forward";
+    font-family: 'Material Symbols Rounded';
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-weight: 500;
+}
+
+.question-wrapper:has(input:checked) button {
+    filter: opacity(1);
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.question-wrapper:has(input:checked) button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 0 darkred;
+}
+
+.question-wrapper:has(input:checked) button:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+/* final score */
+
+#results-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score-container {
+    margin-inline: auto;
+    display: flex;
+    place-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: fit-content;
+    padding: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--section-bg);
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--section-bg) 60%, black 40%), -1px -1px 0 color-mix(in srgb, var(--section-bg) 90%, white 10%);
+    color: white;
+}
+
+.score-container h4 {
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.score-container hr {
+    border: none;
+    background-color: white;
+    border-radius: 100vmax;
+    width: 100%;
+    height: 2px;
+}
+
+#score-wrapper {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.vader-image-text {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    color: red;
+    text-align: center;
+}
+
+#final-vader-image {width: 15rem}
+
+body.show-results #quiz-container {display: none}
+body.show-results #results-container {display: flex}

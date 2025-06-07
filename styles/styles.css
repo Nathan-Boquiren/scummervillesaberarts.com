@@ -544,9 +544,11 @@ footer {
     width: 100%;
     }
 }
+
 .schedule-time  {
     margin: auto;
 }
+
 .m-f {
     display: flex;
     align-items: center;
@@ -567,6 +569,7 @@ footer {
     }
 
 }
+
 .payment-options {
     h3 {
         padding-bottom: 20px;
@@ -590,6 +593,7 @@ footer {
     }
     
 }
+
 .sw-q {
     margin-top: 50px;
     display: flex;
@@ -605,7 +609,8 @@ footer {
         font-size: 2em;
         border-radius: 20px;
     }
-}   
+}
+
 /* .sw-q label {
     transition: transform 0.15s linear, opacity 0.15s linear;
 } */
@@ -620,9 +625,11 @@ label[for="no-sw"]:hover {
         opacity: 0;
     }
 }
+
 #yes-sw:checked + label {
     background-color: rgba(0, 255, 0, 0.616);
 }
+
 #no-sw:checked + label {
     background-color: #324b72;
     color: none;
@@ -901,184 +908,4 @@ label[for="no-sw"]:hover {
     border: none;
     padding: 0;
     margin: 0;
-}
-
-
-
-/*  ------ Quiz page ------ */
-.quiz-page {
-    margin: 250px 50px;
-}
-.quiz-header {
-    background-image: none;
-}
-.quiz-container {
-    background-color: #395784;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.21);
-    padding: 50px;
-    width: 50%;
-    color: white;
-    display: none;
-    margin: auto;
-    position: relative;
-}
-.quiz-container input[type="radio"] {
-    margin: 10px;
-}
-.quiz-container button {
-    margin-top: 20px;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: none;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease, scale 0.2s ease;
-}
-.quiz-container button:hover {
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.158), -1px -1px 2px rgba(255, 134, 134, 0.63);
-    scale: 1.05;
-}
-.quiz-container h3 {
-    font-size: 30px;
-    font-weight: 600;
-    color: rgb(255, 242, 0);
-    margin-top: 0;
-    line-height: 1.5;
-}
-.quiz-container hr {
-    margin-bottom: 30px;
-}
-.quiz-container label {
-    font-size: 30px;
-    font-weight: 450;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 35px;
-    transition: transform 0.2s ease;
-    transform-origin: 0 50%;
-}
-.quiz-container label:hover {
-    transform: scale(1.05);
-}
-.quiz-container input {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    cursor: pointer;
-}
-.indicator {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-}
-.quiz-container input:checked + .indicator {
-    background-color: #2196F3;
-}
-
-.indicator:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.quiz-container input:checked + .indicator:after {
-    display: block;
-}
-
-.quiz-container .indicator:after {
-    top: 7px;
-    left: 7px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: white;
-}
-
-
-
-#your-result {
-    text-align: center;
-}
-.score-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
-}
-#score-text {
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-    font-size: 30px;
-    text-align: center;
-    background-color: rgb(91, 189, 255);
-    display: inline-block;
-    padding: 7px 15px;
-    border-radius: 20px;
-    border: 5px solid var(--dark-bg);
-    margin: 0 auto;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.212);
-}
-
-
-.vader-image-container {
-    position: relative;
-}
-.vader-image-text {
-    position: absolute;
-    top: 20%;
-    right: 2%;
-    transform: translate(-20%, -55%);
-    text-align: right;
-    font-size: 40px;
-    font-weight: 800;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
-    color: rgb(255, 0, 0);
-    padding: 5px;
-    border-radius: 20px;
-}
-
-#final-vader-image {
-    width: 90%;
-    display: block;
-    border-radius: 10px;
-    margin: 20px auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--dark-bg);
-}
-.link-to-classes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.link-to-classes a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-
-    font-weight: 600;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom, rgb(255, 1, 1), rgb(192, 0, 0));
-    padding: 8px 20px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: scale 0.3s ease;
-    z-index: 1;
-
-}
-.link-to-classes a:hover {
-    scale: 1.05;
 }

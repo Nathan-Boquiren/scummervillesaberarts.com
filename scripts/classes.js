@@ -86,11 +86,6 @@ function createBack(data) {
   return back;
 }
 
-// create DOM elements
-function createElement(type, className) {
-  return Object.assign(document.createElement(type), { className: className });
-}
-
 // ===== Dynamic Card Functionality and Styles =====
 
 function addDynamicStyles() {
