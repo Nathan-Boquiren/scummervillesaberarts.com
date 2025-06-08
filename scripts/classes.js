@@ -2,7 +2,6 @@
 const classesContainer = document.getElementById("classes-container");
 
 // ===== fetch class data =====
-
 fetch("../assets/class-data.json")
   .then((response) => {
     if (!response.ok) {
@@ -18,7 +17,6 @@ fetch("../assets/class-data.json")
   });
 
 //   create class categories and cards
-
 function populateClasses(categories) {
   for (let i = 0; i < categories.length; i++) {
     const category = categories[i];
@@ -87,7 +85,6 @@ function createBack(data) {
 }
 
 // ===== Dynamic Card Functionality and Styles =====
-
 function addDynamicStyles() {
   const cards = document.querySelectorAll(".card-inner");
   addFlip(cards);
