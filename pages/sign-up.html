@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="ssa.png">
+    <link rel="website icon" type="png" href="../assets/general/ssa.png">
 
     <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/signup.css">
 
     <title>Sign Up | Scummerville Saber Arts</title>
 </head>
@@ -43,311 +44,235 @@
         </ul>
     </nav>
 
-    <main class="sign-up">
+    <section class="signup-header about-header">
+        <h2>Register for Classes</h2>
+    </section>
 
-        <section class="signup-header about-header">
-            <h2>Register for Classes</h2>
+    <section class="sign-up-section">
+        <div class="form-section first-slide">
+            <h3>Want to become<br>powerful jedi, hmm?</h3>
+            <button type="button" onclick="nextStep()">Begin</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 1: Personal Info</h3>
+            <input type="text" name="name" placeholder="Full Name (Remember to Capitalize)">
+            <input type="number" name="age" placeholder="Age (at least 13, this ain't for young'uns)">
+
+            <div class="this-or-that">
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <p>or</p>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
+
+            <div class="this-or-that">
+                <label><input type="radio" name="cool" value="cool">Cool</label>
+                <p>or</p>
+                <label><input type="radio" name="cool" value="uncool">Uncool</label>
+            </div>
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 2: Contact Info</h3>
+            <input type="email" name="email" placeholder="Email Address (to send you annoying junk)">
+            <input id="phone-input" type="tel" name="phone" placeholder="Phone Number (to call you at the worst time)">
+            <input type="text" name="address" placeholder="Address (to randomly drive by...for no reason)">
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 3: Choose Your Path</h3>
+
+            <div class="multiple-choice-container">
+                <label>
+                    <input type="radio" name="path" value="initiate">
+                    <h4>Initiate</h4>
+                    <p>Learn basic combat and fourishes</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="path" value="apprentice">
+                    <h4>Apprentice</h4>
+                    <p>Learn each of the lightsaber forms</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="path" value="knight">
+                    <h4>Knight</h4>
+                    <p>Learn advanced combat techniques</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="path" value="master">
+                    <h4>Master</h4>
+                    <p>Learn everything about lightsaber combat</p>
+                </label>
+            </div>
+
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 4: Select Your Lightsaber</h3>
+
+            <div class="multiple-choice-container">
+                <label>
+                    <input type="radio" name="saber" value="single">
+                    <h4>Single Blade</h4>
+                    <p>Learn to fight like Anakin, Obi-wan...</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="saber" value="double-bladed">
+                    <h4>Double Bladed Saber</h4>
+                    <p>Learn to fight like Maul, Bastila Shan...</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="saber" value="dual wielding">
+                    <h4>Dual Wield</h4>
+                    <p>Learn to fight like Ahsoka Tano, Galen Marek...</p>
+                </label>
+
+                <label>
+                    <input type="radio" name="saber" value="reverse grip">
+                    <h4>Reverse Grip</h4>
+                    <p>Learn to fight Starkiller and...Starkiller</p>
+                </label>
+            </div>
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 5: Choose Class Schedule</h3>
+            <p>Select your preferred class days, choose how often you'd like to attend, and decide if you'd
+                like to participate in the monthly tournament.</p>
+
+            <div class="schedule-container">
+                <div class="days-container">
+                    <label><input type="checkbox" name="schedule" value="Tue">Tuesday</label>
+                    <label><input type="checkbox" name="schedule" value="Thur">Thursday</label>
+                    <label><input type="checkbox" name="schedule" value="Sat">Saturday</label>
+                </div>
+
+                <div class="hrs-container">
+                    <div class="select-wrapper">
+                        <select class="time-wrapper" name="tue-schedule">
+                            <option disabled selected>Time?</option>
+                            <option value="time-1">morning</option>
+                            <option value="time-2">afternoon</option>
+                            <option value="time-3">evening</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="time-wrapper" name="thur-schedule">
+                            <option disabled selected>Time?</option>
+                            <option value="time-1">morning</option>
+                            <option value="time-2">afternoon</option>
+                            <option value="time-3">evening</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="time-wrapper" name="sat-schedule">
+                            <option disabled selected>Time?</option>
+                            <option value="time-1">morning</option>
+                            <option value="time-2">afternoon</option>
+                            <option value="time-3">evening</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="this-or-that">
+                <label><input type="radio" name="biweekly" value="weekly">Weekly</label>
+                <p>or</p>
+                <label><input type="radio" name="biweekly" value="biweekly">Biweekly</label>
+            </div>
+
+            <div class="this-or-that">
+                <label><input type="radio" name="monthly-tournament" value="yes">Yes to Monthly Tournament</label>
+                <p>or</p>
+                <label><input type="radio" name="monthly-tournament" value="no">No to Monthly Tournament</label>
+            </div>
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 6: Payment Options</h3>
+
+            <div class="payment-container">
+                <label>
+                    <input type="radio" name="payment" value="visa">
+                    <img src="../assets/signup/visa.png" alt="visa">
+                    <h4>Visa</h4>
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="mastercard">
+                    <img src="../assets/signup/mastercard.png" alt="mastercard">
+                    <h4>Mastercard</h4>
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="amex">
+                    <img src="../assets/signup/amex.png" alt="amex">
+                    <h4>Amex</h4>
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="../assets/signup/paypal.png" alt="paypal">
+                    <h4>Paypal</h4>
+                </label>
+            </div>
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 7: Waste Your Money</h3>
+
+            <input type="number" name="card-number" placeholder="Card Number (Dew It.)" required>
+            <input type="month" name="expiration-date" placeholder="Expiration Date" required>
+            <input type="number" name="cvv" placeholder="CVV, CID, or CSC" required>
+            <input type="text" name="billing-address" placeholder="Billing Address" required>
+
+            <button type="button" onclick="nextStep()">Submit Payment</button>
+
+        </div>
+
+        <div class="form-section" style="display: none;">
+            <h3>Step 8</h3>
+            <p>Do you like Star Wars?</p>
+
+            <div class="this-or-that star-wars-question">
+                <label id="yes-btn"><input type="radio" name="sw-question" value="yes">Yes</label>
+                <p>or</p>
+                <label id="no-btn"><input type="radio" name="sw-question" value="no" disabled>No</label>
+            </div>
+
+            <button type="button" onclick="nextStep()">Complete</button>
+        </div>
+
+        <section class="form-section last-slide">
+            <h4 class="txt-shadow">Congrats!</h4>
+            <h3 class="txt-shadow">The force is with you, young Skywalker, but you are not a Jedi yet.</h3>
+            <a class="rickroll-link button" href="../Rickroll.mp4">View your class schedule</a> class="txt-shadow"
         </section>
-
-        <section class="sign-up-section">
-
-            <form id="signup-form">
-
-                <section class="form-section">
-                    <div class="first-slide">
-                        <div class="yoda-slide-text">
-                            <h3>Want to become<br>powerful jedi, hmm?</h3>
-                        </div>
-                        <button type="button" onclick="nextStep()">Begin →</button>
-                    </div>
-                </section>
-
-                <section class="form-section step-one" style="display: none;">
-                    <h3>Step 1: Personal Info</h3>
-                    <input type="text" id="name" name="name" placeholder="Full Name (Remember to Capitalize)"><br>
-                    <input type="number" id="age" name="age" placeholder="Age (at least 13, this ain't for young'uns)"
-                        min="10" max="60" step="1"><br>
-                    <div class="m-f">
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label><br>
-                        <p>or</p>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label><br>
-                    </div>
-
-                    <div class="m-f">
-                        <input type="radio" id="cool" name="cool" value="cool">
-                        <label for="cool">Cool</label><br>
-                        <p>or</p>
-                        <input type="radio" id="uncool" name="cool" value="uncool">
-                        <label for="uncool">Uncool</label><br>
-                    </div>
-
-                    <button type="button" onclick="nextStep()">Next →</button>
-                </section>
-
-                <section class="form-section step-one" style="display: none;">
-                    <h3>Step 2: Contact Info</h3>
-                    <input type="email" id="email" name="email"
-                        placeholder="Email Address (to send you annoying junk)"><br>
-                    <input type="tel" id="phone" name="phone"
-                        placeholder="Phone Number (to call you at the worst time)"><br>
-                    <input type="text" id="address" name="address"
-                        placeholder="Address (to randomly drive by...for no reason)"><br>
-                    <button type="button" onclick="nextStep()">Next →</button>
-                </section>
-
-                <!-- Step 1: Choose Your Path -->
-                <section class="form-section" style="display: none;">
-
-                    <h3>Step 3: Choose Your Path</h3>
-
-                    <input type="radio" id="initiate" name="path" value="initiate">
-                    <label for="initiate">
-                        <em>Initiate</em>
-                        <br>
-                        <strong>Learn basic combat and fourishes</strong>
-                    </label><br>
-
-                    <input type="radio" id="apprentice" name="path" value="apprentice">
-                    <label for="apprentice">
-                        <em>Apprentice</em>
-                        <br>
-                        <strong>Learn each of the lightsaber forms</strong>
-                    </label><br>
-
-                    <input type="radio" id="knight" name="path" value="knight">
-                    <label for="knight">
-                        <em>Knight</em><br>
-                        <strong>Learn advanced combat techniques</strong>
-                    </label><br>
-
-                    <input type="radio" id="master" name="path" value="master">
-                    <label for="master">
-                        <em>Master</em><br>
-                        <strong>Learn everything about lightsaber combat</strong></label><br>
-
-                    <button type="button" onclick="nextStep()">Next →</button>
-
-                </section>
-
-                <!-- Step 2: Select Your Lightsaber -->
-                <section class="form-section" style="display: none;">
-                    <h3>Step 4: Select Your Lightsaber</h3>
-
-                    <input type="radio" id="single" name="saber" value="single">
-                    <label for="single">
-                        <em>Single Blade</em>
-                        <br>
-                        <strong>Learn to fight like Anakin, Obi-wan, Dooku...</strong>
-                    </label><br>
-
-                    <input type="radio" id="double-bladed" name="saber" value="double-bladed">
-                    <label for="double-bladed">
-                        <em>Double Bladed Saber</em>
-                        <br>
-                        <strong>Learn to fight like Maul, Opress, Bastila Shan...</strong>
-                    </label><br>
-
-                    <input type="radio" id="dual wielding" name="saber" value="dual wielding">
-                    <label for="dual wielding">
-                        <em>Dual Wield</em>
-                        <br>
-                        <strong>Learn to fight like Ahsoka Tano, Galen Marek...</strong>
-                    </label><br>
-
-                    <input type="radio" id="reverse grip" name="saber" value="reverse grip">
-                    <label for="reverse grip">
-                        <em>Reverse Grip</em>
-                        <br>
-                        <strong>Learn to fight Starkiller. . .and Starkiller</strong>
-                    </label><br>
-
-                    <button type="button" onclick="nextStep()">Next →</button>
-                </section>
-
-                <!-- Step 3: Choose Class Schedule -->
-                <section class="form-section choose-schedule" style="display: none;">
-
-                    <h3>Step 5: Choose Class Schedule</h3>
-                    <div class="schedule-instruction">
-                        <p>Select your preferred class days, choose how often you'd like to attend, and decide if you'd
-                            like to participate in the monthly tournament.</p>
-                    </div>
-
-                    <div class="schedule-grid-container">
-
-                        <input type="checkbox" id="Tue" name="schedule" value="Tue">
-                        <label for="Tue">Tuesday</label>
-
-                        <div class="schedule-time">
-                            <select id="schedule" name="schedule">
-                                <option value="">Select a time:</option>
-                                <option value="time-1">10 AM - 12 AM</option>
-                                <option value="time-2">3 PM - 5 PM</option>
-                                <option value="time-3">7 PM - 9 PM</option>
-                            </select>
-                        </div>
-
-                        <input type="checkbox" id="Thur" name="schedule" value="Thur">
-                        <label for="Thur">Thursday</label>
-
-                        <div class="schedule-time">
-                            <select id="schedule" name="schedule">
-                                <option value="">Select a time:</option>
-                                <option value="time-1">10 AM - 12 AM</option>
-                                <option value="time-2">3 PM - 5 PM</option>
-                                <option value="time-3">7 PM - 9 PM</option>
-                            </select>
-                        </div>
-
-                        <input type="checkbox" id="Sat" name="schedule" value="Sat">
-                        <label for="Sat">Saturday</label>
-
-                        <div class="schedule-time">
-                            <select id="schedule" name="schedule">
-                                <option value="">Select a time:</option>
-                                <option value="time-1">10 AM - 12 AM</option>
-                                <option value="time-2">3 PM - 5 PM</option>
-                                <option value="time-3">7 PM - 9 PM</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="m-f biweekly">
-                        <input type="radio" id="weekly" name="biweekly" value="weekly">
-                        <label for="weekly">Weekly</label>
-
-                        <p>or</p>
-
-                        <input type="radio" id="biweekly" name="biweekly" value="biweekly">
-                        <label for="biweekly">Biweekly</label>
-                    </div>
-
-                    <div class="m-f biweekly">
-                        <input type="radio" id="monthly-tournament-yes" name="monthly-tournament"
-                            value="monthly-tournament-yes">
-                        <label for="monthly-tournament-yes">Yes to Monthly Tournament</label>
-
-                        <p>or</p>
-
-                        <input type="radio" id="monthly-tournament-no" name="monthly-tournament"
-                            value="monthly-tournament-no">
-                        <label for="monthly-tournament-no">No to Monthly Tournament</label>
-                    </div>
-
-                    <button type="button" onclick="nextStep()">Next →</button>
-                </section>
-
-                <!-- Step 4: Payment Options -->
-                <section class="form-section payment-options" style="display: none;">
-                    <h3>Step 6: Payment Options</h3>
-
-                    <input type="radio" id="visa" name="payment" value="visa">
-                    <label for="visa">
-                        <img src="visa-logo.png" alt="visa">
-                        <em>Visa</em>
-                    </label><br>
-
-                    <input type="radio" id="mastercard" name="payment" value="mastercard">
-                    <label for="mastercard">
-                        <img src="mastercard-logo.png" alt="mastercard">
-                        <em>Mastercard</em>
-                    </label><br>
-
-                    <input type="radio" id="amex" name="payment" value="amex">
-                    <label for="amex">
-                        <img src="amex.png" alt="amex">
-                        <em>Amex</em>
-                    </label><br>
-
-                    <input type="radio" id="paypal" name="payment" value="paypal">
-                    <label for="paypal">
-                        <img src="paypal-logo.png" alt="paypal">
-                        <em>Paypal</em>
-                    </label><br>
-
-                    <button type="button" onclick="nextStep()">Next →</button>
-
-                </section>
-
-                <section class="form-section payment-section">
-
-                    <h3>Step 7: Waste Your Money</h3>
-
-                    <div class="form-group">
-                        <input type="text" id="card-number" name="card-number" pattern="\d{16}"
-                            placeholder="Card Number (Dew It.)" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="month" id="expiration-date" name="expiration-date" placeholder="Expiration Date"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="CVV, CID, or CSC" required>
-                    </div>
-
-                    <div class="form-group billing-address">
-                        <input type="text" id="billing-address" name="billing-address"
-                            placeholder="Billing Address (Yes, I know you've already entered your address)" required>
-                    </div>
-
-                    <button type="button" onclick="nextStep()">Submit Payment →</button>
-
-                </section>
-
-                <section class="form-section star-wars-q" style="display: none;">
-
-                    <h3>Step 8</h3>
-                    <p>Do you like Star Wars?</p>
-
-                    <div class="sw-q">
-
-                        <input type="radio" id="yes-sw" name="sw-q" value="yes-sw">
-                        <label for="yes-sw">Yes</label><br>
-
-                        <p>or</p>
-
-                        <input type="radio" id="no-sw" name="sw-q" value="no-sw" disabled>
-                        <label for="no-sw">No</label><br>
-                    </div>
-
-                    <button type="button" onclick="nextStep()">Complete</button>
-                </section>
-
-
-                <section class="form-section last-slide">
-
-                    <div class="last-slide-text">
-
-                        <h3>
-                            <em>Congrats!</em>
-                        </h3>
-
-                        <h3>The force is with you, young Skywalker, but you are not a Jedi yet.</h3>
-
-                        <a class="rickroll-link" href="rickroll.html">
-                            <p>View your<br>class schedule</p>
-                        </a>
-                    </div>
-
-
-                </section>
-
-            </form>
-        </section>
-
-    </main>
+    </section>
 
     <footer>
-
         <div class="affiliate-link">
             <h3>You WILL check out our partner.</h3>
             <a href="https://darth-jacob.github.io/durrr/index.html" target="_blank">
-                <p>United Sabers of Corellia →</p>
+                <p>United Sabers of Corellia</p>
             </a>
         </div>
 
@@ -379,8 +304,8 @@
 
     </footer>
 
-    <script src="script.js"></script>
-
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/signup.js"></script>
 </body>
 
 </html>

@@ -26,11 +26,7 @@
     animation: fadeIn 0.5s ease-in forwards;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        height: 100vh;
-    }
-}
+@media (max-width: 768px) {.hero {height: 100vh}}
 
 /* ------ Welcome Section ------ */
 .welcome {
@@ -54,37 +50,25 @@
 }
 
 @media (max-width: 768px) {
-    .welcome {
-        align-items: center;
-    }
-    
-    .text-container h2 {
-        text-align: center;
-    }
+    .welcome {align-items: center}
+    .text-container h2 {text-align: center}
 }
 
 /* ------ Featured Classes Section ------ */
 
-.featured-classes {
-    background-color: var(--section-bg);
-    text-align: center;
-}
+.featured-classes {background-color: var(--section-bg)}
 
-.featured-classes > * {
-    margin-bottom: 2rem;
-}
+.featured-classes > * {margin-block: 2rem}
 
 .featured-classes-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
-@media (max-width: 768px) {
-    .featured-classes h3 {display: none}
-}
+.featured-classes-container .card-front {overflow: hidden;}
 
 /* ----- Lightsaber Quote ----- */
 
@@ -100,6 +84,7 @@
     cursor: pointer;
     animation: breathe 1s ease-in-out alternate infinite;
 }
+
 @keyframes breathe {
     0% {transform: scale(1)}
     100% {transform: scale(1.02)}
@@ -121,6 +106,8 @@
 .obi-wan-quote {
     font-family: var(--serif-font);
     font-weight: 200;
+    max-width: 50ch;
+    margin-inline: auto;
 }
 
 @media (max-width: 768px) {
@@ -186,12 +173,14 @@
         gap: calc(var(--student-img-size) / 1.5);
         margin-top: calc(var(--student-img-size) / 1.5);
     }
+
     .testimonial-card {
         flex-wrap: wrap;
         justify-content: center;
         padding-top: 3rem;
         overflow: visible;
     }
+
     .testimonial-card img {
         width: var(--student-img-size);
         position: absolute;
