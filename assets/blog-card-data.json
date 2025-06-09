@@ -1,0 +1,32 @@
+[
+    {
+        "title": "The Meaning of “Do or Do Not. There is No ‘Try’”",
+        "coverImgLink": "../assets/blog/post-1.jpg",
+        "blogPostLink": "../pages/posts/blog-post-1.html"
+    },
+    {
+        "title": "Evolution of the Lightsaber",
+        "coverImgLink": "../assets/blog/post-2.jpg",
+        "blogPostLink": "../pages/posts/blog-post-2.html"
+    },
+    {
+        "title": "Anakin Skywalker's Lightsaber Form",
+        "coverImgLink": "../assets/blog/post-3.jpg",
+        "blogPostLink": "../pages/posts/blog-post-3.html"
+    },
+    {
+        "title": "The Lightsaber Forms",
+        "coverImgLink": "../assets/blog/post-4.jpg",
+        "blogPostLink": "../pages/posts/blog-post-4.html"
+    },
+    {
+        "title": "Focus, Lightsabers and Life",
+        "coverImgLink": "../assets/blog/post-5.webp",
+        "blogPostLink": "../pages/posts/blog-post-5.html"
+    },
+    {
+        "title": "Strength Through Adaptability",
+        "coverImgLink": "../assets/blog/post-6.jpg",
+        "blogPostLink": "../pages/posts/blog-post-6.html"
+    }
+]
