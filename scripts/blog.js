@@ -11,17 +11,29 @@ fetch("../assets/blog-card-data.json")
   })
   .then((data) => {
     populateBlogCards(data);
+    addBtnStorage();
   })
   .catch((error) => {
     console.error("Failed to load JSON:", error);
   });
 
 function populateBlogCards(data) {
-  data.forEach((blog) => {
+  data.forEach((blog, idx) => {
+    // prettier-ignore
     cardContainer.innerHTML += `<div class="card">
             <img src="${blog.coverImgLink}" alt="blog post image">
             <h3>${blog.title}</h3>
-                <a href="${blog.blogPostLink}" target="_blank" rel="noopener noreferrer">Read More</a>
+                <a href="../pages/posts/blog-post.html" target="_blank" rel="noopener noreferrer" class="post-link-btn" data-post-num="${idx + 1}">Read More</a>
             </div>`;
+  });
+}
+
+function addBtnStorage() {
+  const postBtns = document.querySelectorAll(".post-link-btn");
+  postBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const postNum = btn.dataset.postNum;
+      localStorage.setItem("blogPostNum", String(postNum));
+    });
   });
 }

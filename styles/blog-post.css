@@ -1,0 +1,65 @@
+body {
+    background-image: url(../assets/blog-posts/bg.png);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    border-image: fill 1 linear-gradient(rgb(0 0 0 /.2), rgb(0 0 0 /.2));
+}
+
+.blog-post-header h1 {
+    color: var(--yellow);
+    font-size: clamp(1.3rem, 5vw, 3rem);
+    padding-block: 2rem;
+}
+
+.blog-post-header h4 {
+    color: rgb(255 255 255 / .5);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-inline: 2.5rem;
+}
+
+.blog-post > * {
+    scale: 0.95; opacity: 0.6;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.blog-post :is(p, h3) {
+    color: cyan;
+    line-height: 2;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.blog-post img {
+    width: clamp(15rem, 90%, 65ch);
+    min-height: 18rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.blog-post strong {font-family: inherit; color: inherit}
+
+p.signature {
+    font-weight: 700;
+    font-family: var(--main-font);
+}
+
+.lightsaber-form-img {
+    float: left;
+    
+}
+
+.lightsaber-form-img img {
+    width: 400px;
+    margin: 0 20px 10px 0;
+}
