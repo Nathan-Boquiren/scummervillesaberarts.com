@@ -1,9 +1,8 @@
-// DOM
+// DOM Elements
 const postContainer = document.querySelector(".blog-post");
 const titleWrapper = document.querySelector(".title");
 const dateWrapper = document.querySelector(".date");
 
-// const blogNum = window.location.pathname.match(/blog-post-(\d+)\.html/)?.[1];
 const blogNum = localStorage.getItem("blogPostNum");
 
 // ===== fetch blog data =====

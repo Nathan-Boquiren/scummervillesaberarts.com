@@ -23,7 +23,7 @@ function populateBlogCards(data) {
     cardContainer.innerHTML += `<div class="card">
             <img src="${blog.coverImgLink}" alt="blog post image">
             <h3>${blog.title}</h3>
-                <a href="../pages/posts/blog-post.html" target="_blank" rel="noopener noreferrer" class="post-link-btn" data-post-num="${idx + 1}">Read More</a>
+                <a href="../pages/blog-post.html" target="_blank" rel="noopener noreferrer" class="post-link-btn" data-post-num="${idx + 1}">Read More</a>
             </div>`;
   });
 }
