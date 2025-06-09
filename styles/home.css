@@ -197,7 +197,7 @@
 /* --- quiz link section --- */
 
 .quiz-link-section {
-    background: url(../2-saber-background.webp) center / cover no-repeat fixed;
+    background: url(../assets/home/2-saber-background.webp) center / cover no-repeat fixed;
     height: 70vh;
     display: flex;
     align-items: center;
