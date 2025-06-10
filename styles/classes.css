@@ -231,7 +231,11 @@
 
 .card-back .skills-list-header {font-weight: 700}
 
-.card-back li {list-style-position: inside}
+.card-back li {
+    list-style-position: outside;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+}
 
 .card-back li::marker {
     content: "✓\00a0\00a0\00a0";
