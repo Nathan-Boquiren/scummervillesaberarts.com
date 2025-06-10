@@ -257,7 +257,7 @@ nav ul li a:hover {color: var(--yellow)}
     
 }
 
-/* General Page Styles */
+/* ------ General Page Styles ------ */
 
 .page-header {
     background-repeat: no-repeat;
@@ -361,24 +361,4 @@ footer .copyright {
 @media (max-width: 768px) {
     footer {justify-content: center;}
     .newsletter {display: none}
-}
-
-/* ------ Rickroll Page ------ */
-.rickroll-page {
-    background-color: black;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rickroll-page video {
-    width: 50px;
-    height: auto;
-    background-color: black;
-    border-radius: 10px;
-    border: none;
-    padding: 0;
-    margin: 0;
 }

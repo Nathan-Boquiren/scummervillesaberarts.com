@@ -2,10 +2,7 @@ let cl = console.log;
 
 // Dom Elements
 const hamburger = document.getElementById("hamburger");
-const hamburgerLines = document.querySelectorAll(".hamburger-line");
 const navBar = document.querySelector(".navbar");
-const btns = document.querySelectorAll(".button");
-const footerNewsletterBtn = document.getElementById("newsletter-btn");
 
 // hamburger menu
 
@@ -22,7 +19,7 @@ document.addEventListener("pointerdown", (e) => {
 
 // Button Animation
 
-btns.forEach((btn) => {
+document.querySelectorAll(".button").forEach((btn) => {
   btn.tabIndex = 0;
   btn.innerHTML = btn.innerText
     .split("")
@@ -52,6 +49,6 @@ function createElement(type, className) {
 
 // footer newsletter btn
 
-footerNewsletterBtn.addEventListener("click", () => {
+document.getElementById("newsletter-btn").addEventListener("click", () => {
   alert("Now I will send you a ton of annoying emails! HA HA HAAA!");
 });
