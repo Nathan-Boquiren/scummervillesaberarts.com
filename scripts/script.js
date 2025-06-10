@@ -5,6 +5,7 @@ const hamburger = document.getElementById("hamburger");
 const hamburgerLines = document.querySelectorAll(".hamburger-line");
 const navBar = document.querySelector(".navbar");
 const btns = document.querySelectorAll(".button");
+const footerNewsletterBtn = document.getElementById("newsletter-btn");
 
 // hamburger menu
 
@@ -48,3 +49,9 @@ btns.forEach((btn) => {
 function createElement(type, className) {
   return Object.assign(document.createElement(type), { className: className });
 }
+
+// footer newsletter btn
+
+footerNewsletterBtn.addEventListener("click", () => {
+  alert("Now I will send you a ton of annoying emails! HA HA HAAA!");
+});

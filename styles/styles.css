@@ -274,73 +274,84 @@ section {
 }
 
 /* --- footer --- */
+
 footer {
     background-color: var(--dark-bg);
-    color: white;
-    text-align: center;
-    padding: 20px 0 20px;
-}
-
-.subscribe-section {
-    margin: 0px 50px 20px 0;
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-}
-
-.subscribe-section-input {
     display: flex;
     align-items: center;
-    justify-content: center;
-    input, textarea {
-        border: none;
-    }
-}
-
-.subscribe-section-input [type="email"] {
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 15px 0 0 15px;
-
-}
-
-.subscribe-section-input button {
-    font-size: 20px;
-    padding: 10px 15px;
-    background-color: #ff4040;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    padding: 1rem;
     color: white;
+}
+
+footer h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.newsletter {
+    --btn-width: 11ch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.newsletter .input-wrapper {
+    position: relative;
+    overflow: clip;
+    border-radius: .5rem;
+    padding-right: var(--btn-width);
+}
+
+.newsletter .input-wrapper > * {font-size: 1rem}
+
+.newsletter .input-wrapper input {
     border: none;
-    border-radius: 0 15px 15px 0;
+    padding: .6rem;
+    width: 50%;
+    min-width: 22ch;
+}
+
+.newsletter .input-wrapper button {
+    width: var(--btn-width);
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    padding: .6rem;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    border: none;
     cursor: pointer;
     transition: background-color 0.15s ease;
 }
 
-.subscribe-section button:hover {
-    background-color: #c51e1e;
+.newsletter .input-wrapper button:hover {background-color: rgb(212, 0, 0); }
+
+.fake-social-links .icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.social-buttons {
-    margin-top: 10px;
-    a {
-        margin: 0 10px;
-        color: white;
-        text-decoration: none;
-        img {
-            filter: invert(100%);
-        }
-    }
+.icons-wrapper img {filter: invert(100%); transition: all 0.2s ease}
+
+.icons-wrapper img:hover {transform: translateY(-5px)}
+
+footer .copyright {
+    flex: 1 1 100%;
+    font-size: 1rem;
+    max-width: unset;
 }
 
-.footer-link {
-    transition: transform 0.2s ease;
-}
-
-.footer-link:hover {
-    transform: scale(1.1);
-}
-
-.button-warning {
-    margin-top: 0;
+@media (max-width: 768px) {
+    footer {justify-content: center;}
+    .newsletter {display: none}
 }
 
 /* ------ Fake Social Media Pages ------ */
