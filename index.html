@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" type="png" href="assets/general/ssa.png">
 
-    <link href="https://fonts.cdnfonts.com/css/mandalore" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/classes.css">
+
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 
     <title>Scummerville Saber Arts</title>
 </head>
@@ -164,7 +165,7 @@
                 </div>
             </div>
 
-            <a href="pages/classes.html" class="button">See more classes →</a>
+            <a href="pages/classes.html" class="button w-arrow">See more classes</a>
         </section>
 
         <section class="lightsaber-quote">
@@ -232,14 +233,15 @@
         <section id="quiz-section" class="quiz-link-section">
             <h2 class="txt-shadow">Test Your Lightsaber Knowledge!</h2>
             <h3 class="txt-shadow">Think you know everything about lightsaber combat?<br>Take our quiz to prove it!</h3>
-            <a href="pages/quiz.html" class="quiz-button button">Take the Quiz →</a>
+            <a href="pages/quiz.html" class="button w-arrow">Take the Quiz</a>
         </section>
     </main>
 
     <footer>
         <div class="affiliate-link">
             <h4>You WILL check out our partner.</h4>
-            <a class="button" href="https://darth-jacob.github.io/durrr/index.html" target="_blank">United Sabers of
+            <a class="button" href="https://darth-jacob.github.io/durrr/index.html" target="_blank">United
+                Sabers of
                 Corellia</a>
         </div>
 
@@ -269,26 +271,7 @@
         <p class="copyright">&copy; 2025 Scummerville Saber Arts. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.card-inner').forEach(cardInner => {
-            const cardFront = cardInner.querySelector('.card-front');
-            const cardBack = cardInner.querySelector('.card-back');
 
-            function flipCard() {
-                if (cardInner.style.transform === 'rotateX(180deg)') {
-                    cardInner.style.transform = 'rotateX(0deg)';
-                } else {
-                    cardInner.style.transform = 'rotateX(180deg)';
-                }
-            }
-
-            cardFront.addEventListener('click', flipCard);
-            cardBack.addEventListener('click', flipCard);
-        });
-    </script>
-
-    <script src="scripts/script.js"></script>
-    <script src="scripts/home.js"></script>
 </body>
 
 </html>
