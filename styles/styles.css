@@ -354,22 +354,6 @@ footer .copyright {
     .newsletter {display: none}
 }
 
-/* ------ Fake Social Media Pages ------ */
-
-.fake-social-page {
-    background-color: #0C090A;
-}
-.rickroll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rickroll img {
-    width: 100%;
-    cursor: pointer;
-}
-
 /* ------ Rickroll Page ------ */
 .rickroll-page {
     background-color: black;
