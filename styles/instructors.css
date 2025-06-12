@@ -158,7 +158,8 @@
 #inst-modal::backdrop {
     background: rgba(0 0 0 / 0.3);
     opacity: 0; backdrop-filter: blur(4px);
-    transition: opacity .3s ease, display .3s ease, overlay .3s ease; transition-behavior: allow-discrete;
+    transition: opacity .3s ease, display .3s ease, overlay .3s ease;
+    transition-behavior: allow-discrete;
 }
 
 #inst-modal > * {transition: margin-bottom .3s ease}

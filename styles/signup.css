@@ -203,7 +203,6 @@ option[disabled][selected] {color: var(--ph-clr)}
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    
     & label {flex: 1}
 }
 

@@ -1,5 +1,3 @@
-let cl = console.log;
-
 // Dom Elements
 const hamburger = document.getElementById("hamburger");
 const navBar = document.querySelector(".navbar");
