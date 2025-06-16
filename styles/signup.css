@@ -57,9 +57,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input:is([type="radio"], [type="checkbox"]) {display: none}
 input, textarea {border: none}
 
-input:focus, textarea:focus {
-    outline-color: var(--ph-clr);
-}
+input:focus, textarea:focus {outline-color: var(--ph-clr)}
 
 label {
     padding: .5rem;
@@ -69,9 +67,9 @@ label {
     cursor: pointer;
     border: none;
     transition: all 0.2s ease;
-    text-align: center;
     background-color: var(--input-bg);
     box-shadow: -2px -2px 2px rgb(89 115 156 / .5), 5px 5px 5px rgb(0 0 0 / .2);
+    box-shadow: inset 1px 1px 2px rgb(255 255 255 / .2), inset -1px -1px 2px rgb(0 0 0 / .5), 2px 2px 5px rgb(0 0 0 / .1);
 }
 
 label:has(input:checked) {
@@ -79,7 +77,7 @@ label:has(input:checked) {
     color: white;
 }
 
-.form-section label:hover {transform: translateY(-2px) scale(1.01)}
+.form-section label:hover {transform: translateY(-5px)}
 
 /* class schedule */
 
