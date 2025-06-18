@@ -1,6 +1,5 @@
 .page-header {
-    background-image: url(../assets/instructors/instructors-header.webp);
-    background-position: 50% 36%;
+    background: url(../assets/instructors/instructors-header.webp) 50% 36% / cover no-repeat;
     border-image: fill 1 radial-gradient(rgb(0 0 0 / 0.5), transparent 20%);
 }
 

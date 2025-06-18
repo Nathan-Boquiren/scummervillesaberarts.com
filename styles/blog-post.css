@@ -1,9 +1,5 @@
 body {
-    background-image: url(../assets/blog-posts/bg.png);
-    background-position: top left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background: url(../assets/blog-posts/bg.png) top left / cover no-repeat fixed;
     border-image: fill 1 linear-gradient(rgb(0 0 0 /.2), rgb(0 0 0 /.2));
 }
 

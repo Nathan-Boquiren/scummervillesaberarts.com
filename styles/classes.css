@@ -1,6 +1,5 @@
 .page-header {
-    background-image: url(../assets/classes/about-header-bg.webp);
-    background-position: 50% 90%;
+    background: url(../assets/classes/about-header-bg.webp) 50% 90% / cover no-repeat;
     position: relative;
 }
 
@@ -8,11 +7,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url(../assets/classes/about-header-fg.webp);
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: url(../assets/classes/about-header-fg.webp) inherit / inherit inherit;
+    background: url(../assets/classes/about-header-fg.webp) 50% 90% / cover no-repeat;
     z-index: 1;
     pointer-events: none;
 }
